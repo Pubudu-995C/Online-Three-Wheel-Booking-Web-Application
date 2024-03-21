@@ -10,6 +10,7 @@ export default function RentOption() {
   const { data } = location.state || {};
   const [selectedQuantities, setSelectedQuantities] = useState({});
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedDrivers, setSelectedDrivers] = useState({});
 
   const {
     pickupCity,
@@ -28,6 +29,9 @@ export default function RentOption() {
 
   const handleContinue = () => {
     const selectedTukQuantity = selectedQuantities["tukQuantity"];
+    const selectedDriQuantity = selectedQuantities["driQuantity"];
+    const selectedDriCost = selectedDrivers["driCost"];
+
     const dataToSend = {
       pickupCity,
       pickupDate,
@@ -42,6 +46,8 @@ export default function RentOption() {
       totalPrice,
       deposit,
       tukQuantity: selectedTukQuantity,
+      driQuantity: selectedDriQuantity,
+      driCost: selectedDriCost,
       options: selectedOptions,
     };
 
@@ -49,41 +55,48 @@ export default function RentOption() {
   };
 
   const handleQuantityChange = (index, value, item, cost) => {
-    setSelectedQuantities({ ...selectedQuantities, [index]: value });
-
-    if (value !== "") {
-      if (index !== "tukQuantity") {
-        const existingOptionIndex = selectedOptions.findIndex(
-          (option) => option.item === item,
-        );
-
-        if (existingOptionIndex !== -1) {
-          // If the option already exists, update its quantity
-          const updatedOptions = [...selectedOptions];
-          updatedOptions[existingOptionIndex] = {
-            ...updatedOptions[existingOptionIndex],
-            quantity: value,
-          };
-          setSelectedOptions(updatedOptions);
-        } else {
-          // If the option doesn't exist, add it to selectedOptions
-          setSelectedOptions([
-            ...selectedOptions,
-            { item, cost, quantity: value },
-          ]);
-        }
-      }
+    if (index === "driQuantity") {
+      setSelectedQuantities({ ...selectedQuantities, [index]: value });
+      setSelectedDrivers({ driCost: cost });
     } else {
-      // Remove the option if the quantity is deselected
-      setSelectedOptions(
-        selectedOptions.filter((option) => option.item !== item),
-      );
+      setSelectedQuantities({ ...selectedQuantities, [index]: value });
+      if (value !== "") {
+        if (index !== "tukQuantity") {
+          const existingOptionIndex = selectedOptions.findIndex(
+            (option) => option.item === item,
+          );
+
+          if (existingOptionIndex !== -1) {
+            const updatedOptions = [...selectedOptions];
+            updatedOptions[existingOptionIndex] = {
+              ...updatedOptions[existingOptionIndex],
+              quantity: value,
+            };
+            setSelectedOptions(updatedOptions);
+          } else {
+            setSelectedOptions([
+              ...selectedOptions,
+              { item, cost, quantity: value },
+            ]);
+          }
+        }
+      } else {
+        setSelectedOptions(
+          selectedOptions.filter((option) => option.item !== item),
+        );
+      }
     }
   };
 
   const tukQuantity = [
     {
       tukQun: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    },
+  ];
+  const driQuantity = [
+    {
+      driQun: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      driCost: `25.00`,
     },
   ];
 
@@ -134,66 +147,67 @@ export default function RentOption() {
 
   return (
     <div
-      className="bg-cover bg-center min-h-screen"
+      className="min-h-screen bg-center bg-cover"
       style={{ backgroundImage: `url(${wallpaper7})` }}
     >
       <Navbar />
-      <div className="relative pt-28 mb-10">
+      <div className="relative mb-10 pt-28">
         <div className="mx-8 lg:mx-0">
-          <div className=" bg-gray-200 mx-full lg:mx-20 xl:mx-52 p-5 rounded-xl">
+          <div className="p-5 bg-gray-200 mx-full lg:mx-20 xl:mx-52 rounded-xl">
+            {/* ===========================Reservation Details============================= */}
             <div>
-              <h1 className="text-4xl font-bold uppercase mt-5">
+              <h1 className="mt-5 text-2xl font-bold uppercase xl:text-3xl lg:text-2xl">
                 Reservation Details
               </h1>
-              <div className="lg:grid grid-cols-3 lg:space-x-10 justify-center">
+              <div className="justify-center grid-cols-3 lg:grid lg:space-x-10">
                 <div>
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Period
                   </p>
                   <div className="space-y-2 text-lg xl:w-[350px] lg:w-[200px]">
                     <p className="font-semibold text-cyan-600">
                       Start Date:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {pickupDate}
                       </span>{" "}
                       Time:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {pickupTime}
                       </span>
                     </p>
                     <p className="font-semibold text-cyan-600">
                       Return Date:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {returnDate}
                       </span>{" "}
                       Time:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {returnTime}{" "}
                       </span>
                     </p>
                     <p className="font-semibold text-cyan-600">
                       Duration Days:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {durationDays}
                       </span>
                     </p>
                   </div>
                 </div>
                 <div>
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Pick-Up
                   </p>
                   <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
                     <p className="font-semibold text-cyan-600">
                       Start Location:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {pickupCity}{" "}
                       </span>
                     </p>
                     <p className="font-semibold text-cyan-600">Sri Lanka</p>
                     <p className="font-semibold text-cyan-600">
                       Fee:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {" "}
                         ${pickupFee}{" "}
                       </span>
@@ -201,20 +215,20 @@ export default function RentOption() {
                   </div>
                 </div>
                 <div>
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Return
                   </p>
                   <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
                     <p className="font-semibold text-cyan-600">
                       End Location:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         {returnCity}{" "}
                       </span>
                     </p>
                     <p className="font-semibold text-cyan-600">Sri Lanka</p>
                     <p className="font-semibold text-cyan-600">
                       Fee:{" "}
-                      <span className=" text-red-500 font-bold">
+                      <span className="font-bold text-red-500 ">
                         ${returnFee}{" "}
                       </span>
                     </p>
@@ -222,20 +236,24 @@ export default function RentOption() {
                 </div>
               </div>
             </div>
+            {/* ===========================Selected TukTuk============================= */}
             <div>
-              <h1 className="text-4xl font-bold text-left pt-14 uppercase">
+              <h1 className="text-2xl font-bold text-left uppercase xl:text-3xl lg:text-2xl pt-14">
                 Selected TukTuk
               </h1>
-              <div className="lg:grid grid-cols-4 justify-center font-bold text-lg">
+              <div className="justify-center grid-cols-4 text-lg font-bold lg:grid">
                 <div className="xl:w-[300px] lg:w-[450px]">
-                  <p className="hidden lg:block bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="hidden lg:block bg-[#54B435] text-center lg:text-left lg:pl-12 text-white font-bold xl:text-2xl lg:text-xl  py-2 my-5">
                     Tuktuk Type
                   </p>
                   <div>
-                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                      <div className="lg:flex pb-10 mt-5 xl:mt-0">
+                    <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+                      <div className="pb-10 mt-5 lg:flex lg:mt-0 xl:mt-0">
                         <div>
-                          <p className="pb-8">{vehicle}</p>
+                          <p className="pb-8 lg:pb-0 xl:pb-0">{vehicle}</p>
+                          <p className="hidden pb-8 mt-5 lg:block lg:pb-0 xl:pb-0">
+                            Driver (If you Need)
+                          </p>
                           <p className="lg:hidden">Total: ${totalPrice} USD</p>
                           <p className="lg:hidden">Deposit: ${deposit}</p>
                           <p className="lg:hidden ">
@@ -243,7 +261,7 @@ export default function RentOption() {
                             <select
                               name="tukQuantity"
                               id="tukQuantity"
-                              className="rounded-lg text-center h-8 w-28"
+                              className="h-8 text-center rounded-lg w-28"
                               value={selectedQuantities["tukQuantity"] || ""}
                               onChange={(e) =>
                                 handleQuantityChange(
@@ -261,36 +279,82 @@ export default function RentOption() {
                             </select>
                           </p>
                         </div>
+                        <p className="pb-8 mt-10 text-xl lg:hidden">
+                          Driver (If you Need)
+                        </p>
+                        {driQuantity.map((d) => (
+                          <div>
+                            <p className="lg:hidden">
+                              {" "}
+                              $ {d.driCost} / Per Driver
+                            </p>
+                          </div>
+                        ))}
+                        <p className="lg:hidden">Not Requird</p>
+                        {/* Driver Mobile===================== */}
+                        <div className="lg:hidden">
+                          Quantity:{" "}
+                          <select
+                            name="driQuantity"
+                            id="driQuantity"
+                            className="h-8 text-center rounded-lg w-28"
+                            value={selectedQuantities["driQuantity"] || ""}
+                            onChange={(e) =>
+                              handleQuantityChange(
+                                "driQuantity",
+                                e.target.value,
+                                "driver",
+                                driQuantity[0].driCost,
+                              )
+                            }
+                          >
+                            <option value="">Select</option>
+                            {driQuantity[0].driQun.map((quantity, index) => (
+                              <option key={index} value={quantity}>
+                                {quantity}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="bg-[#54B435] text-right text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Total
                   </p>
                   <div>
                     <p className="text-right"> $ {totalPrice}</p>
+                    {driQuantity.map((d) => (
+                      <div>
+                        <p className="mt-5 text-right">
+                          {" "}
+                          $ {d.driCost} / Per Driver
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Deposit
                   </p>
                   <div>
-                    <p className="text-center">{deposit}</p>
+                    <p className="text-center">$ {deposit}</p>
+                    <p className="mt-5 text-center">Not Requird</p>
                   </div>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Quantity
                   </p>
                   <div>
-                    <div className="flex justify-center">
+                    <div className="flex flex-col items-center gap-y-4">
                       <select
                         name="tukQuantity"
                         id="tukQuantity"
-                        className="rounded-lg text-center h-8 w-28"
+                        className="h-8 text-center rounded-lg w-28"
                         value={selectedQuantities["tukQuantity"] || ""}
                         onChange={(e) =>
                           handleQuantityChange("tukQuantity", e.target.value)
@@ -303,46 +367,76 @@ export default function RentOption() {
                           </option>
                         ))}
                       </select>
+                      {/* Driver===================== */}
+                      <select
+                        name="driQuantity"
+                        id="driQuantity"
+                        className="h-8 text-center rounded-lg w-28"
+                        value={selectedQuantities["driQuantity"] || ""}
+                        onChange={(e) =>
+                          handleQuantityChange(
+                            "driQuantity",
+                            e.target.value,
+                            "driver",
+                            driQuantity[0].driCost,
+                          )
+                        }
+                      >
+                        <option value="">Select</option>
+                        {driQuantity[0].driQun.map((quantity, index) => (
+                          <option key={index} value={quantity}>
+                            {quantity}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            {/* ===========================Rental Options============================= */}
             <div>
-              <h1 className="text-4xl font-bold text-left pt-0 uppercase">
+              <h1 className="pt-0 text-2xl font-bold text-left uppercase xl:text-3xl lg:text-2xl">
                 Rental Options
               </h1>
-              <div className="lg:grid grid-cols-4 justify-center font-bold text-lg">
+              <div className="justify-center grid-cols-4 text-lg font-bold lg:grid">
                 <div>
-                  <p className="hidden lg:block bg-[#54B435] text-center  text-white font-bold text-2xl py-2 my-5">
+                  <p className="hidden lg:block bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Extra
                   </p>
                   {option.map((p, index) => (
                     <div>
-                      <div className="flex flex-col lg:items-start text-center lg:text-left">
-                        <div className="hidden lg:flex justify-center pb-10 mt-5 xl:mt-0">
-                          {p.item}
+                      <div className="flex flex-col text-center lg:items-start lg:text-left">
+                        <div className="hidden lg:block">
+                          <div className="justify-center pb-10 mt-5 lg:flex xl:mt-0">
+                            {p.item}
+                          </div>
                         </div>
-                        <div className="lg:hidden flex justify-center mt-5">
+                        <div className="flex justify-center mt-5 lg:hidden">
                           Item: {p.item}
                         </div>
-                        <div className="lg:hidden flex justify-center xl:mt-0">
+                        <div className="flex justify-center lg:hidden">
                           Deposit: {p.deposit}
                         </div>
-                        <div className="lg:hidden flex justify-center pb-5 xl:mt-0">
+                        <div className="flex justify-center pb-5 lg:hidden">
                           Cost: {p.cost} USD
                         </div>
-                        <div className="lg:hidden justify-center pb-5 xl:mt-0">
-                          <div className="flex pb-9 mt-5 xl:mt-0 justify-center">
+                        <div className="justify-center pb-5 lg:hidden xl:mt-0">
+                          <div className="flex justify-center mt-5 pb-9 xl:mt-0">
                             <div key={index}>
                               Quantity:{" "}
                               <select
                                 name={`quantity-${index}`}
                                 id={`quantity-${index}`}
-                                className="rounded-lg text-center h-8 w-28"
+                                className="h-8 text-center rounded-lg w-28"
                                 value={selectedQuantities[index] || ""}
                                 onChange={(e) =>
-                                  handleQuantityChange(index, e.target.value)
+                                  handleQuantityChange(
+                                    index,
+                                    e.target.value,
+                                    p.item,
+                                    p.cost,
+                                  )
                                 }
                               >
                                 <option value="">Select</option>
@@ -360,41 +454,41 @@ export default function RentOption() {
                     </div>
                   ))}
                 </div>
-                <div>
-                  <p className="hidden lg:block bg-[#54B435] text-center  text-white font-bold text-2xl py-2 my-5">
+                <div className="hidden lg:block">
+                  <p className="bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Deposit
                   </p>
                   {option.map((p) => (
                     <div>
-                      <div className="hidden lg:flex justify-center pb-10 mt-5 xl:mt-0 ">
+                      <div className="justify-center pb-10 mt-5 lg:flex xl:mt-0 ">
                         {p.deposit}
                       </div>
                     </div>
                   ))}
                 </div>
-                <div>
-                  <p className="hidden lg:block bg-[#54B435] text-center  text-white font-bold text-2xl py-2 my-5">
+                <div className="hidden lg:block">
+                  <p className=" bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Cost
                   </p>
                   {option.map((p) => (
                     <div>
-                      <div className="hidden lg:flex justify-center pb-10 mt-5 xl:mt-0 ">
+                      <div className="justify-center pb-10 mt-5 lg:flex xl:mt-0 ">
                         {p.cost} USD
                       </div>
                     </div>
                   ))}
                 </div>
-                <div>
-                  <p className="hidden lg:block bg-[#54B435] text-center  text-white font-bold text-2xl py-2 my-5">
+                <div className="hidden lg:block">
+                  <p className="bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl py-2 my-5">
                     Quantity
                   </p>
                   {option.map((p, index) => (
-                    <div className="hidden lg:flex pb-9 mt-5 xl:mt-0 justify-center">
+                    <div className="justify-center mt-5 lg:flex pb-9 xl:mt-0">
                       <div key={index}>
                         <select
                           name={`quantity-${index}`}
                           id={`quantity-${index}`}
-                          className="rounded-lg text-center h-8 w-28"
+                          className="h-8 text-center rounded-lg w-28"
                           value={selectedQuantities[index] || ""}
                           onChange={(e) =>
                             handleQuantityChange(
@@ -418,7 +512,7 @@ export default function RentOption() {
                 </div>
               </div>
             </div>
-            <div className="flex xl:justify-end justify-center xl:mt-0 mt-5">
+            <div className="flex justify-center mt-5 xl:justify-end xl:mt-0">
               <button
                 onClick={handleContinue}
                 className="bg-[#54B435] py-2 px-4 font-bold text-xl text-white rounded-full mx-10"

@@ -87,10 +87,8 @@ export default function RentTuk() {
       vehicle: v.vehicle,
       totalPrice: durationDays * v.price,
       deposit: v.deposit,
-      // Include any other data you need here
     };
 
-    // Navigate to RentOption component with data passed through state
     navigate("/RentOption", { state: { data: dataToSend } });
   };
 
@@ -103,12 +101,12 @@ export default function RentTuk() {
       <div className="relative mb-10 pt-28">
         <div className="mx-8 lg:mx-0">
           <div className=" bg-gray-200 mx-full lg:mx-20 xl:mx-52 p-5 rounded-xl">
-            <h1 className="text-4xl font-bold uppercase mt-5">
+            <h1 className="xl:text-3xl lg:text-2xl text-2xl font-bold uppercase mt-5">
               Reservation Details
             </h1>
             <div className="lg:grid grid-cols-3 lg:space-x-10 justify-center">
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                   Period
                 </p>
                 <div className="space-y-2 text-lg xl:w-[350px] lg:w-[200px]">
@@ -141,7 +139,7 @@ export default function RentTuk() {
                 </div>
               </div>
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                   Pick-Up
                 </p>
                 <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
@@ -162,7 +160,7 @@ export default function RentTuk() {
                 </div>
               </div>
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                   Return
                 </p>
                 <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
@@ -183,12 +181,12 @@ export default function RentTuk() {
               </div>
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-left pt-14 uppercase">
+              <h1 className="xl:text-3xl lg:text-2xl text-2xl font-bold text-left pt-14 uppercase">
                 Search Results
               </h1>
               <div className="lg:grid grid-cols-3 justify-center">
                 <div className="xl:w-[600px] lg:w-[450px]">
-                  <p className="bg-[#54B435] text-center  text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Class
                   </p>
                   <div>
@@ -223,7 +221,7 @@ export default function RentTuk() {
                                 $ {v.price} / Day
                               </p>
                               <p className="lg:hidden text-lg font-bold">
-                                {v.deposit}
+                                Deposit: $ {v.deposit}
                               </p>
                               <button
                                 onClick={() => handleChoose(v)}
@@ -239,7 +237,7 @@ export default function RentTuk() {
                   </div>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="bg-[#54B435] text-right text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Total
                   </p>
 
@@ -263,7 +261,7 @@ export default function RentTuk() {
                   </div>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="bg-[#54B435] text-center text-white font-bold text-2xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Deposit
                   </p>
 
@@ -274,7 +272,7 @@ export default function RentTuk() {
                           <div className="mt-28 xl:h-[90px] lg:h-[50px] flex justify-between xl:space-x-2 items-center">
                             <div>
                               <p className="ml-20 font-bold xl:text-2xl">
-                                {v.deposit}
+                               $ {v.deposit}
                               </p>
                             </div>
                             <div className="justify-end">

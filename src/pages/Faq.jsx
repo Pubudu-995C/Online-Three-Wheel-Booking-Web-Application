@@ -20,25 +20,25 @@ export default function Faq() {
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute mt-56 top-0 left-0 w-full justify-center">
-          <h1 className="text-center font-bold lg:text-6xl text-3xl mt-0 text-white uppercase">
+        <div className="absolute top-0 left-0 justify-center w-full mt-56">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
             FAQ
           </h1>
         </div>
       </div>
 
       <div>
-        <div className="m-0 pt-20">
+        <div className="pt-20 m-0">
           <h2 className="text-center font-mono font text-3xl text-[#54B435] uppercase">
             have inquiries on your mind? discover solutions to your questions
             right here!
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3 mx-20">
+          <h1 className="mx-20 mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Frequently Asked Questions
           </h1>
         </div>
 
-        <div className="xl:mx-40 lg:mx-20 mx-8">
+        <div className="mx-8 xl:mx-40 lg:mx-20">
           <p className="mt-12 text-2xl font-bold py-5 text-[#379237]">
             What does your insurance cover?
           </p>
@@ -77,7 +77,7 @@ export default function Faq() {
           <p className="text-2xl font-bold py-5 text-[#379237]">
             What is included in the rental price?
           </p>
-          <ul className="list-disc px-10 text-xl">
+          <ul className="px-10 text-xl list-disc">
             <li>Quality tuktuks sourced from locals to support their income</li>
             <li>Comprehensive third-party insurance for peace of mind</li>
             <li>Locally approved license provided if applicable (Sri Lanka)</li>

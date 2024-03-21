@@ -308,8 +308,8 @@ export default function Home() {
           alt="Wallpaper"
         />
 
-        <div className="absolute top-0 w-full xl:mt-24 md:mt-12 mt-10">
-          <h1 className="text-center font-bold xl:text-6xl lg:text-5xl lg:leading-normal text-3xl mt-20 text-white uppercase">
+        <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12">
+          <h1 className="mt-20 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl lg:leading-normal">
             Explore Sri Lanka with Tuktuk rentals
           </h1>
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 xl:mx-32 lg:mx-10 lg:justify-center md:justify-center">
@@ -461,22 +461,22 @@ export default function Home() {
       </div>
       {/* ===================================================================== */}
 
-      <div className="bg-gradient-to-tl from-lime-300 to-yellow-100 py-10 lg:py-10 px-5 ">
+      <div className="px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
         <div>
           <h2 className="text-center font-mono font text-3xl text-[#54B435] uppercase">
             Set out on a remarkable journey that you'll always remember
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Drive your own Tuktuk in style!
           </h1>
 
-          <p className="text-center mt-12 text-xl">
+          <p className="mt-12 text-xl text-center">
             Hold on, you mean I get to cruise around in a three-wheeler in Sri
             Lanka? Absolutely! And trust me, you're going to have the time of
             your life!
           </p>
 
-          <p className="text-center mt-8 text-xl xl:px-40">
+          <p className="mt-8 text-xl text-center xl:px-40">
             We provide travelers with the opportunity to rent tuktuks, allowing
             them to experience the true essence of Sri Lanka through the joy of
             driving an authentic and dependable rickshaw! Break away from the
@@ -486,19 +486,19 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="lg:flex lg:m-20 mt-10 lg:space-y-0 space-y-10">
+          <div className="mt-10 space-y-10 lg:flex lg:m-20 lg:space-y-0">
             {drive.map((d) => (
               <div class="xl:max-w-96 lg:max-w-64 md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
                 <div>
                   <div>
                     <img
                       src={d.img}
-                      className="mx-auto object-cover w-full h-48"
+                      className="object-cover w-full h-48 mx-auto"
                       alt="Freedom"
                     />
                   </div>
                   <div class="p-8">
-                    <p className="text-center font-bold text-xl">{d.topic}</p>
+                    <p className="text-xl font-bold text-center">{d.topic}</p>
                     <p class="mt-2 text-gray-500 text-center">{d.details}</p>
                   </div>
                 </div>
@@ -509,12 +509,12 @@ export default function Home() {
       </div>
       {/* ===================================================================== */}
 
-      <div className="lg:px-20 px-5 py-10 bg-gray-200 flex flex-col">
+      <div className="flex flex-col px-5 py-10 bg-gray-200 lg:px-20">
         <div>
           <h2 className="text-center font-mono font text-3xl text-[#54B435] uppercase">
             Experience Traveling as a Local
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Our Vehicles
           </h1>
           <p className="mt-8 text-xl text-center lg:px-28">
@@ -526,10 +526,10 @@ export default function Home() {
 
         <div>
           <p className="mt-10 font-bold">CHOOSE YOUR EXTRAS</p>
-          <div className="lg:flex justify-between">
-            <div className="gap-y-2 md:gap-x-2 m-2 ml-0 grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1 grid-cols-1">
+          <div className="justify-between lg:flex">
+            <div className="grid grid-cols-1 m-2 ml-0 gap-y-2 md:gap-x-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1">
               {extras.map((e) => (
-                <div className="bg-white p-2 flex space-x-5 lg:w-full">
+                <div className="flex p-2 space-x-5 bg-white lg:w-full">
                   <div className="p-2">
                     <img src={e.img} className="w-7" alt="" />
                   </div>
@@ -540,29 +540,29 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="xl:w-3/5 lg:w-2/5 lg:mt-20 xl:mt-0 px-5 lg:px-0">
+            <div className="px-5 xl:w-3/5 lg:w-2/5 lg:mt-20 xl:mt-0 lg:px-0">
               <div className="mt-10 lg:mt-0 xl:mt-0">
                 <Slider
                   {...(windowWidth <= 640
                     ? mobileSettings
                     : windowWidth <= 768
-                    ? tabletSettings
-                    : windowWidth <= 1024
-                    ? tabletLargeSettings
-                    : desktopSettings)}
+                      ? tabletSettings
+                      : windowWidth <= 1024
+                        ? tabletLargeSettings
+                        : desktopSettings)}
                 >
                   {carousel.map((d) => (
                     <div
                       key={d.id}
                       className="bg-white xl:h-[500px] h-[600px] md:h-[550px] text-black rounded-xl relative"
                     >
-                      <div className="h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center">
+                      <div className="flex items-center justify-center h-56 bg-indigo-500 rounded-t-xl">
                         <img src={d.img} alt="" className="h-44" />
                       </div>
-                      <div className="flex flex-col justify-center items-center gap-4 p-4">
+                      <div className="flex flex-col items-center justify-center gap-4 p-4">
                         <p className="text-xl font-semibold">{d.name}</p>
                         <p className="text-justify">{d.review}</p>
-                        <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl absolute bottom-5">
+                        <button className="absolute px-6 py-1 text-lg text-white bg-indigo-500 rounded-xl bottom-5">
                           Read More
                         </button>
                       </div>
@@ -595,16 +595,16 @@ export default function Home() {
       </div>
       {/* ===================================================================== */}
 
-      <div className="bg-gradient-to-tl from-lime-300 to-yellow-100 pt-20 px-5">
+      <div className="px-5 pt-20 bg-gradient-to-tl from-lime-300 to-yellow-100">
         <div>
           <h2 className="text-center font-mono font text-3xl text-[#54B435] uppercase">
             Travel Planning Assistance, Absolutely Free!
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Seeking Free Sri Lanka Travel Tips?
           </h1>
 
-          <p className="text-center mt-8 text-xl lg:mx-40">
+          <p className="mt-8 text-xl text-center lg:mx-40">
             Our team specializing in tuktuk rentals is passionately dedicated to
             exploring the wonders of Sri Lanka. Regardless of whether you choose
             to rent a tuktuk or not, you have the option to schedule a
@@ -631,7 +631,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center my-10 py-10">
+          <div className="flex flex-col items-center py-10 my-10">
             <button className="font-bold text-xl bg-[#82CD47] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#F0FF42]">
               MEET THE WHOLE TEEM!
             </button>
@@ -645,10 +645,10 @@ export default function Home() {
           <h2 className="text-center font-mono font text-3xl px-5 text-[#54B435] uppercase">
             Everything is covered, including the TukTuk Mango experience
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Why Choose Us for Booking?
           </h1>
-          <p className="text-center mt-8 text-xl px-5">
+          <p className="px-5 mt-8 text-xl text-center">
             When you book with{" "}
             <span className="font-bold">
               tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -657,14 +657,14 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-20 text-xl px-5">
+        <div className="px-5 mt-20 text-xl">
           <div className="text-center">
             <div className="grid grid-cols-2 lg:grid-cols-4">
               {benifits.map((b) => (
                 <div>
                   <img
                     src={b.img}
-                    className="mb-4 lg:w-24 w-16 mx-auto"
+                    className="w-16 mx-auto mb-4 lg:w-24"
                     alt=""
                   />
                   <p className="mb-10 lg:px-20">{b.details}</p>
@@ -679,26 +679,26 @@ export default function Home() {
       <div className="relative mt-20 xl:h-[750px] lg:h-[800px] md:h-[850px] h-[1000px]">
         <img
           src={wallpaper2}
-          className="opacity-30 object-cover h-full w-full"
+          className="object-cover w-full h-full opacity-30"
           alt="Wallpaper"
         />
         <div className="absolute top-0 w-full">
           <h2 className="text-center font-mono font text-3xl mt-20 text-[#54B435] uppercase">
             Important details to understand
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Frequently Asked Questions
           </h1>
         </div>
 
-        <div className="lg:m-20 mt-20 px-5 pt-10 absolute top-28">
+        <div className="absolute px-5 pt-10 mt-20 lg:m-20 top-28">
           {faqData.map((faq) => (
             <div
               key={faq.id}
               className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] mt-4`}
             >
               <div
-                className="flex justify-between items-center cursor-pointer"
+                className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleExpand(faq.id)}
               >
                 <h2 className="text-lg font-semibold uppercase">
@@ -723,7 +723,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center lg:mt-0 absolute bottom-10 w-full">
+        <div className="absolute flex flex-col items-center w-full lg:mt-0 bottom-10">
           <button
             onClick={faqPageClick}
             className="font-bold text-xl bg-[#F0FF42] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#82CD47]"

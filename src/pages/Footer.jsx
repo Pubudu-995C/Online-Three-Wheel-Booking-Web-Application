@@ -1,14 +1,15 @@
 export default function Footer() {
-
- const getCurrentYear = () => { return new Date().getFullYear();};
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
 
   return (
     <div>
-      <div className="p-10 bg-gray-800 text-gray-200">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+      <div className="p-10 text-gray-200 bg-gray-800">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
             <div className="mb-5">
-              <h4 className="text-3xl pb-4">
+              <h4 className="pb-4 text-3xl">
                 <a href="/" className="flex items-center">
                   <img
                     src="/tuktukmango.png"
@@ -28,7 +29,7 @@ export default function Footer() {
               <ul className="text-gray-500">
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href= "/" className=" hover:text-yellow-500">
+                  <a href="/" className=" hover:text-yellow-500">
                     {" "}
                     Booking
                   </a>
@@ -105,18 +106,18 @@ export default function Footer() {
             </div>
             <div className="mb-5">
               <h4 className="pb-4">Join Our Newsletter</h4>
-              <p className="text-gray-500 pb-2">
+              <p className="pb-2 text-gray-500">
                 Join with us know to new informations and offers
               </p>
               <form action="" className="flex flex-row flex-wrap">
                 <input
                   type="text"
-                  className="text-gray-500 w-2/3 p-2 focus:border-yellow-500"
+                  className="w-2/3 p-2 text-gray-500 focus:border-yellow-500"
                   placeholder="email@example.com"
                   name=""
                   id=""
                 />
-                <button className="p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow-600">
+                <button className="w-1/3 p-2 text-white bg-yellow-500 hover:bg-yellow-600">
                   Subscribe
                 </button>
               </form>
@@ -124,8 +125,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-gray-900 text-gray-500 px-10">
-        <div className="max-w-7xl flex flex-col sm:flex-row py-4 mx-auto justify-between items-center">
+      <div className="w-full px-10 text-gray-500 bg-gray-900">
+        <div className="flex flex-col items-center justify-between py-4 mx-auto max-w-7xl sm:flex-row">
           <div className="text-center">
             <div>
               Copyright &copy; {getCurrentYear()}
@@ -141,34 +142,34 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="text-center text-xl text-white mb-2">
+          <div className="mb-2 text-xl text-center text-white">
             <a
               href
-              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1"
+              className="inline-block w-10 h-10 pt-1 mx-1 bg-yellow-500 rounded-full hover:bg-yellow-600"
             >
               <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a
               href
-              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1"
+              className="inline-block w-10 h-10 pt-1 mx-1 bg-yellow-500 rounded-full hover:bg-yellow-600"
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <a
               href
-              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1"
+              className="inline-block w-10 h-10 pt-1 mx-1 bg-yellow-500 rounded-full hover:bg-yellow-600"
             >
               <i class="fa-brands fa-instagram"></i>
             </a>
             <a
               href
-              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1"
+              className="inline-block w-10 h-10 pt-1 mx-1 bg-yellow-500 rounded-full hover:bg-yellow-600"
             >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a
               href
-              className="w-10 h-10 rounded-full bg-yellow-500 hover:bg-yellow-600 mx-1 inline-block pt-1"
+              className="inline-block w-10 h-10 pt-1 mx-1 bg-yellow-500 rounded-full hover:bg-yellow-600"
             >
               <i class="fa-brands fa-youtube"></i>
             </a>

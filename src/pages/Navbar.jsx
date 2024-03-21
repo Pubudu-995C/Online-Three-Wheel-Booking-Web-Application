@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className=" absolute top-0 left-0 w-full z-20">
+    <div className="absolute top-0 left-0 z-20 w-full">
       <div className="bg-white border-gray-200 py-2.5 dark:bg-gray-900 w-full">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
           <a href="/" className="flex items-center">
@@ -73,7 +73,7 @@ export default function Navbar() {
                   to="/Trip"
                   className={`${
                     isActivePage("/Trip") ? "text-[#F0FF42]" : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   TRIP
                 </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
                     isActivePage("/HowWork")
                       ? "text-[#F0FF42]"
                       : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   HOW IT WORKS
                 </Link>
@@ -97,7 +97,7 @@ export default function Navbar() {
                     isActivePage("/Gallery")
                       ? "text-[#F0FF42]"
                       : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   GALLERY
                 </Link>
@@ -107,7 +107,7 @@ export default function Navbar() {
                   to="/faq"
                   className={`${
                     isActivePage("/faq") ? "text-[#F0FF42]" : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   FAQ
                 </Link>
@@ -117,17 +117,19 @@ export default function Navbar() {
                   to="/jobs"
                   className={`${
                     isActivePage("/jobs") ? "text-[#F0FF42]" : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   JOBS
                 </Link>
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/ContactUs"
                   className={`${
-                    isActivePage("/jobs") ? "text-[#F0FF42]" : "text-gray-300"
-                  } block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                    isActivePage("/ContactUs")
+                      ? "text-[#F0FF42]"
+                      : "text-gray-300"
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
                   CONTACT US
                 </Link>

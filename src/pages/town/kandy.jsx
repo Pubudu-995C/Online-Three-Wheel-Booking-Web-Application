@@ -68,10 +68,10 @@ export default function Kandy() {
           <h2 className="font-mono font text-3xl px-5 text-[#54B435] uppercase">
             A city brimming with culture and heritage
           </h2>
-          <h1 className="font-serif font lg:text-6xl text-3xl font-bold mt-3 mx-4">
+          <h1 className="mx-4 mt-3 font-serif text-3xl font-bold font lg:text-6xl">
             Explore Kandy, Sri Lanka with Tuktuk Mango!
           </h1>
-          <p className="text-justify pt-8 text-xl px-5">
+          <p className="px-5 pt-8 text-xl text-justify">
             Immerse yourself in the enchanting beauty of Kandy, where lush tea
             plantations and majestic mountains create a stunning backdrop for
             exploration. Throughout the year, Kandy boasts temperatures ranging
@@ -84,7 +84,7 @@ export default function Kandy() {
             surroundings.
           </p>
 
-          <p className="text-justify pt-8 text-xl px-5">
+          <p className="px-5 pt-8 text-xl text-justify">
             Experience the tranquility and allure of Kandy as you zip through
             its streets in a tuk-tuk, taking in the breathtaking vistas of
             tea-draped hills and towering peaks. The city's centerpiece, a
@@ -93,27 +93,27 @@ export default function Kandy() {
             by Kandy's unique charm and natural beauty at every turn.
           </p>
 
-          <p className="text-3xl font-bold px-5 py-5">
+          <p className="px-5 py-5 text-3xl font-bold">
             Discover Exciting Activities in and Around Kandy!
           </p>
 
-          <p className="text-justify text-xl px-5 py-5 font-bold">
+          <p className="px-5 py-5 text-xl font-bold text-justify">
             It’s the second-largest city in Sri Lanka
           </p>
 
-          <div className=" flex justify-center">
+          <div className="flex justify-center ">
             <img
               src={Kandy2}
               className="object-cover h-[500px]"
               alt="Wallpaper"
             />
           </div>
-          <p className="text-3xl font-bold px-5 py-5">
+          <p className="px-5 py-5 text-3xl font-bold">
             Explore Kandy hassle-free: Rent from Tuktuk
             <span className="text-[#54B435]">mango</span>.com!
           </p>
 
-          <ul className="list-disc px-10 text-xl leading-relaxed">
+          <ul className="px-10 text-xl leading-relaxed list-disc">
             <li>Choose Kandy as your pickup or drop-off location.</li>
             <li>Select the dates you need the tuktuk for.</li>
             <li>
@@ -143,47 +143,47 @@ export default function Kandy() {
               RESERVE YOUR TUKTUK!
             </button>
           </div>
-          <p className="text-2xl font-bold px-5">
+          <p className="px-5 text-2xl font-bold">
             Get Your Recognition Permit for Sri Lanka from Kandy Easily
           </p>
-          <p className="text-justify pt-5 text-xl px-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             To legally drive a tuktuk in Sri Lanka, you need a specific permit.
             There are two ways to obtain it: either through your International
             Driving Permit (IDP) or by having a Regular National Country License
             with a B/C endorsement (which indicates you're licensed to drive a
             car in your country).
           </p>
-          <p className="text-justify pt-8 text-xl px-5">
+          <p className="px-5 pt-8 text-xl text-justify">
             You have two options for getting your recognition permit from the
             AAC (Automobile Association of Ceylon). Once you choose either,
             you'll get an email containing the license form. Just upload your
             documents there, and we'll have your permit ready for you to pick up
             in Kandy.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Make sure you're protected with our all-inclusive insurance
             coverage.
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             All of our tuktuks are equipped with full insurance that not only
             protects your tuktuk and other vehicles in case of damage but also
             ensures coverage for any personal injuries to you, your passengers,
             and anyone else involved.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Become Proficient with Your Tuktuk: Feel at Ease Before Embarking on
             Your Adventure from Kandy
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             We'll give you an online session to run through all the last-minute
             plans, and we'll help you organize your schedule. Plus, you'll get
             thorough driving lessons before setting off to discover paradise on
             your very own tuktuk adventure from Kandy.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Why Pick Tuktukmango.com?
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Renting a tuktuk offers a thrilling and one-of-a-kind opportunity to
             explore the beautiful scenery and embrace the local vibe,
             particularly in areas like Kandy. When choosing a rental company,
@@ -193,7 +193,7 @@ export default function Kandy() {
             provision, and eco-friendly policies. These factors ensure a smooth
             and enjoyable experience while cruising around.
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Ensuring your safety is our top concern. We've got you covered with
             comprehensive rental insurance, routine vehicle check-ups, and
             skilled mechanics for upkeep. Plus, if you ever find yourself in a
@@ -205,20 +205,20 @@ export default function Kandy() {
             our part to promote eco-friendly tourism and make Sri Lanka greener
             for all.
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             When you're picking out a tuktuk rental service, keep these points
             in mind. Get ready to embrace the freedom of cruising along the open
             roads and soaking in the beauty of Sri Lanka. Your adventure kicks
             off right from Kandy!
           </p>
-          <p className="text-3xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-3xl font-bold">
             Kandy's Must-See Attractions
           </p>
 
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Temple of the Tooth Relic (Sri Dalada Maligawa)
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Come and immerse yourself in the serene atmosphere of this temple,
             where you can witness the sacred relic of Lord Buddha's tooth and
             experience the essence of Buddhism. Admire the intricate
@@ -227,14 +227,14 @@ export default function Kandy() {
             own tuktuk ride. Find it{" "}
             <a
               href="https://sridaladamaligawa.lk/"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">Kandy Lake</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">Kandy Lake</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             Take a leisurely walk around Kandy Lake, which is also
             affectionately called Kiri Muhuda or Milky Ocean. Marvel at the
             stunning reflections of the nearby hills on the tranquil water and
@@ -242,10 +242,10 @@ export default function Kandy() {
             about renting a tuktuk to conveniently reach Kandy Lake and other
             interesting sights nearby.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Royal Botanical Gardens, Peradeniya
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Discover the enchanting allure of Peradeniya Botanical Gardens,
             where a rich tapestry of tropical flora awaits your exploration.
             Wander through verdant pathways, admiring the exotic beauty of rare
@@ -259,16 +259,16 @@ export default function Kandy() {
             rent a tuktuk for convenient transportation. Find it{" "}
             <a
               href="https://www.botanicgardens.gov.lk/"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Udawatta Kele Sanctuary
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Take a leisurely walk through the serene Udawatta Kele Sanctuary,
             nestled amidst the natural beauty of Kandy. Discover the diverse
             plant and animal life, ancient cave temples, and stunning views that
@@ -276,22 +276,22 @@ export default function Kandy() {
             and environmentally conscious journey to the sanctuary. Find it{" "}
             <a
               href="https://www.google.com/maps/place/Udawatta+Kele+Sanctuary/@7.2988835,80.6398284,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae367cd62a0e9bb:0x36fa6b55cd89eec3!8m2!3d7.2988782!4d80.6424033!16s%2Fm%2F06w5gq7?authuser=0&entry=ttu"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">Kandy View Point</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">Kandy View Point</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             Experience the breathtaking beauty of Kandy from the picturesque
             Kandy View Point. Take in the panoramic cityscape, marvel at the
             majestic Temple of the Tooth, and admire the lush green mountains in
             the backdrop. Enjoy a delightful tuktuk ride to the viewpoint and
             soak in the stunning scenery along the way.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">Kandy Cultural Show</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">Kandy Cultural Show</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             Immerse yourself in the rich tapestry of Sri Lankan culture with a
             visit to the Kandy Cultural Show. Prepare to be dazzled by
             captivating performances that highlight the diverse cultural
@@ -299,8 +299,8 @@ export default function Kandy() {
             not consider renting a tuktuk? It's a fun and comfortable way to
             travel and adds to the overall experience.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">Gadaladeniya Temple</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">Gadaladeniya Temple</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             Explore the mesmerizing Gadaladeniya Temple, an exquisite Buddhist
             sanctuary renowned for its distinctive architectural design. Marvel
             at the intricate sculptures, serene ambiance, and awe-inspiring
@@ -309,14 +309,14 @@ export default function Kandy() {
             it{" "}
             <a
               href="https://www.google.com/maps/place/Gadaladeniya+Raja+maha+viharaya/@7.2491439,80.5385309,15z/data=!4m10!1m2!2m1!1sgadaladeniya+temple+map!3m6!1s0x3ae369d25e76adc5:0xc695c9a219c56f4d!8m2!3d7.25753!4d80.556011!15sChdnYWRhbGFkZW5peWEgdGVtcGxlIG1hcFoZIhdnYWRhbGFkZW5peWEgdGVtcGxlIG1hcJIBD2J1ZGRoaXN0X3RlbXBsZZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VRdE5tVmxlazluRUFF4AEA!16s%2Fg%2F11j_p5pg9d?authuser=0&entry=ttu"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">Tea Plantations</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">Tea Plantations</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             Take a delightful journey to the farthest reaches of Kandy and
             explore the beautiful tea estates. Marvel at the breathtaking
             scenery of endless hills blanketed with tea bushes as you delve into
@@ -325,24 +325,24 @@ export default function Kandy() {
             a convenient tuktuk ride. Find it{" "}
             <a
               href="https://www.google.com/maps/place/Ceylon+Tea+Museum/@7.2686647,80.6301589,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae368a77d5cbf91:0xba828c0e203b5306!8m2!3d7.2686594!4d80.6327338!16s%2Fg%2F11fj329wpr?authuser=0&entry=ttu"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <div className=" flex justify-center mt-10">
+          <div className="flex justify-center mt-10 ">
             <img
               src={Kandy3}
               className="object-cover h-[500px]"
               alt="Wallpaper"
             />
           </div>
-          <p className="text-3xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-3xl font-bold">
             How to Get to Kandy from Colombo
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">A Train Ride to Kandy</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">A Train Ride to Kandy</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             If you're planning to journey from Colombo to Kandy by train, head
             straight to Colombo Fort Railway Station for a direct ride. Trains
             are available all day long, offering a speedy and scenic trip.
@@ -352,14 +352,14 @@ export default function Kandy() {
             Lanka. Find the train time table{" "}
             <a
               href="https://eservices.railway.gov.lk/schedule/searchTrain.action?lang=en"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               here
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">A Bus Ride to Kandy</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">A Bus Ride to Kandy</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             You can catch a bus directly from Colombo to Kandy! Just head to
             either the Colombo Central Bus Stand (Pettah) or the Colombo Bastian
             Mawatha Bus Terminal. The journey typically lasts between 3 to 4
@@ -369,31 +369,31 @@ export default function Kandy() {
             bus schedules, you can visit the official website of the Sri Lanka{" "}
             <a
               href="https://www.ntc.gov.lk/"
-              className=" text-blue-600 font-bold"
+              className="font-bold text-blue-600 "
               target="_blank"
             >
               {" "}
               National Transport Commission (NTC).
             </a>
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">By Taxi to Kandy</p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">By Taxi to Kandy</p>
+          <p className="px-5 pt-5 text-xl text-justify">
             You also have the option to hire a private vehicle with a driver,
             either through a rental car service or by using apps like Uber or
             PickMe (a Sri Lankan app). While this is the quickest method of
             travel, it's also the priciest.
           </p>
-          <p className="text-2xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-2xl font-bold">
             Rent a Tuktuk and Drive to Kandy !
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Traveling from Colombo to Kandy in your own tuktuk offers an
             incredible way to soak in the breathtaking scenery and uncover Sri
             Lanka's hidden treasures. Renting a tuktuk adds a thrilling element
             to your journey, granting you the liberty to explore intriguing
             paths and stop wherever catches your eye.
           </p>
-          <p className="text-justify text-xl px-5 pt-5">
+          <p className="px-5 pt-5 text-xl text-justify">
             Ready to embark on this adventure? Simply visit our website,{" "}
             <a href="https://tuktukmango.com">
               <span className="font-bold">
@@ -413,7 +413,7 @@ export default function Kandy() {
               RESERVE YOUR TUKTUK!
             </button>
           </div>
-          <p className="text-3xl font-bold px-5 pt-5">
+          <p className="px-5 pt-5 text-3xl font-bold">
             Frequently Asked Questions
           </p>
         </div>
@@ -424,7 +424,7 @@ export default function Kandy() {
               className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] mt-4`}
             >
               <div
-                className="flex justify-between items-center cursor-pointer"
+                className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleExpand(faq.id)}
               >
                 <h2 className="text-lg font-semibold uppercase">
@@ -450,7 +450,7 @@ export default function Kandy() {
           ))}
         </div>
         <div>
-          <p className="text-3xl font-bold px-5 pt-5 pb-10">Kandy Map</p>
+          <p className="px-5 pt-5 pb-10 text-3xl font-bold">Kandy Map</p>
           <div class="relative mx-5 h-[500px]">
             <iframe
               class="absolute top-0 left-0 w-full h-full"

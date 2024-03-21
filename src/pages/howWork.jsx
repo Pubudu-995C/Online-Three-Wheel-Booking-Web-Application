@@ -81,23 +81,23 @@ export default function HowWork() {
           className="object-cover w-full h-full"
           alt="Wallpaper"
         />
-        <div className="absolute mt-56 top-0 left-0 w-full justify-center">
-          <h1 className="text-center font-bold lg:text-6xl text-3xl mt-0 text-white uppercase">
+        <div className="absolute top-0 left-0 justify-center w-full mt-56">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
             How It Works​
           </h1>
         </div>
       </div>
       {/* ============================================================= */}
       <div className="bg-gradient-to-br from-slate-50 to-lime-200">
-        <div className="m-0 pt-20">
+        <div className="pt-20 m-0">
           <h2 className="text-center font-mono font text-3xl text-[#54B435]">
             HOW IT WORKS
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Let’s Get You Driving a Tuktuk!
           </h1>
 
-          <p className="text-center mt-12 text-xl px-5">
+          <p className="px-5 mt-12 text-xl text-center">
             Driving your own tuktuk in Sri Lanka is easy with{" "}
             <span className="font-bold">
               tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -110,11 +110,11 @@ export default function HowWork() {
 
         <div className="p-10">
           {enjoy.map((j) => (
-            <div className="lg:flex gap-x-4 space-y-5 justify-center items-center lg:text-justify text-center">
+            <div className="items-center justify-center space-y-5 text-center lg:flex gap-x-4 lg:text-justify">
               <div className="p-5 lg:w-2/5">
                 <p className="text-2xl font-bold">{j.topic}</p>
                 <p className="text-xl text-justify ">{j.details}</p>
-                <div className=" text-center">
+                <div className="text-center ">
                   <button className=" bg-[#82CD47] hover:bg-[#379237] transition-colors duration-300 hover:text-white px-10 py-2 rounded-full font-bold mt-10">
                     {j.btn}
                   </button>
@@ -132,19 +132,19 @@ export default function HowWork() {
       <div className="relative xl:h-[850px] lg:h-[950px] md:h-[860px] h-[1300px]">
         <img
           src={wallpaper4}
-          className="brightness-50 object-cover h-full w-full"
+          className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="mt-20 absolute top-0 w-full md:px-5">
+        <div className="absolute top-0 w-full mt-20 md:px-5">
           <h2 className="text-center font-mono font lg:text-3xl text-xl mx-8 text-[#54B435]">
             OUR COMPANY HAS GROWN EXPONENTIALLY
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-2xl font-bold mt-3 text-white">
+          <h1 className="mt-3 font-serif text-2xl font-bold text-center text-white font lg:text-6xl">
             How Does <br /> TukTuk<span className="text-[#54B435]">Mango</span>
             .com Work?
           </h1>
 
-          <p className="lg:text-center text-justify mt-12 text-xl lg:mx-20 mx-8 text-white">
+          <p className="mx-8 mt-12 text-xl text-justify text-white lg:text-center lg:mx-20">
             TukTukMango.com is all about creating a unique and enjoyable
             experience for travelers exploring Sri Lanka. As a social business,
             we connect you with local tuktuk drivers, ensuring they benefit from
@@ -154,7 +154,7 @@ export default function HowWork() {
             Lanka in a whole new way!
           </p>
 
-          <p className="font-bold text-xl lg:mx-28 mx-8 py-5 text-white">
+          <p className="py-5 mx-8 text-xl font-bold text-white lg:mx-28">
             Every tuktukmango.com booking includes
           </p>
 
@@ -196,30 +196,30 @@ export default function HowWork() {
       </div>
       {/* ============================================== */}
       <div>
-        <div className="m-0 pt-20 md:px-5">
+        <div className="pt-20 m-0 md:px-5">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             TUK TUK DRIVING IN SRI LANKA
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-2xl font-bold mt-3 mx-8 lg:mx-20">
+          <h1 className="mx-8 mt-3 font-serif text-2xl font-bold text-center font lg:text-6xl lg:mx-20">
             Can you drive a Tuktuk in Sri Lanka without any legal issues?
           </h1>
 
-          <div className="lg:mx-32 mx-8">
+          <div className="mx-8 lg:mx-32">
             <p className="mt-12 text-xl text-justify">
               Sure thing! If you've got a valid driver's license back home,
               you're good to roll with a tuktuk in Sri Lanka. Just a couple of
               must-haves before you embark on your road adventure:
             </p>
-            <ul className="list-disc py-5 px-10 text-xl">
+            <ul className="px-10 py-5 text-xl list-disc">
               <li>A Sri Lankan driving permit</li>
               <li>Valid vehicle insurance</li>
             </ul>
-            <p className="text-justify text-xl">
+            <p className="text-xl text-justify">
               For a smooth and enjoyable experience navigating a tuktuk in Sri
               Lanka, we suggest a few friendly tips to ensure your safety,
               ethical conduct, and a hassle-free ride:
             </p>
-            <ul className="list-disc py-5 px-10 text-xl">
+            <ul className="px-10 py-5 text-xl list-disc">
               <li>Use a safe and reliable tuktuk</li>
               <li>Take a comprehensive and personal driving lesson</li>
               <li>Have an on board travel and repair kit</li>
@@ -227,11 +227,11 @@ export default function HowWork() {
               <li>Rent from a social business</li>
               <li>Offset your emissions</li>
             </ul>
-            <p className="text-left text-xl">
+            <p className="text-xl text-left">
               Tuktukmango.com offers all of these services conveniently on its
               user-friendly online platform, making booking a breeze!
             </p>
-            <p className="text-2xl font-bold py-5">Sri Lankan Driving Permit</p>
+            <p className="py-5 text-2xl font-bold">Sri Lankan Driving Permit</p>
             <p className="text-xl text-justify">
               To cruise around in a tuktuk or any vehicle in Sri Lanka, you'll
               need a special local license. Unlike many countries, Sri Lanka
@@ -242,7 +242,7 @@ export default function HowWork() {
               of the law and make sure you've got that local permit in your
               pocket! 🚗🇱🇰
             </p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               🌟 If you're a tuktukmango.com customer, we've got your back!
               We'll take care of arranging your local driving permit in advance,
               so you don't have to worry about it upon your arrival. If you have
@@ -256,7 +256,7 @@ export default function HowWork() {
               potential queues, their business hours, and the usual traffic in
               Colombo.
             </p>
-            <p className="text-2xl font-bold py-5">Valid Vehicle Insurance</p>
+            <p className="py-5 text-2xl font-bold">Valid Vehicle Insurance</p>
             <p className="text-xl text-justify">
               🚗 When driving any vehicle in Sri Lanka, it's essential to have
               insurance that covers the person behind the wheel. Keep in mind
@@ -267,7 +267,7 @@ export default function HowWork() {
               foreign driver without any extra hassle. Drive worry-free with
               tuktukmango.com! 🌴
             </p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               Our insurance has everyone covered – that means you as the driver,
               your passengers, your vehicle, and even folks in other vehicles
               you might be involved with. It's a standard feature on all our
@@ -276,7 +276,7 @@ export default function HowWork() {
               everyone and everything involved.
             </p>
             <p className="text-2xl font-bold">Personal Travel Insurance</p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               🌟 While our insurance has got you covered legally, it's crucial
               to consider having your own travel insurance just in case the
               unexpected happens, like a serious injury requiring a medical
@@ -288,13 +288,13 @@ export default function HowWork() {
               When you're searching for insurance coverage, it's important to
               ensure that you're protected for both car and motorcycle usage.
             </p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               If you're in search of travel insurance that's tailored to cover
               tuktuks, we suggest checking out SafetyWing. Their rates begin at
               $37 for a four-week period and cover a variety of benefits, making
               sure you're well-protected during your adventures.
             </p>
-            <ul className="list-disc px-10 text-xl text-justify">
+            <ul className="px-10 text-xl text-justify list-disc">
               <li>
                 Stay worry-free on your travels with our travel medical
                 coverage! Gain access to a reliable global network of hospitals
@@ -311,7 +311,7 @@ export default function HowWork() {
               </li>
             </ul>
             <p className="text-2xl font-bold">Comprehensive Driving Lesson</p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               🚗 Before you venture out on your own, we organize a session with
               a skilled tuktuk driver who will guide you through a thorough
               driving lesson and provide insights into basic vehicle upkeep. Our
@@ -326,7 +326,7 @@ export default function HowWork() {
             </p>
             <div className="lg:flex lg:space-x-20">
               <div>
-                <p className="text-2xl font-bold py-5">
+                <p className="py-5 text-2xl font-bold">
                   On the Road Travel Kit
                 </p>
                 <p className="text-xl text-justify">
@@ -334,7 +334,7 @@ export default function HowWork() {
                   and ensure you have everything you need for an extended
                   journey. Our package comprises:
                 </p>
-                <ul className="list-disc text-xl py-5 px-10">
+                <ul className="px-10 py-5 text-xl list-disc">
                   <li>Spare Tyre</li>
                   <li>Basic Toolset</li>
                   <li>Reserve Fuel Tank</li>
@@ -344,13 +344,13 @@ export default function HowWork() {
                 </ul>
               </div>
               <div>
-                <p className="text-2xl font-bold py-5">Optional Extras</p>
+                <p className="py-5 text-2xl font-bold">Optional Extras</p>
                 <p className="text-xl text-justify">
                   In addition to the basic travel essentials, you have the
                   option to add some extra goodies to enhance your journey.
                   Choose from the following delightful add-ons:
                 </p>
-                <ul className="list-disc text-xl py-5 px-10">
+                <ul className="px-10 py-5 text-xl list-disc">
                   <li>Big Bluetooth Speakers</li>
                   <li>Surfboard roof racks</li>
                   <li>Baby-seats</li>
@@ -364,7 +364,7 @@ export default function HowWork() {
               </div>
             </div>
             <p className="text-2xl font-bold">100% Carbon Neutral</p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               In the fight against climate change, it's important for each of us
               to play a role. When you drive with us, we take care of offsetting
               the carbon footprint of every kilometer you travel by supporting
@@ -373,7 +373,7 @@ export default function HowWork() {
               positive impact together! 🌍✨
             </p>
             <p className="text-2xl font-bold">Repair Costs Covered</p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               🚗 Cruise worry-free on the open road with us! We've got you
               covered for wear and tear, ensuring a smooth ride. If something
               unexpectedly gives out while you're driving responsibly (no beach
@@ -382,7 +382,7 @@ export default function HowWork() {
               🌟 #DriveWithPeaceOfMind
             </p>
             <p className="text-2xl font-bold">Unlimited Kilometres</p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               Whether you're dreaming of quick beach getaways or embarking on an
               epic journey around the globe 🌍, there's no need to stress about
               keeping track of kilometers. At tuktukmango.com, every booking
@@ -391,7 +391,7 @@ export default function HowWork() {
             <p className="text-2xl font-bold">
               Pick up or drop-off your tuktuk anywhere in Sri Lanka!
             </p>
-            <p className="text-xl text-justify py-5">
+            <p className="py-5 text-xl text-justify">
               Absolutely no worries! 🚗 Exciting news – we've got you covered
               for a pickup in charming Kandy and a drop-off in the sunny
               paradise of Arugam Bay! 🌴 We've sprinkled 27 fabulous locations
@@ -411,7 +411,7 @@ export default function HowWork() {
               make sure you hit the road with confidence and a big smile! 😊🛣️
               Let's turn those driving dreams into a reality! 🚀🌈
             </p>
-            <p className="text-2xl font-bold py-5">
+            <p className="py-5 text-2xl font-bold">
               Transparent and Secure Online Payment
             </p>
             <p className="text-xl text-justify">
@@ -424,7 +424,7 @@ export default function HowWork() {
               and crystal clear. Let the good times roll! 🌈💳
               #CashlessAdventures
             </p>
-            <p className="text-2xl font-bold py-5">Alright, let’s do this!</p>
+            <p className="py-5 text-2xl font-bold">Alright, let’s do this!</p>
             <p className="text-xl text-justify">
               If you've managed to stick with me until now, it's high time to
               snag your fancy lawnmower and gear up for an adventure that will
@@ -437,23 +437,23 @@ export default function HowWork() {
       <div className="relative mt-10 h-[500px]">
         <img
           src={wallpaper5}
-          className=" opacity-20 w-full h-full object-cover"
+          className="object-cover w-full h-full  opacity-20"
           alt="Wallpaper"
         />
-        <div className="mt-20 absolute top-0 w-full">
+        <div className="absolute top-0 w-full mt-20">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             STILL READING? BOOK NOW...
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-2xl font-bold mt-3">
+          <h1 className="mt-3 font-serif text-2xl font-bold text-center font lg:text-6xl">
             Sure, let's Get Started!
           </h1>
 
-          <p className="text-center mt-12 text-xl lg:mx-20 mx-8">
+          <p className="mx-8 mt-12 text-xl text-center lg:mx-20">
             If you're still with us at this point, then it's high time to secure
             your fancy lawnmower and gear up for an adventure that will stay
             with you forever!
           </p>
-          <div className="lg:space-x-40 md:space-x-20 space-y-4 lg:space-y-0 text-center lg:mt-20 mt-10">
+          <div className="mt-10 space-y-4 text-center lg:space-x-40 md:space-x-20 lg:space-y-0 lg:mt-20">
             <button
               onClick={homePageClick}
               className=" font-bold text-xl bg-[#F0FF42] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#82CD47]"

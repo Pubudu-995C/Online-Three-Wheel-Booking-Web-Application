@@ -79,25 +79,25 @@ export default function Gallery() {
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute mt-56 top-0 left-0 w-full justify-center">
-          <h1 className="text-center font-bold lg:text-6xl text-3xl mt-0 text-white uppercase">
+        <div className="absolute top-0 left-0 justify-center w-full mt-56">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
             Tuktuk Mango Travel Photos
           </h1>
         </div>
       </div>
 
       <div>
-        <div className="m-0 pt-20">
+        <div className="pt-20 m-0">
           <h2 className="text-center font-mono font text-3xl text-[#54B435] mx-5">
             CREATING MEMORIES ONE STEP AT A TIME
           </h2>
-          <h1 className="text-center font-serif font lg:text-6xl text-3xl font-bold mt-3 mx-20">
+          <h1 className="mx-20 mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Embarking on an adventure across the globe with three wheels
           </h1>
         </div>
       </div>
 
-      <div className="lg:mx-20 my-10">
+      <div className="my-10 lg:mx-20">
         <>
           <div className={model ? "model open" : "model"}>
             <img src={tempimg} alt="" />
