@@ -7,7 +7,7 @@ export default function Jobs() {
     <div>
       <div>
         <Navbar />
-        <div className="h-96">
+        <div className="h-[500px]">
           <img
             src={wallpaper9}
             className="object-cover w-full h-full brightness-50"

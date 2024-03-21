@@ -255,8 +255,8 @@ export default function RentCost() {
                   )}
                 </div>
 
-                <div className="grid grid-rows-1 mt-8 xl:text-right ">
-                  <div className="hidden lg:block">
+                <div className="hidden lg:block">
+                  <div className="grid mt-8 xl:grid-rows-3 xl:text-right">
                     <div>
                       <p className="text-2xl font-bold">Period</p>
                       <p className="mt-4 text-lg font-bold text-red-500">
@@ -264,14 +264,14 @@ export default function RentCost() {
                       </p>
                     </div>
                     <div />
-                    <div>
+                    <div className="mb-5">
                       <p className="text-2xl font-bold">Total</p>
                       <p className="mt-4 text-lg font-bold text-red-500">
                         {total} USD
                       </p>
                     </div>
                     {driQuantity && (
-                      <div className="mt-5">
+                      <div>
                         <p className="text-2xl font-bold">Driver Total</p>
                         <p className="mt-4 text-lg font-bold text-red-500">
                           {totalDriverCost} USD

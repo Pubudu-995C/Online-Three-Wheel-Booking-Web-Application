@@ -556,13 +556,13 @@ export default function Home() {
                       key={d.id}
                       className="bg-white xl:h-[500px] h-[600px] md:h-[550px] text-black rounded-xl relative"
                     >
-                      <div className="flex items-center justify-center h-56 bg-indigo-500 rounded-t-xl">
+                      <div className="flex items-center justify-center h-56 bg-green-500 rounded-t-xl">
                         <img src={d.img} alt="" className="h-44" />
                       </div>
                       <div className="flex flex-col items-center justify-center gap-4 p-4">
                         <p className="text-xl font-semibold">{d.name}</p>
                         <p className="text-justify">{d.review}</p>
-                        <button className="absolute px-6 py-1 text-lg text-white bg-indigo-500 rounded-xl bottom-5">
+                        <button className="absolute px-6 py-1 text-lg text-white bg-yellow-500 rounded-xl bottom-5">
                           Read More
                         </button>
                       </div>
