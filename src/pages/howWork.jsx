@@ -119,7 +119,7 @@ export default function HowWork() {
                   {j.details}
                 </p>
                 <div className="text-center ">
-                  <button className=" bg-[#82CD47] hover:bg-[#379237] transition-colors duration-300 hover:text-white px-10 py-2 rounded-full font-bold mt-10 text-sm lg:text-base">
+                  <button className=" bg-[#82CD47] hover:bg-[#379237] transition-colors duration-300 hover:text-white px-10 py-2 rounded-full font-bold mt-5 text-sm lg:text-base">
                     {j.btn}
                   </button>
                 </div>

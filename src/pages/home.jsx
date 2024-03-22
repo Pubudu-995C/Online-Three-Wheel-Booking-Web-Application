@@ -529,7 +529,7 @@ export default function Home() {
           <div className="justify-between lg:flex">
             <div className="grid grid-cols-1 m-2 ml-0 gap-y-2 md:gap-x-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1">
               {extras.map((e) => (
-                <div className="flex p-2 space-x-5 bg-white lg:w-full">
+                <div className="flex p-2 space-x-5 bg-white lg:w-full rounded-tl-2xl rounded-br-2xl shadow-lg">
                   <div className="p-2">
                     <img src={e.img} className="w-7" alt="" />
                   </div>
@@ -564,7 +564,7 @@ export default function Home() {
                       <div className="flex flex-col items-center justify-center gap-4 p-4">
                         <p className="text-xl font-semibold">{d.name}</p>
                         <p className="text-justify">{d.review}</p>
-                        <button className="absolute px-6 py-1 text-lg text-black hover:text-white font-bold bg-[#F0FF42] hover:bg-[#82CD47] transition-colors duration-300 rounded-xl bottom-5">
+                        <button className="absolute px-6 py-1 text-lg text-black hover:text-white font-bold bg-[#F0FF42] hover:bg-[#82CD47] transition-colors duration-300 rounded-lg bottom-5">
                           Read More
                         </button>
                       </div>

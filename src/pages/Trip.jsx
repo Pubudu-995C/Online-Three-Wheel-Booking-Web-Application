@@ -113,7 +113,7 @@ export default function Trip() {
         </div>
 
         <div>
-          <div className="m-auto xl:w-4/5">
+          <div className="m-auto xl:w-5/6">
             <div className="m-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0">
               {trip.map((d) => (
                 <div className="bg-white h-[550px] sm:h-[640px] lg:h-[520px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
@@ -127,7 +127,7 @@ export default function Trip() {
                   <div className="flex flex-col items-center justify-center flex-1 gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
                     <p className="text-justify">{d.review}</p>
-                    <button className="px-6 py-1 mt-auto text-lg text-white bg-indigo-500 rounded-xl">
+                    <button className="px-6 py-1 mt-auto text-lg text-white bg-[#379237] hover:bg-[#82CD47] transition-colors duration-300 font-bold rounded-lg">
                       Read More
                     </button>
                   </div>
