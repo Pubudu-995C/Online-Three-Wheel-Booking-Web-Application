@@ -76,7 +76,7 @@ export default function Trip() {
     <div>
       <div>
         <Navbar />
-        <div className="lg:h-[500px] md:h-[400px] h-[400px]">
+        <div className="h-[500px]">
           <img
             src={wallpaper7}
             className="object-cover w-full h-full brightness-50"
