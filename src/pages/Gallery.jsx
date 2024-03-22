@@ -88,10 +88,10 @@ export default function Gallery() {
 
       <div>
         <div className="pt-20 m-0">
-          <h2 className="text-center font-mono font text-3xl text-[#54B435] mx-5">
+          <h2 className="text-center font-mono font xl:text-3xl text-xl text-[#54B435] mx-5">
             CREATING MEMORIES ONE STEP AT A TIME
           </h2>
-          <h1 className="mx-20 mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="lg:mx-20 mx-8 mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Embarking on an adventure across the globe with three wheels
           </h1>
         </div>
@@ -128,7 +128,7 @@ export default function Gallery() {
       <div className="flex flex-col items-center my-10">
         <button
           onClick={homePageClick}
-          className="font-bold text-xl bg-[#82CD47] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#F0FF42]"
+          className="font-bold lg:text-xl text-base text-white hover:text-black bg-[#82CD47] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#F0FF42]"
         >
           RESERVE YOUR TUKTUK!
         </button>

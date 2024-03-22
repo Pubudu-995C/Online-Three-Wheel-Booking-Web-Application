@@ -76,7 +76,7 @@ export default function Trip() {
     <div>
       <div>
         <Navbar />
-        <div className="h-[500px]">
+        <div className="lg:h-[500px] md:h-[400px] h-[400px]">
           <img
             src={wallpaper7}
             className="object-cover w-full h-full brightness-50"
@@ -92,14 +92,14 @@ export default function Trip() {
 
       <div className="pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
         <div className="pt-20 ">
-          <h2 className="text-center font-mono font text-3xl text-[#54B435]">
+          <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             TUKTUK ITINERARIES
           </h2>
           <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
             Explore the wonders of Sri Lanka aboard a tuktuk!
           </h1>
 
-          <p className="px-5 mt-12 text-xl text-center lg:mx-20">
+          <p className="px-5 mt-12 lg:text-xl text-lg text-center lg:mx-20">
             Experience all that Sri Lanka has to offer from the unique vantage
             point of a tuktuk! When you choose to book a tuktuk through{" "}
             <span className="font-bold">
@@ -140,14 +140,14 @@ export default function Trip() {
       {/* ====================================================================== */}
 
       <div>
-        <div className="relative xl:h-full lg:h-[750px] h-[1000px]">
+        <div className="relative xl:h-full lg:h-[750px] md:h-[650px] h-[900px]">
           <img
             src={wallpaper9}
             className="object-cover w-full h-full brightness-50"
             alt="Wallpaper"
           />
           <div className="absolute top-0 w-full">
-            <h2 className="text-center font-mono font text-3xl mt-20 text-[#54B435]">
+            <h2 className="text-center font-mono font lg:text-3xl text-xl mt-20 text-[#54B435]">
               GATHER INDELIBLE MOMENTS
             </h2>
             <h1 className="mx-10 mt-3 font-serif text-3xl font-bold text-center text-white font lg:text-6xl">
@@ -155,8 +155,8 @@ export default function Trip() {
             </h1>
           </div>
 
-          <div className="absolute top-0 left-0 right-0 mt-80 sm:mx-20 xl:mx-40 lg:mx-28">
-            <div className="grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-3">
+          <div className="absolute top-0 left-0 right-0 mt-80 md:mt-60 lg:mt-72 sm:mx-20 xl:mx-40 lg:mx-28">
+            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3">
               {townList.map((town, index) => (
                 <div
                   key={index}
@@ -164,9 +164,9 @@ export default function Trip() {
                 >
                   <a
                     href={town.details ? `/${town.town.toLowerCase()}` : "#"}
-                    className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl text-base font-bold"
+                    className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg text-sm font-bold"
                   >
-                    <i className="mx-5 text-base fa-solid fa-location-dot xl:text-2xl"></i>
+                    <i className="lg:mx-5 mx-3 text-sm fa-solid fa-location-dot xl:text-2xl"></i>
                     {town.town}
                   </a>
                 </div>

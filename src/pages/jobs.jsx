@@ -20,7 +20,7 @@ export default function Jobs() {
           </div>
           <div className="px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
             <div>
-              <h2 className="text-center font-mono font text-3xl text-[#54B435] uppercase">
+              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
                 Tuktuk Mango Jobs
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
