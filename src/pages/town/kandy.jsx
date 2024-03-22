@@ -56,7 +56,7 @@ export default function Kandy() {
   return (
     <div>
       <Navbar />
-      <div className="h-[500px]">
+      <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
         <img
           src={Kandy1}
           className="object-cover w-full h-full"
@@ -68,7 +68,7 @@ export default function Kandy() {
           <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
             A city brimming with culture and heritage
           </h2>
-          <h1 className="mx-4 mt-3 font-serif text-3xl font-bold font lg:text-6xl">
+          <h1 className="mx-4 mt-3 font-serif text-3xl font-bold font lg:text-5xl xl:text-6xl">
             Explore Kandy, Sri Lanka with Tuktuk Mango!
           </h1>
           <p className="px-5 pt-8 lg:text-xl md:text-lg text-base text-justify">

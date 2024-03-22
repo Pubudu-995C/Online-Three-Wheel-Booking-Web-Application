@@ -76,30 +76,30 @@ export default function Trip() {
     <div>
       <div>
         <Navbar />
-        <div className="h-[500px]">
+        <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
           <img
             src={wallpaper7}
             className="object-cover w-full h-full brightness-50"
             alt="Wallpaper"
           />
-          <div className="absolute top-0 left-0 justify-center w-full mt-56">
-            <h1 className="mx-4 mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl lg:mx-20">
+          <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+            <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
               Discover sri lanka by tuktuk!
             </h1>
           </div>
         </div>
       </div>
 
-      <div className="pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
+      <div className="pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100 px-5">
         <div className="pt-20 ">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             TUKTUK ITINERARIES
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
             Explore the wonders of Sri Lanka aboard a tuktuk!
           </h1>
 
-          <p className="px-5 mt-12 lg:text-xl text-lg text-center lg:mx-20">
+          <p className="mt-12 xl:text-xl md:text-lg text-base text-center lg:mx-10 xl:mx-20">
             Experience all that Sri Lanka has to offer from the unique vantage
             point of a tuktuk! When you choose to book a tuktuk through{" "}
             <span className="font-bold">
@@ -113,10 +113,10 @@ export default function Trip() {
         </div>
 
         <div>
-          <div className="m-auto xl:w-5/6">
-            <div className="m-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0">
+          <div className="m-auto xl:w-5/7">
+            <div className="mt-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0 md:mx-20 lg:mx-10">
               {trip.map((d) => (
-                <div className="bg-white h-[550px] sm:h-[640px] lg:h-[520px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
+                <div className="bg-white h-[550px] sm:h-[640px] lg:h-[540px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
                   <div className="flex  rounded-t-xl">
                     <img
                       src={d.img}
@@ -126,7 +126,9 @@ export default function Trip() {
                   </div>
                   <div className="flex flex-col items-center justify-center flex-1 gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
-                    <p className="text-justify">{d.review}</p>
+                    <p className="text-justify lg:text-base text-sm">
+                      {d.review}
+                    </p>
                     <button className="px-6 py-1 mt-auto text-lg text-white bg-[#379237] hover:bg-[#82CD47] transition-colors duration-300 font-bold rounded-lg">
                       Read More
                     </button>
@@ -150,7 +152,7 @@ export default function Trip() {
             <h2 className="text-center font-mono font lg:text-3xl text-xl mt-20 text-[#54B435]">
               GATHER INDELIBLE MOMENTS
             </h2>
-            <h1 className="mx-10 mt-3 font-serif text-3xl font-bold text-center text-white font lg:text-6xl">
+            <h1 className="mx-4 mt-3 font-serif text-3xl font-bold text-center text-white font lg:text-5xl xl:text-6xl">
               Discover beautiful places on the beautiful island
             </h1>
           </div>
@@ -164,9 +166,9 @@ export default function Trip() {
                 >
                   <a
                     href={town.details ? `/${town.town.toLowerCase()}` : "#"}
-                    className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg text-sm font-bold"
+                    className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg md:text-sm text-xs font-bold"
                   >
-                    <i className="lg:mx-5 mx-3 text-sm fa-solid fa-location-dot xl:text-2xl"></i>
+                    <i className="lg:mx-5 mx-2 text-xs md:text-sm fa-solid fa-location-dot xl:text-2xl"></i>
                     {town.town}
                   </a>
                 </div>

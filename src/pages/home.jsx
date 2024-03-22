@@ -56,6 +56,7 @@ export default function Home() {
 
   // =================================================================
 
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -69,9 +70,15 @@ export default function Home() {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          playVideoFromTime(30); // Start video time seconds
+          if (!isPlaying) {
+            playVideoFromTime(30); // Start video time seconds
+            setIsPlaying(true);
+          }
         } else {
-          videoElement.pause();
+          if (isPlaying) {
+            videoElement.pause();
+            setIsPlaying(false);
+          }
         }
       });
     };
@@ -82,7 +89,7 @@ export default function Home() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [isPlaying]);
 
   const playVideoFromTime = (startTime) => {
     if (videoRef.current) {
@@ -466,7 +473,7 @@ export default function Home() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
             Set out on a remarkable journey that you'll always remember
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Drive your own Tuktuk in style!
           </h1>
 
@@ -486,9 +493,9 @@ export default function Home() {
         </div>
 
         <div>
-          <div className="mt-10 space-y-10 lg:flex lg:m-20 lg:space-y-0">
+          <div className="mt-10 space-y-10 lg:flex lg:my-10 lg:space-y-0">
             {drive.map((d) => (
-              <div class="xl:max-w-96 lg:max-w-64 md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
+              <div class="xl:max-w-96 lg:max-w-[300px] md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
                 <div>
                   <div>
                     <img
@@ -514,7 +521,7 @@ export default function Home() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
             Experience Traveling as a Local
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Our Vehicles
           </h1>
           <p className="mt-8 lg:text-xl text-lg text-center lg:px-28">
@@ -556,14 +563,16 @@ export default function Home() {
                   {carousel.map((d) => (
                     <div
                       key={d.id}
-                      className="bg-white xl:h-[500px] h-[550px] md:h-[550px] text-black rounded-xl relative"
+                      className="bg-white xl:h-[500px] lg:h-[540px] h-[550px] md:h-[500px] text-black rounded-xl relative"
                     >
                       <div className="flex items-center justify-center h-56 bg-[#379237] rounded-t-xl">
                         <img src={d.img} alt="" className="h-44" />
                       </div>
                       <div className="flex flex-col items-center justify-center gap-4 p-4">
                         <p className="text-xl font-semibold">{d.name}</p>
-                        <p className="text-justify">{d.review}</p>
+                        <p className="text-justify text-sm lg:text-base">
+                          {d.review}
+                        </p>
                         <button className="absolute px-6 py-1 text-lg text-black hover:text-white font-bold bg-[#F0FF42] hover:bg-[#82CD47] transition-colors duration-300 rounded-lg bottom-5">
                           Read More
                         </button>
@@ -602,7 +611,7 @@ export default function Home() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
             Travel Planning Assistance, Absolutely Free!
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Seeking Free Sri Lanka Travel Tips?
           </h1>
 
@@ -647,7 +656,7 @@ export default function Home() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
             Everything is covered, including the TukTuk Mango experience
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Why Choose Us for Booking?
           </h1>
           <p className="px-5 mt-8 lg:text-xl text-lg text-center">
@@ -690,7 +699,7 @@ export default function Home() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl mt-20 text-[#54B435] uppercase">
             Important details to understand
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Frequently Asked Questions
           </h1>
         </div>

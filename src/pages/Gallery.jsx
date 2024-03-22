@@ -73,31 +73,31 @@ export default function Gallery() {
   return (
     <div>
       <Navbar />
-      <div className="h-[500px]">
+      <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
         <img
           src={wallpaper6}
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute top-0 left-0 justify-center w-full mt-56">
-          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
+        <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
             Tuktuk Mango Travel Photos
           </h1>
         </div>
       </div>
 
       <div>
-        <div className="pt-20 m-0">
+        <div className="pt-20">
           <h2 className="text-center font-mono font xl:text-3xl text-xl text-[#54B435] mx-5">
             CREATING MEMORIES ONE STEP AT A TIME
           </h2>
-          <h1 className="lg:mx-20 mx-8 mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="lg:mx-20 mx-8 mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
             Embarking on an adventure across the globe with three wheels
           </h1>
         </div>
       </div>
 
-      <div className="my-10 lg:mx-20">
+      <div className="my-10 md:mx-10">
         <>
           <div className={model ? "model open" : "model"}>
             <img src={tempimg} alt="" />

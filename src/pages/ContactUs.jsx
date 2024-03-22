@@ -7,14 +7,14 @@ export default function ContactUs() {
   return (
     <div>
       <Navbar />
-      <div className="h-[500px]">
+      <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
         <img
           src={wallpaper10}
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute top-0 left-0 justify-center w-full mt-56">
-          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
+        <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
             Reach Out and Connect Today
           </h1>
         </div>
@@ -38,7 +38,7 @@ export default function ContactUs() {
           <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
               <div class="h-full pr-6">
-                <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400 text-justify">
                   Explore Sri Lanka with TukTukMango! Rent our vibrant tuk-tuks
                   for an unforgettable adventure. Contact us today for a
                   seamless and personalized experience tailored to your

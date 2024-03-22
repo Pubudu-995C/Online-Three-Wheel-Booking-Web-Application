@@ -7,14 +7,14 @@ export default function Jobs() {
     <div>
       <div>
         <Navbar />
-        <div className="h-[500px]">
+        <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
           <img
             src={wallpaper9}
             className="object-cover w-full h-full brightness-50"
             alt="Wallpaper"
           />
-          <div className="absolute top-0 left-0 justify-center w-full mt-56">
-            <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
+          <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+            <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
               jobs
             </h1>
           </div>
@@ -23,7 +23,7 @@ export default function Jobs() {
               <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
                 Tuktuk Mango Jobs
               </h2>
-              <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Contact Us to know More Details
               </h1>
             </div>

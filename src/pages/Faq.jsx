@@ -14,31 +14,31 @@ export default function Faq() {
   return (
     <div>
       <Navbar />
-      <div className="h-[500px]">
+      <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
         <img
           src={wallpaper8}
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute top-0 left-0 justify-center w-full mt-56">
-          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase lg:text-6xl">
+        <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+          <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
             FAQ
           </h1>
         </div>
       </div>
 
       <div>
-        <div className="pt-20 m-0">
+        <div className="pt-20">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
             have inquiries on your mind? discover solutions to your questions
             right here!
           </h2>
-          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
             Frequently Asked Questions
           </h1>
         </div>
 
-        <div className="mx-8 xl:mx-40 lg:mx-20">
+        <div className="mx-8 xl:mx-34 lg:mx-20">
           <p className="mt-12 xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             What does your insurance cover?
           </p>
