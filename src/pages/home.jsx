@@ -308,7 +308,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className="xl:h-[850px] lg:h-[900px] h-[1150px]">
+      <div className="xl:h-[850px] lg:h-[900px] md:h-[1000px] h-[1200px]">
         <img
           src={wallpaper}
           className="object-cover w-full h-full brightness-[70%]"
@@ -350,7 +350,7 @@ export default function Home() {
                 </select>
               </div>
 
-              <div class="lg:flex mb-4 lg:space-x-4">
+              <div class="md:flex mb-4 md:space-x-4">
                 <div className="flex flex-col w-full lg:w-full">
                   <label for="date" class="text-sm font-medium">
                     Date
@@ -421,7 +421,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div class="lg:flex mb-4 lg:space-x-4">
+              <div class="md:flex mb-4 md:space-x-4">
                 <div className="flex flex-col w-full">
                   <label for="endDate" class="text-sm font-medium">
                     Date
