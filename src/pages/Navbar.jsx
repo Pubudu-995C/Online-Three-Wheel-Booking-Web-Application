@@ -10,6 +10,10 @@ export default function Navbar() {
     return location.pathname === pathname;
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="fixed top-0 left-0 z-20 w-full lg:absolute">
       <div className="bg-white border-gray-200 py-2.5 dark:bg-gray-900 w-full">
@@ -71,6 +75,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/Trip"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/Trip") ? "text-[#F0FF42]" : "text-gray-300"
                   } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
@@ -81,6 +86,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/HowWork"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/HowWork")
                       ? "text-[#F0FF42]"
@@ -93,6 +99,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/Gallery"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/Gallery")
                       ? "text-[#F0FF42]"
@@ -105,6 +112,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/faq"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/faq") ? "text-[#F0FF42]" : "text-gray-300"
                   } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
@@ -115,6 +123,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/jobs"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/jobs") ? "text-[#F0FF42]" : "text-gray-300"
                   } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
@@ -125,6 +134,7 @@ export default function Navbar() {
               <li>
                 <Link
                   to="/ContactUs"
+                  onClick={scrollToTop}
                   className={`${
                     isActivePage("/ContactUs")
                       ? "text-[#F0FF42]"
