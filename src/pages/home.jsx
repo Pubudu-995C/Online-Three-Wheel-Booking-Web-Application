@@ -227,22 +227,22 @@ export default function Home() {
   const team = [
     {
       img: `/team/person (2).png`,
-      name: `Alan Turing`,
+      name: `Pubudu`,
       details: `Frontend Developer`,
     },
     {
       img: `/team/person (1).png`,
-      name: `Veronica Smith`,
+      name: `Oshani`,
       details: `Backend Developer`,
     },
     {
       img: `/team/person (3).png`,
-      name: `Tom Johnson`,
+      name: `Sanjaya`,
       details: `Digital Marketing Analyst`,
     },
     {
       img: `/team/person (4).png`,
-      name: `Emma Lovelace`,
+      name: `Hasitha`,
       details: `Web Designer`,
     },
   ];
