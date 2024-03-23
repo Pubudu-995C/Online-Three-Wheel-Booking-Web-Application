@@ -117,78 +117,95 @@ export default function RentCost() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="mx-8 lg:mx-0">
+        <div className="md:mx-8 lg:mx-0">
           {/* =========================RENTAL DETAILS============================= */}
           <div className="p-5 bg-gray-200 mx-full lg:mx-20 xl:mx-52 rounded-xl">
             <div>
               <div>
-                <h1 className="mt-5 text-3xl font-bold uppercase">
+                <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
                   Rental Details
                 </h1>
               </div>
               <div className="grid grid-cols-1 text-center xl:grid-cols-3 lg:grid-cols-2 xl:text-left">
                 <div className="mt-8">
                   <div>
-                    <p className="text-2xl font-bold">Pick-up Location</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
+                    <p className="md:text-2xl text-xl font-bold">
+                      Pick-up Location
+                    </p>
+                    <p className="hidden lg:block mt-4 text-lg font-bold text-red-500">
                       {pickupCity}
                     </p>
                     {/* ==============Mobile Response========== */}
+                    <p className="lg:hidden mb-4 text-lg font-bold text-red-500">
+                      {pickupCity}
+                    </p>
                     <div className="lg:hidden">
-                      <p className="text-2xl font-bold">Pick-up Date & Time</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">
+                        Pick-up Date & Time
+                      </p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         <span className="text-blue-600">Date: </span>
                         {pickupDate}{" "}
                         <span className="text-blue-600 ">Time: </span>{" "}
                         {pickupTime}
                       </p>
                       <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="text-2xl font-bold">Return Location</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">
+                        Return Location
+                      </p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         {returnCity}
                       </p>
-                      <p className="text-2xl font-bold">Return Date & Time</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">
+                        Return Date & Time
+                      </p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         <span className="text-blue-600">Date: </span>
                         {returnDate}{" "}
                         <span className="text-blue-600">Time: </span>{" "}
                         {returnTime}
                       </p>
                       <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="text-2xl font-bold">Period</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">Period</p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         {durationDays} Days
                       </p>
                       <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="text-2xl font-bold">Selected Cars</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">
+                        Selected Cars
+                      </p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         {vehicle}
                       </p>
-                      <p className="text-2xl font-bold">Price</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">Price</p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         {tukQuantity
                           ? `$ ${totalPrice} x ${tukQuantity}`
                           : `$ ${totalPrice}`}
                       </p>
-                      <p className="text-2xl font-bold">Total</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="md:text-2xl text-xl font-bold">Total</p>
+                      <p className="mb-4 text-lg font-bold text-red-500">
                         {total} USD
                       </p>
                       <hr className="h-2 bg-[#54B435] rounded-full my-5" />
                       {driQuantity && (
                         <div>
-                          <p className="text-2xl font-bold">
+                          <p className="md:text-2xl text-xl font-bold">
                             Selected Driver(s)
                           </p>
-                          <p className="mt-4 text-lg font-bold text-red-500">
+                          <p className="mb-4 text-lg font-bold text-red-500">
                             {driQuantity} Driver(s)
                           </p>
-                          <p className="text-2xl font-bold">Driver Price</p>
-                          <p className="mt-4 text-lg font-bold text-red-500">
+                          <p className="md:text-2xl text-xl font-bold">
+                            Driver Price
+                          </p>
+                          <p className="mb-4 text-lg font-bold text-red-500">
                             {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
                           </p>
-                          <p className="text-2xl font-bold">Driver Total</p>
-                          <p className="mt-4 text-lg font-bold text-red-500">
+                          <p className="md:text-2xl text-xl font-bold">
+                            Driver Total
+                          </p>
+                          <p className="mb-4 text-lg font-bold text-red-500">
                             {totalDriverCost} USD
                           </p>
                         </div>
@@ -310,7 +327,7 @@ export default function RentCost() {
             <div>
               {options && options.length > 0 && (
                 <div>
-                  <h1 className="my-5 text-3xl font-bold uppercase">
+                  <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
                     Extra Options
                   </h1>
                   {options.map((option, index) => (
@@ -342,7 +359,9 @@ export default function RentCost() {
             </div>
             {/* ===============================TOTAL================================== */}
             <div>
-              <h1 className="mt-5 text-3xl font-bold uppercase">Total</h1>
+              <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
+                Total
+              </h1>
               <div className="grid xl:grid-cols-3">
                 <div />
                 <div className="grid grid-rows-4 text-xl font-bold text-center gap-y-2 xl:gap-x-0 xl:text-left">
@@ -384,14 +403,185 @@ export default function RentCost() {
             {/* =======================================CUSTOMER DETAILS========================================== */}
             <div>
               <div>
-                <h1 className="mt-5 text-3xl font-bold uppercase">
+                <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
                   Customer Details
                 </h1>
               </div>
               <div className="mt-10">
                 <form action="" method="post">
-                  <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-x-10 xl:mx-10">
-                    <div className="space-y-5 font-bold">
+                  <div className="hidden md:block">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 md:gap-x-3 xl:gap-x-10 xl:mx-10">
+                      <div className="space-y-5 font-bold">
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="title">Title</label>
+                          <select
+                            name="title"
+                            id="title"
+                            value={formData.title}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          >
+                            <option value=""></option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Miss.">Miss.</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Prof.">Prof.</option>
+                          </select>
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="lastName">Last Name</label>
+                          <input
+                            type="text"
+                            name="lastName"
+                            id="lastName"
+                            value={formData.lastName}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="address">Address</label>
+                          <input
+                            type="text"
+                            name="address"
+                            id="address"
+                            value={formData.address}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="state">State</label>
+                          <input
+                            type="text"
+                            name="state"
+                            id="state"
+                            value={formData.state}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="country">Country</label>
+                          <input
+                            type="text"
+                            name="country"
+                            id="country"
+                            value={formData.country}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="email">E-mail</label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            value={formData.email}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-5 font-bold">
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="firstName">First Name</label>
+                          <input
+                            type="text"
+                            name="firstName"
+                            id="firstName"
+                            value={formData.firstName}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="dob">Date of Birth:</label>
+                          <input
+                            type="date"
+                            name="dob"
+                            id="dob"
+                            value={formData.dob}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="city">City:</label>
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            value={formData.city}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="zipCode">Zip Code:</label>
+                          <input
+                            type="text"
+                            name="zipCode"
+                            id="zipCode"
+                            value={formData.zipCode}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="phone">Phone:</label>
+                          <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            value={formData.phone}
+                            onChange={handleFormChange}
+                            className="p-2 mt-2 rounded-full"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 ">
+                          <label htmlFor="comments">Additional Comments:</label>
+                          <textarea
+                            name="comments"
+                            id="comments"
+                            rows="4"
+                            cols="60"
+                            value={formData.comments}
+                            onChange={handleFormChange}
+                            className="p-4 mt-2 resize-none rounded-3xl"
+                          ></textarea>
+                        </div>
+                        <div className="flex items-center space-x-2 xl:justify-center">
+                          <input
+                            type="checkbox"
+                            name="agreeTerms"
+                            id="agreeTerms"
+                            checked={formData.agreeTerms}
+                            onChange={handleFormChange}
+                            className="w-6 h-5"
+                          />
+                          <label htmlFor="">
+                            I agree with the terms & conditions
+                          </label>
+                        </div>
+                      </div>
+                      <div className="font-bold">
+                        <div className="space-y-5">
+                          <label htmlFor="">Pay by</label>
+                          <p>
+                            Pay for your tuktuk using our secure credit card
+                            payment gateway.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* ==========================Mobile Response========================= */}
+                  <div className="md:hidden">
+                    <div className="grid grid-cols-1 font-bold text-sm space-y-5">
                       <div className="grid grid-cols-1 ">
                         <label htmlFor="title">Title</label>
                         <select
@@ -411,69 +601,23 @@ export default function RentCost() {
                         </select>
                       </div>
                       <div className="grid grid-cols-1 ">
-                        <label htmlFor="lastName">Last Name</label>
-                        <input
-                          type="text"
-                          name="lastName"
-                          id="lastName"
-                          value={formData.lastName}
-                          onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 ">
-                        <label htmlFor="address">Address</label>
-                        <input
-                          type="text"
-                          name="address"
-                          id="address"
-                          value={formData.address}
-                          onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 ">
-                        <label htmlFor="state">State</label>
-                        <input
-                          type="text"
-                          name="state"
-                          id="state"
-                          value={formData.state}
-                          onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 ">
-                        <label htmlFor="country">Country</label>
-                        <input
-                          type="text"
-                          name="country"
-                          id="country"
-                          value={formData.country}
-                          onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 ">
-                        <label htmlFor="email">E-mail</label>
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          value={formData.email}
-                          onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-5 font-bold">
-                      <div className="grid grid-cols-1 ">
                         <label htmlFor="firstName">First Name</label>
                         <input
                           type="text"
                           name="firstName"
                           id="firstName"
                           value={formData.firstName}
+                          onChange={handleFormChange}
+                          className="p-2 mt-2 rounded-full"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 ">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          id="lastName"
+                          value={formData.lastName}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
                         />
@@ -490,12 +634,34 @@ export default function RentCost() {
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
+                        <label htmlFor="address">Address</label>
+                        <input
+                          type="text"
+                          name="address"
+                          id="address"
+                          value={formData.address}
+                          onChange={handleFormChange}
+                          className="p-2 mt-2 rounded-full"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 ">
                         <label htmlFor="city">City:</label>
                         <input
                           type="text"
                           name="city"
                           id="city"
                           value={formData.city}
+                          onChange={handleFormChange}
+                          className="p-2 mt-2 rounded-full"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 ">
+                        <label htmlFor="state">State</label>
+                        <input
+                          type="text"
+                          name="state"
+                          id="state"
+                          value={formData.state}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
                         />
@@ -512,12 +678,34 @@ export default function RentCost() {
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
+                        <label htmlFor="country">Country</label>
+                        <input
+                          type="text"
+                          name="country"
+                          id="country"
+                          value={formData.country}
+                          onChange={handleFormChange}
+                          className="p-2 mt-2 rounded-full"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 ">
                         <label htmlFor="phone">Phone:</label>
                         <input
                           type="text"
                           name="phone"
                           id="phone"
                           value={formData.phone}
+                          onChange={handleFormChange}
+                          className="p-2 mt-2 rounded-full"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 ">
+                        <label htmlFor="email">E-mail</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          value={formData.email}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
                         />
@@ -534,7 +722,7 @@ export default function RentCost() {
                           className="p-4 mt-2 resize-none rounded-3xl"
                         ></textarea>
                       </div>
-                      <div className="flex items-center space-x-2 xl:justify-center">
+                      <div className="flex items-center space-x-2 xl:justify-center my-5">
                         <input
                           type="checkbox"
                           name="agreeTerms"
@@ -547,23 +735,24 @@ export default function RentCost() {
                           I agree with the terms & conditions
                         </label>
                       </div>
-                    </div>
-                    <div className="font-bold">
-                      <div className="space-y-5">
-                        <label htmlFor="">Pay by</label>
-                        <p>
-                          Pay for your tuktuk using our secure credit card
-                          payment gateway.
-                        </p>
+                      <div>
+                        <div className="space-y-5">
+                          <label htmlFor="">Pay by</label>
+                          <p>
+                            Pay for your tuktuk using our secure credit card
+                            payment gateway.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  {/* ==========================End of Mobile Response========================= */}
                   <div className="flex justify-center mt-10 xl:mt-0">
                     <input
                       type="submit"
                       value="Confirm"
                       onClick={handleConfirm}
-                      className="bg-[#379237] hover:bg-[#F0FF42] transition-colors duration-300 py-2 px-5 text-2xl text-white hover:text-black font-bold rounded-full"
+                      className="bg-[#379237] hover:bg-[#F0FF42] transition-colors duration-300 py-2 px-5 lg:text-2xl text-white hover:text-black font-bold rounded-full"
                     />
                   </div>
                 </form>

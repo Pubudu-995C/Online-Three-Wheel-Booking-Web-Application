@@ -249,35 +249,35 @@ export default function Home() {
 
   const benifits = [
     {
-      img: `/icons/tuktuk.png`,
+      img: `/icon/tuktuk.png`,
       details: `Reliable tuktuks`,
     },
     {
-      img: `/icons/hours.png`,
+      img: `/icon/hours.png`,
       details: `24/7 support`,
     },
     {
-      img: `/icons/social.png`,
+      img: `/icon/social.png`,
       details: `Social impact`,
     },
     {
-      img: `/icons/kms.png`,
+      img: `/icon/kms.png`,
       details: `Unlimited kms`,
     },
     {
-      img: `/icons/insurance.png`,
+      img: `/icon/insurance.png`,
       details: `Comprehensive insurance`,
     },
     {
-      img: `/icons/license.png`,
+      img: `/icon/license.png`,
       details: `Valid local driver's licence`,
     },
     {
-      img: `/icons/lesson.png`,
+      img: `/icon/lesson.png`,
       details: `Driving lesson & itinerary advice`,
     },
     {
-      img: `/icons/more.png`,
+      img: `/icon/more.png`,
       details: `Phone chargers, speakers, & more`,
     },
   ];

@@ -90,6 +90,7 @@ export default function RentTuk() {
     };
 
     navigate("/RentOption", { state: { data: dataToSend } });
+    window.scrollTo(0, 0);
   };
 
   return (
