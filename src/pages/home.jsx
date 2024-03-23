@@ -226,22 +226,22 @@ export default function Home() {
 
   const team = [
     {
-      img: `https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg`,
+      img: `/team/person (2).png`,
       name: `Alan Turing`,
       details: `Frontend Developer`,
     },
     {
-      img: `https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(30).jpg`,
+      img: `/team/person (1).png`,
       name: `Veronica Smith`,
       details: `Backend Developer`,
     },
     {
-      img: `https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).jpg`,
+      img: `/team/person (3).png`,
       name: `Tom Johnson`,
       details: `Digital Marketing Analyst`,
     },
     {
-      img: `https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(31).jpg`,
+      img: `/team/person (4).png`,
       name: `Emma Lovelace`,
       details: `Web Designer`,
     },
