@@ -90,7 +90,7 @@ export default function Trip() {
         </div>
       </div>
 
-      <div className="pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100 px-5">
+      <div className="px-5 pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
         <div className="pt-20 ">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             TUKTUK ITINERARIES
@@ -99,7 +99,7 @@ export default function Trip() {
             Explore the wonders of Sri Lanka aboard a tuktuk!
           </h1>
 
-          <p className="mt-12 xl:text-xl md:text-lg text-base text-center lg:mx-10 xl:mx-20">
+          <p className="mt-12 text-base text-center xl:text-xl md:text-lg lg:mx-10 xl:mx-20">
             Experience all that Sri Lanka has to offer from the unique vantage
             point of a tuktuk! When you choose to book a tuktuk through{" "}
             <span className="font-bold">
@@ -117,7 +117,7 @@ export default function Trip() {
             <div className="mt-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0 md:mx-20 lg:mx-10">
               {trip.map((d) => (
                 <div className="bg-white h-[550px] sm:h-[640px] lg:h-[540px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
-                  <div className="flex  rounded-t-xl">
+                  <div className="flex rounded-t-xl">
                     <img
                       src={d.img}
                       alt=""
@@ -126,7 +126,7 @@ export default function Trip() {
                   </div>
                   <div className="flex flex-col items-center justify-center flex-1 gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
-                    <p className="text-justify lg:text-base text-sm">
+                    <p className="text-sm text-justify lg:text-base">
                       {d.review}
                     </p>
                     <button className="px-6 py-1 mt-auto text-lg text-white bg-[#379237] hover:bg-[#82CD47] transition-colors duration-300 font-bold rounded-lg">
@@ -168,7 +168,7 @@ export default function Trip() {
                     href={town.details ? `/${town.town.toLowerCase()}` : "#"}
                     className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg md:text-sm text-xs font-bold"
                   >
-                    <i className="lg:mx-5 mx-2 text-xs md:text-sm fa-solid fa-location-dot xl:text-2xl"></i>
+                    <i className="mx-2 text-xs lg:mx-5 md:text-sm fa-solid fa-location-dot xl:text-2xl"></i>
                     {town.town}
                   </a>
                 </div>

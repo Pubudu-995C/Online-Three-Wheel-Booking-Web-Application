@@ -97,7 +97,7 @@ export default function HowWork() {
             Let’s Get You Driving a Tuktuk!
           </h1>
 
-          <p className="px-5 mt-12 lg:text-xl text-lg text-center">
+          <p className="px-5 mt-12 text-lg text-center lg:text-xl">
             Driving your own tuktuk in Sri Lanka is easy with{" "}
             <span className="font-bold">
               tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -112,10 +112,10 @@ export default function HowWork() {
           {enjoy.map((j) => (
             <div className="items-center justify-center space-y-5 text-center lg:flex gap-x-4 lg:text-justify">
               <div className="lg:p-5 lg:w-3/6">
-                <p className="lg:text-2xl text-xl font-bold py-4 lg:py-0">
+                <p className="py-4 text-xl font-bold lg:text-2xl lg:py-0">
                   {j.topic}
                 </p>
-                <p className="xl:text-xl text-base text-justify ">
+                <p className="text-base text-justify xl:text-xl ">
                   {j.details}
                 </p>
                 <div className="text-center ">
@@ -139,7 +139,7 @@ export default function HowWork() {
           className="object-cover w-full h-full brightness-50"
           alt="Wallpaper"
         />
-        <div className="absolute top-0 w-full mt-20 px-5 md:px-10 xl:px-20">
+        <div className="absolute top-0 w-full px-5 mt-20 md:px-10 xl:px-20">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             OUR COMPANY HAS GROWN EXPONENTIALLY
           </h2>
@@ -148,7 +148,7 @@ export default function HowWork() {
             .com Work?
           </h1>
 
-          <p className="mt-12 xl:text-xl md:text-lg text-base text-justify text-white lg:text-center">
+          <p className="mt-12 text-base text-justify text-white xl:text-xl md:text-lg lg:text-center">
             TukTukMango.com is all about creating a unique and enjoyable
             experience for travelers exploring Sri Lanka. As a social business,
             we connect you with local tuktuk drivers, ensuring they benefit from
@@ -204,25 +204,25 @@ export default function HowWork() {
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             TUK TUK DRIVING IN SRI LANKA
           </h2>
-          <h1 className=" mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
+          <h1 className="mt-3 font-serif text-3xl font-bold text-center  font lg:text-5xl xl:text-6xl">
             Can you drive a Tuktuk in Sri Lanka without any legal issues?
           </h1>
 
-          <p className="mt-12 xl:text-xl md:text-lg text-base text-justify">
+          <p className="mt-12 text-base text-justify xl:text-xl md:text-lg">
             Sure thing! If you've got a valid driver's license back home, you're
             good to roll with a tuktuk in Sri Lanka. Just a couple of must-haves
             before you embark on your road adventure:
           </p>
-          <ul className="pl-10 py-5 xl:text-xl md:text-lg text-base list-disc">
+          <ul className="py-5 pl-10 text-base list-disc xl:text-xl md:text-lg">
             <li>A Sri Lankan driving permit</li>
             <li>Valid vehicle insurance</li>
           </ul>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             For a smooth and enjoyable experience navigating a tuktuk in Sri
             Lanka, we suggest a few friendly tips to ensure your safety, ethical
             conduct, and a hassle-free ride:
           </p>
-          <ul className="pl-10 py-5 xl:text-xl md:text-lg text-base list-disc">
+          <ul className="py-5 pl-10 text-base list-disc xl:text-xl md:text-lg">
             <li>Use a safe and reliable tuktuk</li>
             <li>Take a comprehensive and personal driving lesson</li>
             <li>Have an on board travel and repair kit</li>
@@ -230,14 +230,14 @@ export default function HowWork() {
             <li>Rent from a social business</li>
             <li>Offset your emissions</li>
           </ul>
-          <p className="xl:text-xl md:text-lg text-base text-left">
+          <p className="text-base text-left xl:text-xl md:text-lg">
             Tuktukmango.com offers all of these services conveniently on its
             user-friendly online platform, making booking a breeze!
           </p>
-          <p className="py-5 xl:text-2xl text-xl font-bold">
+          <p className="py-5 text-xl font-bold xl:text-2xl">
             Sri Lankan Driving Permit
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             To cruise around in a tuktuk or any vehicle in Sri Lanka, you'll
             need a special local license. Unlike many countries, Sri Lanka
             doesn't acknowledge international or foreign driving licenses. So,
@@ -246,24 +246,24 @@ export default function HowWork() {
             with fines or even a stint in jail. Stay on the right side of the
             law and make sure you've got that local permit in your pocket! 🚗🇱🇰
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             🌟 If you're a tuktukmango.com customer, we've got your back! We'll
             take care of arranging your local driving permit in advance, so you
             don't have to worry about it upon your arrival. If you have more
             than one driver, just let us know how many permits you need in the
             extras section – it's as easy as that! 🚗
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             You can definitely obtain this information directly from the
             Automobile Association of Ceylon. However, it's advisable to set
             aside about half a day for the process, taking into account
             potential queues, their business hours, and the usual traffic in
             Colombo.
           </p>
-          <p className="py-5 xl:text-2xl text-xl font-bold">
+          <p className="py-5 text-xl font-bold xl:text-2xl">
             Valid Vehicle Insurance
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             🚗 When driving any vehicle in Sri Lanka, it's essential to have
             insurance that covers the person behind the wheel. Keep in mind that
             typical vehicle insurance might not protect you as a third-party
@@ -273,7 +273,7 @@ export default function HowWork() {
             driver without any extra hassle. Drive worry-free with
             tuktukmango.com! 🌴
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             Our insurance has everyone covered – that means you as the driver,
             your passengers, your vehicle, and even folks in other vehicles you
             might be involved with. It's a standard feature on all our vehicles,
@@ -281,10 +281,10 @@ export default function HowWork() {
             with peace of mind knowing that protection extends to everyone and
             everything involved.
           </p>
-          <p className="xl:text-2xl text-xl font-bold">
+          <p className="text-xl font-bold xl:text-2xl">
             Personal Travel Insurance
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             🌟 While our insurance has got you covered legally, it's crucial to
             consider having your own travel insurance just in case the
             unexpected happens, like a serious injury requiring a medical
@@ -292,17 +292,17 @@ export default function HowWork() {
             customer has ever faced a serious injury, but it's always wise to
             take this precaution for added peace of mind. 🤞
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             When you're searching for insurance coverage, it's important to
             ensure that you're protected for both car and motorcycle usage.
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             If you're in search of travel insurance that's tailored to cover
             tuktuks, we suggest checking out SafetyWing. Their rates begin at
             $37 for a four-week period and cover a variety of benefits, making
             sure you're well-protected during your adventures.
           </p>
-          <ul className="pl-10 xl:text-xl md:text-lg text-base text-justify list-disc">
+          <ul className="pl-10 text-base text-justify list-disc xl:text-xl md:text-lg">
             <li>
               Stay worry-free on your travels with our travel medical coverage!
               Gain access to a reliable global network of hospitals and doctors
@@ -318,17 +318,17 @@ export default function HowWork() {
               you're protected every step of the way!
             </li>
           </ul>
-          <p className="xl:text-2xl text-xl font-bold">
+          <p className="text-xl font-bold xl:text-2xl">
             Comprehensive Driving Lesson
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             🚗 Before you venture out on your own, we organize a session with a
             skilled tuktuk driver who will guide you through a thorough driving
             lesson and provide insights into basic vehicle upkeep. Our goal is
             to ensure you feel confident behind the wheel of a tuktuk and are
             all set to navigate the streets like a seasoned pro! 🌟
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Typically, this process takes about an hour. However, if you need a
             bit more time to get the hang of the controls, our instructors are
             more than happy to invest as much time as necessary to ensure you
@@ -336,15 +336,15 @@ export default function HowWork() {
           </p>
           <div className="lg:flex lg:space-x-20">
             <div>
-              <p className="py-5 xl:text-2xl text-xl font-bold">
+              <p className="py-5 text-xl font-bold xl:text-2xl">
                 On the Road Travel Kit
               </p>
-              <p className="xl:text-xl md:text-lg text-base text-justify">
+              <p className="text-base text-justify xl:text-xl md:text-lg">
                 We offer a handy travel package to get you on your way quickly
                 and ensure you have everything you need for an extended journey.
                 Our package comprises:
               </p>
-              <ul className="pl-10 py-5 xl:text-xl md:text-lg text-base list-disc">
+              <ul className="py-5 pl-10 text-base list-disc xl:text-xl md:text-lg">
                 <li>Spare Tyre</li>
                 <li>Basic Toolset</li>
                 <li>Reserve Fuel Tank</li>
@@ -354,15 +354,15 @@ export default function HowWork() {
               </ul>
             </div>
             <div>
-              <p className="py-5 xl:text-2xl text-xl font-bold">
+              <p className="py-5 text-xl font-bold xl:text-2xl">
                 Optional Extras
               </p>
-              <p className="xl:text-xl md:text-lg text-base text-justify">
+              <p className="text-base text-justify xl:text-xl md:text-lg">
                 In addition to the basic travel essentials, you have the option
                 to add some extra goodies to enhance your journey. Choose from
                 the following delightful add-ons:
               </p>
-              <ul className="pl-10 py-5 xl:text-xl md:text-lg text-base list-disc">
+              <ul className="py-5 pl-10 text-base list-disc xl:text-xl md:text-lg">
                 <li>Big Bluetooth Speakers</li>
                 <li>Surfboard roof racks</li>
                 <li>Baby-seats</li>
@@ -375,8 +375,8 @@ export default function HowWork() {
               </ul>
             </div>
           </div>
-          <p className="xl:text-2xl text-xl font-bold">100% Carbon Neutral</p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-xl font-bold xl:text-2xl">100% Carbon Neutral</p>
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             In the fight against climate change, it's important for each of us
             to play a role. When you drive with us, we take care of offsetting
             the carbon footprint of every kilometer you travel by supporting
@@ -384,8 +384,8 @@ export default function HowWork() {
             of the rental package - no extra charge! 😉 Let's make a positive
             impact together! 🌍✨
           </p>
-          <p className="xl:text-2xl text-xl font-bold">Repair Costs Covered</p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-xl font-bold xl:text-2xl">Repair Costs Covered</p>
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             🚗 Cruise worry-free on the open road with us! We've got you covered
             for wear and tear, ensuring a smooth ride. If something unexpectedly
             gives out while you're driving responsibly (no beach burnouts,
@@ -393,17 +393,17 @@ export default function HowWork() {
             assured, there are no hidden charges lurking around! 🌟
             #DriveWithPeaceOfMind
           </p>
-          <p className="xl:text-2xl text-xl font-bold">Unlimited Kilometres</p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-xl font-bold xl:text-2xl">Unlimited Kilometres</p>
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             Whether you're dreaming of quick beach getaways or embarking on an
             epic journey around the globe 🌍, there's no need to stress about
             keeping track of kilometers. At tuktukmango.com, every booking comes
             with limitless kilometers as part of the package! 🚗✨
           </p>
-          <p className="xl:text-2xl text-xl font-bold">
+          <p className="text-xl font-bold xl:text-2xl">
             Pick up or drop-off your tuktuk anywhere in Sri Lanka!
           </p>
-          <p className="py-5 xl:text-xl md:text-lg text-base text-justify">
+          <p className="py-5 text-base text-justify xl:text-xl md:text-lg">
             Absolutely no worries! 🚗 Exciting news – we've got you covered for
             a pickup in charming Kandy and a drop-off in the sunny paradise of
             Arugam Bay! 🌴 We've sprinkled 27 fabulous locations all across the
@@ -413,7 +413,7 @@ export default function HowWork() {
             just give us a shout, and we'll work our magic to make it happen! 🌟
             Let's make your journey as smooth as a beach breeze! 🏖️✨
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Sit back, relax, and leave the driving to our seasoned instructors!
             🚗🌟 They'll skillfully whisk your tuktuk to your desired spot,
             bringing along your Sri Lankan driving license. 🇱🇰✨ Once you're
@@ -422,10 +422,10 @@ export default function HowWork() {
             you hit the road with confidence and a big smile! 😊🛣️ Let's turn
             those driving dreams into a reality! 🚀🌈
           </p>
-          <p className="py-5 xl:text-2xl text-xl font-bold">
+          <p className="py-5 text-xl font-bold xl:text-2xl">
             Transparent and Secure Online Payment
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Hey there! 🌟 Exciting news – we're totally cashless! 🚖 When you
             snag a ride with us, just breeze through payment with your trusty
             credit or debit card. We'll ask for a $150 deposit upfront, but
@@ -434,10 +434,10 @@ export default function HowWork() {
             card (or any account you fancy). Easy peasy, super safe, and crystal
             clear. Let the good times roll! 🌈💳 #CashlessAdventures
           </p>
-          <p className="py-5 xl:text-2xl text-xl font-bold">
+          <p className="py-5 text-xl font-bold xl:text-2xl">
             Alright, let’s do this!
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             If you've managed to stick with me until now, it's high time to snag
             your fancy lawnmower and gear up for an adventure that will leave a
             lasting impression! 🚀✨
@@ -448,10 +448,10 @@ export default function HowWork() {
       <div className="relative mt-10 h-[500px]">
         <img
           src={wallpaper5}
-          className="object-cover w-full h-full  opacity-20"
+          className="object-cover w-full h-full opacity-20"
           alt="Wallpaper"
         />
-        <div className="absolute top-0 w-full mt-20 px-5">
+        <div className="absolute top-0 w-full px-5 mt-20">
           <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
             STILL READING? BOOK NOW...
           </h2>
@@ -459,7 +459,7 @@ export default function HowWork() {
             Sure, let's Get Started!
           </h1>
 
-          <p className="mt-12 xl:text-xl md:text-lg text-base text-center">
+          <p className="mt-12 text-base text-center xl:text-xl md:text-lg">
             If you're still with us at this point, then it's high time to secure
             your fancy lawnmower and gear up for an adventure that will stay
             with you forever!

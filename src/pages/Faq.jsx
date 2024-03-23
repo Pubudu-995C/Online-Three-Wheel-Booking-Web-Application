@@ -42,7 +42,7 @@ export default function Faq() {
           <p className="mt-12 xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             What does your insurance cover?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Hey there! Our tuktuks come with complete insurance, ensuring
             protection for both the tuktuk and any other vehicles involved in
             case of any mishaps. This coverage extends to personal injuries for
@@ -55,7 +55,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Can I drop the tuktuk to a different location?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Certainly! Feel free to give us a heads-up at least two days before
             you want to return the tuktuk, and our driver will swing by your
             hotel to pick it up. Just a heads-up, there are some location
@@ -65,7 +65,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Can I pick up the tuktuk from a different location?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Sure thing! In this case, one of our driving instructors will take
             the wheel of the tuktuk, armed with your license and all the
             required paperwork. They'll zip over to your hotel at the designated
@@ -77,7 +77,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             What is included in the rental price?
           </p>
-          <ul className="pl-10 text-justify xl:text-xl md:text-lg text-base list-disc">
+          <ul className="pl-10 text-base text-justify list-disc xl:text-xl md:text-lg">
             <li>Quality tuktuks sourced from locals to support their income</li>
             <li>Comprehensive third-party insurance for peace of mind</li>
             <li>Locally approved license provided if applicable (Sri Lanka)</li>
@@ -98,7 +98,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Why do you have different prices for less than 4 days?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Our pricing is tied to how long you want to rent with us – the
             longer you book, the more budget-friendly it becomes! For shorter
             rentals, the rates are a bit higher because they might not be as
@@ -109,7 +109,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             What happens if my tuktuk gets stolen?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Tuktuk theft is exceptionally uncommon in Sri Lanka and India. In
             the unlikely event that your tuktuk is stolen, rest assured that our
             insurance has got you covered – as long as it wasn't taken using
@@ -118,7 +118,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             What happens if my accessories get stolen?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             If any accessories go missing or are stolen, we'll kindly request
             you to cover the replacement cost. Most accessories aren't too
             pricey, except for the tuktuk documents, which amount to US$90 for a
@@ -127,7 +127,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Do I need to pay in advance to secure my booking?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Absolutely! Following our social business model, we kindly request
             confirmation of your payment before we can secure the rental of your
             tuktuk from one of our amazing local suppliers. Your support makes a
@@ -136,7 +136,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Do I get a refund if I need to cancel?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             For details regarding cancellations, please take a look at our
             RENTAL TERMS SUMMARY. It provides comprehensive information to guide
             you through the cancellation process.
@@ -144,7 +144,7 @@ export default function Faq() {
           <p className="xl:text-2xl text-xl font-bold py-5 text-[#379237]">
             Do you accept credit cards?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Certainly! We offer two secure payment options for your convenience.
             You can make payments through our credit card payment gateway
             (Stripe) or via PayPal. If you opt for credit card payment through
@@ -157,7 +157,7 @@ export default function Faq() {
             I want to take the train between Kandy and Nuwara Eliya. Is this
             possible with my tuktuk?
           </p>
-          <p className="xl:text-xl md:text-lg text-base text-justify">
+          <p className="text-base text-justify xl:text-xl md:text-lg">
             Absolutely! We've got you covered. If you're looking to enjoy the
             renowned train journey between Kandy and Nuwara Eliya, we have a
             contact who can expertly drive your tuktuk in either direction. Just

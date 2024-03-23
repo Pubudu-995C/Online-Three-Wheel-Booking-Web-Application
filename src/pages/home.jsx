@@ -477,13 +477,13 @@ export default function Home() {
             Drive your own Tuktuk in style!
           </h1>
 
-          <p className="mt-12 lg:text-xl text-lg text-center">
+          <p className="mt-12 text-lg text-center lg:text-xl">
             Hold on, you mean I get to cruise around in a three-wheeler in Sri
             Lanka? Absolutely! And trust me, you're going to have the time of
             your life!
           </p>
 
-          <p className="mt-8 lg:text-xl text-lg text-center xl:px-40">
+          <p className="mt-8 text-lg text-center lg:text-xl xl:px-40">
             We provide travelers with the opportunity to rent tuktuks, allowing
             them to experience the true essence of Sri Lanka through the joy of
             driving an authentic and dependable rickshaw! Break away from the
@@ -524,7 +524,7 @@ export default function Home() {
           <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Our Vehicles
           </h1>
-          <p className="mt-8 lg:text-xl text-lg text-center lg:px-28">
+          <p className="mt-8 text-lg text-center lg:text-xl lg:px-28">
             Choose your own tuktuk and express your individuality with our wide
             array of choices, featuring the Classic Tuk, Transformable Tuk, and
             the Adventure Tuk.
@@ -536,12 +536,12 @@ export default function Home() {
           <div className="justify-between lg:flex">
             <div className="grid grid-cols-1 m-2 ml-0 gap-y-2 md:gap-x-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-1">
               {extras.map((e) => (
-                <div className="flex p-2 space-x-5 bg-white lg:w-full rounded-tl-2xl rounded-br-2xl shadow-lg">
+                <div className="flex p-2 space-x-5 bg-white shadow-lg lg:w-full rounded-tl-2xl rounded-br-2xl">
                   <div className="p-2">
                     <img src={e.img} className="w-7" alt="" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm lg:text-base">
+                    <p className="text-sm font-semibold lg:text-base">
                       {e.topic}
                     </p>
                     <p className="text-sm lg:text-base">{e.details}</p>
@@ -570,7 +570,7 @@ export default function Home() {
                       </div>
                       <div className="flex flex-col items-center justify-center gap-4 p-4">
                         <p className="text-xl font-semibold">{d.name}</p>
-                        <p className="text-justify text-sm lg:text-base">
+                        <p className="text-sm text-justify lg:text-base">
                           {d.review}
                         </p>
                         <button className="absolute px-6 py-1 text-lg text-black hover:text-white font-bold bg-[#F0FF42] hover:bg-[#82CD47] transition-colors duration-300 rounded-lg bottom-5">
@@ -615,7 +615,7 @@ export default function Home() {
             Seeking Free Sri Lanka Travel Tips?
           </h1>
 
-          <p className="mt-8 lg:text-xl text-lg text-center lg:mx-40">
+          <p className="mt-8 text-lg text-center lg:text-xl lg:mx-40">
             Our team specializing in tuktuk rentals is passionately dedicated to
             exploring the wonders of Sri Lanka. Regardless of whether you choose
             to rent a tuktuk or not, you have the option to schedule a
@@ -659,7 +659,7 @@ export default function Home() {
           <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
             Why Choose Us for Booking?
           </h1>
-          <p className="px-5 mt-8 lg:text-xl text-lg text-center">
+          <p className="px-5 mt-8 text-lg text-center lg:text-xl">
             When you book with{" "}
             <span className="font-bold">
               tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -678,7 +678,7 @@ export default function Home() {
                     className="w-16 mx-auto mb-4 lg:w-24"
                     alt=""
                   />
-                  <p className="mb-10 lg:px-20 lg:text-xl text-base">
+                  <p className="mb-10 text-base lg:px-20 lg:text-xl">
                     {b.details}
                   </p>
                 </div>
@@ -714,7 +714,7 @@ export default function Home() {
                 className="flex items-center justify-between cursor-pointer"
                 onClick={() => toggleExpand(faq.id)}
               >
-                <h2 className="lg:text-lg text-sm font-semibold uppercase">
+                <h2 className="text-sm font-semibold uppercase lg:text-lg">
                   {faq.question}
                 </h2>
                 <span
@@ -731,7 +731,7 @@ export default function Home() {
                   expandedItem === faq.id ? "max-h-96" : "max-h-0"
                 } duration-500 ease-in-out`}
               >
-                <p className="text-justify text-sm lg:text-base">
+                <p className="text-sm text-justify lg:text-base">
                   {faq.answer}
                 </p>
               </div>

@@ -91,7 +91,7 @@ export default function Gallery() {
           <h2 className="text-center font-mono font xl:text-3xl text-xl text-[#54B435] mx-5">
             CREATING MEMORIES ONE STEP AT A TIME
           </h2>
-          <h1 className="lg:mx-20 mx-8 mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
+          <h1 className="mx-8 mt-3 font-serif text-3xl font-bold text-center lg:mx-20 font lg:text-5xl xl:text-6xl">
             Embarking on an adventure across the globe with three wheels
           </h1>
         </div>
