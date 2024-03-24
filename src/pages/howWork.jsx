@@ -133,7 +133,7 @@ export default function HowWork() {
       </div>
       {/* ======================================================== */}
 
-      <div className="relative xl:h-[930px] lg:h-[950px] md:h-[950px] h-[1300px]">
+      <div className="relative xl:h-[930px] lg:h-[950px] md:h-[970px] h-[1300px]">
         <img
           src={wallpaper4}
           className="object-cover w-full h-full brightness-50"
