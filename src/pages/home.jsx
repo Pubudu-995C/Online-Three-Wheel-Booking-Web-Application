@@ -65,48 +65,7 @@ export default function Home() {
 
   // =================================================================
 
-  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
-
-  useEffect(() => {
-    const videoElement = videoRef.current;
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
-
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!isPlaying) {
-            playVideoFromTime(30); // Start video time seconds
-            setIsPlaying(true);
-          }
-        } else {
-          if (isPlaying) {
-            videoElement.pause();
-            setIsPlaying(false);
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-    if (videoElement) {
-      observer.observe(videoElement);
-    }
-
-    return () => observer.disconnect();
-  }, [isPlaying]);
-
-  const playVideoFromTime = (startTime) => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = startTime;
-      videoRef.current.muted = true;
-      videoRef.current.play();
-    }
-  };
 
   // ================================================
 
@@ -613,7 +572,8 @@ export default function Home() {
                   ref={videoRef}
                   width="full"
                   height="315"
-                  controls
+                  muted // Ensure the video is muted
+                  autoPlay // Ensure the video auto plays
                   controlsList="nodownload" // Hides the download button
                   disablePictureInPicture // Disables PiP mode
                   onContextMenu={(e) => e.preventDefault()} // Disables right-click context menu
