@@ -117,7 +117,7 @@ export default function RentCost() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="md:mx-8 lg:mx-0">
+        <div className="mx-0 md:mx-8 lg:mx-0">
           {/* =========================RENTAL DETAILS============================= */}
           <div className="p-5 bg-gray-200 mx-full lg:mx-20 xl:mx-52 rounded-xl">
             <div>
@@ -187,9 +187,9 @@ export default function RentCost() {
                       <p className="mb-4 text-lg font-bold text-red-500">
                         {total} USD
                       </p>
-                      <hr className="h-2 bg-[#54B435] rounded-full my-5" />
                       {driQuantity && (
                         <div>
+                          <hr className="h-2 bg-[#54B435] rounded-full my-5" />
                           <p className="md:text-2xl text-xl font-bold">
                             Selected Driver(s)
                           </p>
@@ -371,7 +371,7 @@ export default function RentCost() {
                   </p>
                   <p className="flex justify-center gap-x-5 xl:justify-between">
                     <p>Deposit:</p>
-                    <p className="text-lg text-red-500">
+                    <p className="text-lg text-blue-600">
                       {tukQuantity
                         ? `$ ${deposit} x ${tukQuantity}`
                         : `$ ${deposit}`}

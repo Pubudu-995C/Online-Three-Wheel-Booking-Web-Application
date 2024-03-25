@@ -153,7 +153,7 @@ export default function RentOption() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="mx-2 md:mx-8 lg:mx-0">
+        <div className="mx-0 md:mx-8 lg:mx-0">
           <div className="p-5 bg-gray-200 lg:mx-20 xl:mx-52 rounded-xl">
             {/* ===========================Reservation Details============================= */}
             <div>
@@ -263,7 +263,7 @@ export default function RentOption() {
                           <p className="lg:hidden md:text-lg text-base">
                             Total: ${totalPrice} USD
                           </p>
-                          <p className="lg:hidden md:text-lg text-base">
+                          <p className="lg:hidden md:text-lg text-base pb-5">
                             Deposit: ${deposit}
                           </p>
                           <p className="lg:hidden md:text-lg text-base">
@@ -301,7 +301,7 @@ export default function RentOption() {
                             </p>
                           </div>
                         ))}
-                        <p className="lg:hidden md:text-lg text-base">
+                        <p className="lg:hidden md:text-lg text-base pb-5">
                           Not Requird
                         </p>
                         {/* Driver Mobile===================== */}

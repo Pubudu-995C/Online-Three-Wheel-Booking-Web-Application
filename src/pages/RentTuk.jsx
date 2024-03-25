@@ -100,18 +100,18 @@ export default function RentTuk() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="mx-8 lg:mx-0">
+        <div className="mx-0 md:mx-8 lg:mx-0">
           <div className="p-5 bg-gray-200 mx-full lg:mx-20 xl:mx-52 rounded-xl">
-            <h1 className="mt-5 text-2xl font-bold uppercase xl:text-3xl lg:text-2xl">
+            <h1 className="mt-5 md:text-2xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
               Reservation Details
             </h1>
             <div className="justify-center grid-cols-3 lg:grid lg:space-x-10">
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5">
                   Period
                 </p>
-                <div className="space-y-2 text-lg xl:w-[350px] lg:w-[200px]">
-                  <p className="font-semibold text-cyan-600">
+                <div className="space-y-2 md:text-lg text-base xl:w-[350px] lg:w-[200px]">
+                  <p className="font-bold text-cyan-600">
                     Start Date:{" "}
                     <span className="font-bold text-red-500 ">
                       {pickupDate}
@@ -121,7 +121,7 @@ export default function RentTuk() {
                       {pickupTime}
                     </span>
                   </p>
-                  <p className="font-semibold text-cyan-600">
+                  <p className="font-bold text-cyan-600">
                     Return Date:{" "}
                     <span className="font-bold text-red-500 ">
                       {returnDate}
@@ -131,7 +131,7 @@ export default function RentTuk() {
                       {returnTime}{" "}
                     </span>
                   </p>
-                  <p className="font-semibold text-cyan-600">
+                  <p className="font-bold text-cyan-600">
                     Duration Days:{" "}
                     <span className="font-bold text-red-500 ">
                       {durationDays}
@@ -140,18 +140,18 @@ export default function RentTuk() {
                 </div>
               </div>
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5">
                   Pick-Up
                 </p>
-                <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
-                  <p className="font-semibold text-cyan-600">
+                <div className="space-y-2 md:text-lg text-base xl:w-[300px] lg:w-[200px]">
+                  <p className="font-bold text-cyan-600">
                     Start Location:{" "}
                     <span className="font-bold text-red-500 ">
                       {pickupCity}{" "}
                     </span>
                   </p>
-                  <p className="font-semibold text-cyan-600">Sri Lanka</p>
-                  <p className="font-semibold text-cyan-600">
+                  <p className="font-bold text-cyan-600">Sri Lanka</p>
+                  <p className="font-bold text-cyan-600">
                     Fee:{" "}
                     <span className="font-bold text-red-500 ">
                       {" "}
@@ -161,18 +161,18 @@ export default function RentTuk() {
                 </div>
               </div>
               <div>
-                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl  md:text-xl text-lg md:py-2 my-5">
                   Return
                 </p>
-                <div className="space-y-2 text-lg xl:w-[300px] lg:w-[200px]">
-                  <p className="font-semibold text-cyan-600">
+                <div className="space-y-2 md:text-lg text-base xl:w-[300px] lg:w-[200px]">
+                  <p className="font-bold text-cyan-600">
                     End Location:{" "}
                     <span className="font-bold text-red-500 ">
                       {returnCity}{" "}
                     </span>
                   </p>
-                  <p className="font-semibold text-cyan-600">Sri Lanka</p>
-                  <p className="font-semibold text-cyan-600">
+                  <p className="font-bold text-cyan-600">Sri Lanka</p>
+                  <p className="font-bold text-cyan-600">
                     Fee:{" "}
                     <span className="font-bold text-red-500 ">
                       ${returnFee}{" "}
@@ -182,12 +182,12 @@ export default function RentTuk() {
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-left uppercase xl:text-3xl lg:text-2xl pt-14">
+              <h1 className="md:text-2xl font-bold text-left uppercase xl:text-3xl lg:text-2xl text-lg pt-14">
                 Search Results
               </h1>
               <div className="justify-center grid-cols-3 lg:grid">
                 <div className="xl:w-[600px] lg:w-[450px]">
-                  <p className="bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
+                  <p className="bg-[#54B435] text-center  text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5">
                     Class
                   </p>
                   <div>
@@ -199,34 +199,34 @@ export default function RentTuk() {
                               <img
                                 src={v.img}
                                 alt=""
-                                className="h-40 m-auto xl:h-40 lg:h-32"
+                                className="h-28 m-auto xl:h-40 lg:h-32 md:h-40"
                               />
                             </div>
                             <div>
-                              <p className="pb-8 text-2xl font-bold xl:text-2xl lg:text-xl">
+                              <p className="pb-8 md:text-2xl font-bold xl:text-2xl lg:text-xl text-lg">
                                 {v.vehicle}
                               </p>
-                              <p className="text-lg font-bold xl:text-lg lg:text-base">
+                              <p className="text-base font-bold lg:text-xl md:text-lg">
                                 {v.passenger}
                               </p>
-                              <p className="text-lg font-bold xl:text-lg lg:text-base">
+                              <p className="text-base font-bold lg:text-xl md:text-lg">
                                 {v.fuel}
                               </p>
-                              <p className="text-lg font-bold xl:text-lg lg:text-base">
+                              <p className="text-base font-bold lg:text-xl md:text-lg">
                                 {v.gear}
                               </p>
-                              <p className="text-lg font-bold lg:hidden">
+                              <p className="text-base font-bold lg:text-xl md:text-lg lg:hidden">
                                 Total Price: $ {durationDays * v.price}
                               </p>
-                              <p className="text-lg font-bold lg:hidden">
+                              <p className="text-base font-bold lg:text-xl md:text-lg lg:hidden">
                                 $ {v.price} / Day
                               </p>
-                              <p className="text-lg font-bold lg:hidden">
+                              <p className="text-base font-bold lg:text-xl md:text-lg lg:hidden">
                                 Deposit: $ {v.deposit}
                               </p>
                               <button
                                 onClick={() => handleChoose(v)}
-                                className="lg:hidden bg-[#54B435] text-white text-xl py-2 px-14 mt-5 font-bold rounded-full"
+                                className="lg:hidden bg-[#54B435] text-white md:text-xl text-base py-2 px-14 mt-5 font-bold rounded-full"
                               >
                                 Choose
                               </button>
@@ -237,7 +237,7 @@ export default function RentTuk() {
                     )}
                   </div>
                 </div>
-                <div className="hidden lg:block">
+                <div className="hidden lg:block ">
                   <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl text-xl py-2 my-5">
                     Total
                   </p>
@@ -246,7 +246,7 @@ export default function RentTuk() {
                     {detail.length !== 0 && (
                       <div>
                         {detail.map((v) => (
-                          <div className=" justify-end mt-28 xl:h-[90px]">
+                          <div className=" justify-end mt-28 xl:h-[90px] lg:h-[70px]">
                             <div></div>
                             <div>
                               <p className="text-lg font-bold text-right xl:text-lg lg:text-base">
@@ -270,7 +270,7 @@ export default function RentTuk() {
                     {detail.length !== 0 && (
                       <div>
                         {detail.map((v) => (
-                          <div className="mt-28 xl:h-[90px] lg:h-[50px] flex justify-between xl:space-x-2 items-center">
+                          <div className="mt-28 xl:h-[85px] lg:h-[70px] flex justify-between xl:space-x-2 items-center">
                             <div>
                               <p className="ml-20 font-bold xl:text-2xl">
                                 $ {v.deposit}
