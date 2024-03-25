@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import wallpaper8 from "../images/wallpapers/wallpaper8.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function Faq() {
   const navigate = useNavigate();
@@ -201,6 +202,7 @@ export default function Faq() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

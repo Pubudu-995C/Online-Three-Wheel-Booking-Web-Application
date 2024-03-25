@@ -6,6 +6,7 @@ import Kandy1 from "../../images/town/kandy1.jpg";
 import Kandy2 from "../../images/town/kandy2.jpg";
 import Kandy3 from "../../images/town/kandy3.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Kandy() {
   const [loading, setLoading] = useState(false);
@@ -516,6 +517,7 @@ export default function Kandy() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

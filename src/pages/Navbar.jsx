@@ -40,7 +40,6 @@ export default function Navbar() {
               className="inline-flex items-center p-2 ml-1 text-sm text-yellow-500 rounded-lg lg:hidden hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-yellow-200 dark:text-yellow-400 dark:hover:bg-yellow-700 dark:focus:ring-yellow-600"
               aria-expanded={isMenuOpen}
             >
-              <span className="sr-only">Toggle Menu</span>
               <svg
                 className={`w-6 h-6 ${isMenuOpen ? "hidden" : ""}`}
                 fill="currentColor"

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function Trip() {
   const [loading, setLoading] = useState(false);
@@ -201,6 +202,7 @@ export default function Trip() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

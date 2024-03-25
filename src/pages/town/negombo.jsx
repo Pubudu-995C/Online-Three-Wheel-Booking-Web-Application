@@ -6,6 +6,7 @@ import Negombo1 from "../../images/town/negombo1.jpg";
 import Negombo2 from "../../images/town/negombo2.jpg";
 import Negombo3 from "../../images/town/negombo3.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Negombo() {
   const [loading, setLoading] = useState(false);
@@ -488,6 +489,7 @@ export default function Negombo() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

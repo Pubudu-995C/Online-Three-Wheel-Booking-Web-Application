@@ -6,6 +6,7 @@ import wallpaper6 from "../images/wallpapers/wallpaper6.jpg";
 import "./gallery.css";
 import CloseIcon from "@mui/icons-material/Close";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
@@ -152,6 +153,7 @@ export default function Gallery() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

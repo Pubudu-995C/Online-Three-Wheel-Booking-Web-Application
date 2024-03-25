@@ -7,6 +7,7 @@ import wallpaper3 from "../images/wallpapers/wallpaper3.jpg";
 import wallpaper4 from "../images/wallpapers/wallpaper4.jpg";
 import wallpaper5 from "../images/wallpapers/wallpaper5.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function HowWork() {
   const [loading, setLoading] = useState(false);
@@ -512,6 +513,7 @@ export default function HowWork() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GridLoader from "react-spinners/GridLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -731,6 +732,7 @@ export default function Home() {
           <Footer />
         </div>
       )}
+      <ScrollToTopButton />
     </div>
   );
 }
