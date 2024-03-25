@@ -31,6 +31,19 @@ export default function Home() {
     returnTime: "",
   });
 
+  const generateTimeOptions = () => {
+    const options = [];
+    for (let hour = 0; hour < 24; hour++) {
+      options.push(
+        <option key={hour} value={`${hour}:00`}>{`${hour}:00`}</option>,
+      );
+      options.push(
+        <option key={`${hour}-30`} value={`${hour}:30`}>{`${hour}:30`}</option>,
+      );
+    }
+    return options;
+  };
+
   // Get current date in YYYY-MM-DD format
   const currentDate = new Date().toISOString().split("T")[0];
 
@@ -344,14 +357,15 @@ export default function Home() {
                       <label for="time" class="text-sm font-medium">
                         Time
                       </label>
-                      <input
-                        type="time"
+                      <select
                         name="startTime"
                         id="pickupTime"
                         value={formData.pickupTime}
                         onChange={handleInputChange}
-                        class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      />
+                        className="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                      >
+                        {generateTimeOptions()}
+                      </select>
                     </div>
                   </div>
 
@@ -415,14 +429,15 @@ export default function Home() {
                       <label for="endTime" class="text-sm font-medium">
                         Time
                       </label>
-                      <input
-                        type="time"
+                      <select
                         name="endTime"
                         id="returnTime"
                         value={formData.returnTime}
                         onChange={handleInputChange}
                         class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      />
+                      >
+                        {generateTimeOptions()}
+                      </select>
                     </div>
                   </div>
 
