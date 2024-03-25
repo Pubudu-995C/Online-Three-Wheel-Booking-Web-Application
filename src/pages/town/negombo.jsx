@@ -409,7 +409,7 @@ export default function Negombo() {
                 Frequently Asked Questions
               </p>
             </div>
-            <div className="pt-5 px-5 relative xl:h-[350px] lg:h-[350px] md:h-[350px] h-[450px]">
+            <div className="pt-5 px-5 relative xl:h-[350px] lg:h-[350px] md:h-[350px] h-[500px]">
               {faqData.map((faq) => (
                 <div
                   key={faq.id}
