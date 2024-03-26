@@ -1,7 +1,7 @@
 .gallery {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
   -webkit-column-width: 33%;
   -moz-column-width: 33%;
   column-width: 33%;
@@ -19,6 +19,13 @@
   filter: opacity(0.8);
 }
 
+@media (max-width: 1024px) {
+  .gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
 @media (max-width: 768px) {
   .gallery {
     -webkit-column-count: 2;

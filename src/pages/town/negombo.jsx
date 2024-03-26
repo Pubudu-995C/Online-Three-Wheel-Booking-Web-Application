@@ -462,7 +462,7 @@ export default function Negombo() {
               </p>
             </div>
             <div>
-              <p className="px-5 lg:pt-5 pb-10 text-3xl font-bold">
+              <p className="px-5 pt-5 pb-10 text-3xl font-bold">
                 Negombo Map
               </p>
               <div class="relative mx-5 h-[500px]">

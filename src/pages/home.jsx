@@ -99,7 +99,7 @@ export default function Home() {
       details: `Embark on a charming tuktuk journey that leads you off the beaten path, unveiling the captivating secrets of Sri Lanka beyond the typical tourist destinations. Seize the opportunity to be your own navigator, savoring the liberty to uncover hidden treasures at your leisure.`,
     },
     {
-      img: `/images/Hassle.jpeg`,
+      img: `/images/Hassle.jpg`,
       topic: `Experience a Seamless and Effortless Journey`,
       details: `Whether you're off to the serene mountains or cruising down the beach at sunset, our tuktuks ensure your travel is seamlessly enjoyable. Say goodbye to worries about transportation and relish the delight of a carefree journey.`,
     },
@@ -114,37 +114,37 @@ export default function Home() {
     {
       img: `/extras/Camping.png`,
       topic: `Camping Kit`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Gear for nature lovers seeking outdoor adventures.`,
     },
     {
       img: `/extras/Adventure.png`,
       topic: `Adventure Kit`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Essential gear for daring explorers on journeys.`,
     },
     {
       img: `/extras/Seat.png`,
       topic: `Seat Belt`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Enhance your safety with an additional buckle.`,
     },
     {
       img: `/extras/Bluetooth.png`,
       topic: `Big Bluetooth Speakers`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Plan your celebration while you're on the move.`,
     },
     {
       img: `/extras/Baby.png`,
       topic: `Baby Seat`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Enjoyable journeys for young children.`,
     },
     {
       img: `/extras/Cooler.png`,
       topic: `Cooler / Esky`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Stay refreshed with drinks on-the-go.`,
     },
     {
       img: `/extras/Train.png`,
       topic: `Train Transfer`,
-      details: `Strap your precious surfboards or a baby stroller.`,
+      details: `Traveling by train as we carry your luggage in a tuk-tuk.`,
     },
   ];
   // ==============================================
@@ -170,6 +170,8 @@ export default function Home() {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 4000, // Change slides every 3 seconds (4000 milliseconds)
   };
 
   const mobileSettings = {
@@ -521,7 +523,7 @@ export default function Home() {
               <p className="mt-8 text-lg text-center lg:text-xl lg:px-28">
                 Choose your own tuktuk and express your individuality with our
                 wide array of choices, featuring the Classic Tuk, Transformable
-                Tuk, and the Adventure Tuk.
+                Tuk, and the Camper Tuk.
               </p>
             </div>
 

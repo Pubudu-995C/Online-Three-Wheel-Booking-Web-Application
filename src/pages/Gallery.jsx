@@ -26,7 +26,7 @@ export default function Gallery() {
     },
     {
       id: 2,
-      img: `/images/Hassle.jpeg`,
+      img: `/images/Hassle.jpg`,
       caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
     },
     {
@@ -50,17 +50,17 @@ export default function Gallery() {
       caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
     },
     {
-      id: 6,
+      id: 7,
       img: `/wallpapers/wallpaper6.jpg`,
       caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
     },
     {
-      id: 6,
+      id: 8,
       img: `/wallpapers/wallpaper4.jpg`,
       caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
     },
     {
-      id: 6,
+      id: 9,
       img: `/wallpapers/wallpaper8.jpg`,
       caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
     },
