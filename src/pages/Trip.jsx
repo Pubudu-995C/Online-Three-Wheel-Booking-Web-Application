@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Trip() {
   const [loading, setLoading] = useState(false);
@@ -72,6 +72,7 @@ export default function Trip() {
     },
     {
       town: `Trincomalee`,
+      details: `./town/trincomalee.jsx`,
     },
     {
       town: `Nilaveli`,

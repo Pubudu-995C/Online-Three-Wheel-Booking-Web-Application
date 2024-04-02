@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 import wallpaper10 from "../images/wallpapers/wallpaper10.jpg";
 import GridLoader from "react-spinners/GridLoader";
 

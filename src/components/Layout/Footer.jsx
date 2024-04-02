@@ -25,7 +25,7 @@ export default function Footer() {
               </p>
             </div>
             <div className="mb-5">
-              <h4 className="pb-4">Useful Links</h4>
+              <h4 className="pb-4 uppercase font-bold">company</h4>
               <ul className="text-gray-500">
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
@@ -65,27 +65,27 @@ export default function Footer() {
               </ul>
             </div>
             <div className="mb-5">
-              <h4 className="pb-4">Locations</h4>
+              <h4 className="pb-4 uppercase font-bold">legal</h4>
               <ul className="text-gray-500">
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href className=" hover:text-yellow-500">
+                  <a href="/PrivacyPolicy" className=" hover:text-yellow-500">
                     {" "}
-                    Colombo
+                    Privacy Policy
                   </a>
                 </li>
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href="/kandy" className=" hover:text-yellow-500">
+                  <a href="/Conditions" className=" hover:text-yellow-500">
                     {" "}
-                    Kandy
+                    Terms & Conditions
                   </a>
                 </li>
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href className=" hover:text-yellow-500">
+                  <a href="/RefundPolicy" className=" hover:text-yellow-500">
                     {" "}
-                    Galle
+                    Refund Policy
                   </a>
                 </li>
                 <li className="pb-4">

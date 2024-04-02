@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 

@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Layout/Navbar";
 import Footer from "../../components/Layout/Footer";
-import Negombo1 from "../../images/town/negombo1.jpg";
-import Negombo2 from "../../images/town/negombo2.jpg";
-import Negombo3 from "../../images/town/negombo3.jpg";
+import Trincomalee1 from "../../images/town/trincomalee1.jpg";
+import Trincomalee2 from "../../images/town/trincomalee2.jpg";
+import Trincomalee3 from "../../images/town/trincomalee3.jpg";
+import Trincomalee4 from "../../images/town/trincomalee4.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 
-export default function Negombo() {
+export default function Trincomalee() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -17,13 +18,12 @@ export default function Negombo() {
       setLoading(false);
     }, 4000);
   }, []);
-  
+
   const navigate = useNavigate();
   const homePageClick = () => {
     navigate("/");
     window.scrollTo(0, 0);
   };
-
   // ==========================================================
 
   const [expandedItem, setExpandedItem] = useState(1);
@@ -35,7 +35,7 @@ export default function Negombo() {
   const faqData = [
     {
       id: 1,
-      question: `Is it safe and legal to drive a TukTuk in Negombo?`,
+      question: `Is it safe and legal to drive a TukTuk in Trincomalee?`,
       answer: `Yes, we prioritize your safety. We provide you with a local driving license to safely and legally drive in Sri Lanka.`,
     },
     {
@@ -61,7 +61,7 @@ export default function Negombo() {
           <Navbar />
           <div className="xl:h-[500px] lg:h-[400px] h-[300px]">
             <img
-              src={Negombo1}
+              src={Trincomalee1}
               className="object-cover w-full h-full"
               alt="Wallpaper"
             />
@@ -69,55 +69,51 @@ export default function Negombo() {
           <div className="mt-10 lg:mx-12 xl:mx-28">
             <div>
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
-                Negombo: The Starting and Ending Point of Tropical Adventures
+                Trincomalee: Crystal Seas, Marine Marvels, Tales of Splendor.
               </h2>
               <h1 className="mx-4 mt-3 font-serif text-3xl font-bold font lg:text-5xl xl:text-6xl">
-                Explore the beauty of Negombo with TukTuk Mango
+                With TukTuk Mango, visit the beautiful places of Trincomalee
               </h1>
               <p className="px-5 pt-8 lg:text-xl md:text-lg text-base text-justify">
-                Are you ready to unlock the beauty of Negombo? Negombo is a
-                waterside paradise that has a mind-blowing beauty for waiting.
-                When you step into this enchanting city, you’ll be greeted by
-                fresh air from the sea and eye-catching colors, sounds, and
-                flavors that will peace your mind. Imagine this: walk through
-                the colorful and vibrant market stalls and enjoy fresh sea fish
-                flavored with the spicy scent of local spices. Yes, if you visit
-                Negombo, you can catch all these mind-blowing experiences!
+                Imagine this: if you get an unforgettable and exciting journey
+                to discover the beauty of Trincomalee Sri Lanka! Isn’t it
+                amazing? Trincomalee still wins the hearts of visitors around
+                the globe because of its stunning beaches, ageless beauty, and
+                high-spirited culture. As a visitor to Sri Lanka, you can spend
+                your days peacefully lounging on the white sands of Marbel Beach
+                or exploring the ancient ruins of Fort Frederick. What’s more?
+                The beauty of Trinco is endless.
               </p>
               <p className="px-5 pt-8 lg:text-xl md:text-lg text-base text-justify">
-                The true magic of Negombo lies in its breathtaking natural
-                beachside. While feeling the tunes of the ear-attractive waves,
-                give the time to feel the softness of the sand to your toes when
-                you walk through the historical natural beaches. Moreover, to
-                refresh your memories and romanticize yourself, Negombo Beach is
-                a great place for you!
+                The best thing about this Trincomalee journey is that it
+                promises to give you cherished memories for years to come
+                whether you’re a nature lover, a researcher of history, or a
+                person who is simply seeking relaxation for your busy life. But
+                how do we make this journey more simple? With TukTuk Mango, now
+                you can get a safe TukTuk journey to Trincomalee. But how?
+                TukTuk Mango provides a safe TukTuk for you to visit all
+                breathtaking places! With your favourite TukTuk, now you can
+                enjoy all the beautiful places of Trinco.
               </p>
               <p className="px-5 pt-8 lg:text-xl md:text-lg text-base text-justify">
-                And, what is the best method to experience the true beauty of
-                Negombo than with TukTuk Mango? Just pick TukTuk Mango and
-                unlock the Negombo beauty together! Our friendly service is
-                ready to give you a safe and unforgettable adventure with a safe
-                TukTuk. So, if you need to feel the Negombo beauty with a
-                TukTuk, join hands with our best TukTuk service. With TukTuk
-                Mango, it’s not just a ride, it is a friendship tour!
+                So, get ready to dive yourself into the amazing beauty of
+                Trincomalee like never before with TukTuk Mango leading the way.
               </p>
               <p className="px-5 py-5 lg:text-3xl text-2xl font-bold">
-                Discover Exciting Activities in and Around Negombo!
+                Discover Exciting Activities in and Around Trincomalee!
               </p>
-
               <p className="px-5 py-5 lg:text-xl text-lg font-bold text-justify">
-                Discover the secrets hidden within Negombo
+                Uncover Trincomalee's Hidden Charms Together
               </p>
-
               <div className="flex justify-center ">
                 <img
-                  src={Negombo2}
+                  src={Trincomalee2}
                   className="object-cover h-[500px]"
                   alt="Wallpaper"
                 />
               </div>
               <p className="px-5 pt-5 lg:text-3xl text-2xl font-bold">
-                Explore Negombo hassle-free: Rent from Tuktuk
+                Explore Trincomalee hassle-free: Rent from Tuktuk
                 <span className="text-[#54B435]">mango</span>.com!
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
@@ -126,7 +122,6 @@ export default function Negombo() {
                 TukTuk, yeah we can give it to you! If you select TukTuk Mango,
                 you can also enjoy these mind-blowing benefits:
               </p>
-
               <ul className="px-10 pt-5 lg:text-xl md:text-lg text-base leading-relaxed list-disc space-y-3">
                 <li>Trusted TukTuk service: your safety is our main thing.</li>
                 <li>
@@ -157,7 +152,8 @@ export default function Negombo() {
                 </button>
               </div>
               <p className="px-5 lg:text-2xl text-xl font-bold">
-                Get Your Recognition Permit for Sri Lanka from Negombo Easily
+                Get Your Recognition Permit for Sri Lanka from Trincomalee
+                Easily
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
                 To legally drive a tuktuk in Sri Lanka, you need a specific
@@ -171,7 +167,7 @@ export default function Negombo() {
                 the AAC (Automobile Association of Ceylon). Once you choose
                 either, you'll get an email containing the license form. Just
                 upload your documents there, and we'll have your permit ready
-                for you to pick up in Negombo.
+                for you to pick up in Trincomalee.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
                 Make sure you're protected with our all-inclusive insurance
@@ -185,14 +181,14 @@ export default function Negombo() {
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
                 Become Proficient with Your Tuktuk: Feel at Ease Before
-                Embarking on Your Adventure from Negombo
+                Embarking on Your Adventure from Trincomalee
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
                 We'll give you an online session to run through all the
                 last-minute plans, and we'll help you organize your schedule.
                 Plus, you'll get thorough driving lessons before setting off to
                 discover paradise on your very own tuktuk adventure from
-                Negombo.
+                Trincomalee.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
                 Why Pick Tuktukmango.com?
@@ -224,180 +220,235 @@ export default function Negombo() {
                 When you're picking out a tuktuk rental service, keep these
                 points in mind. Get ready to embrace the freedom of cruising
                 along the open roads and soaking in the beauty of Sri Lanka.
-                Your adventure kicks off right from Negombo!
+                Your adventure kicks off right from Trincomalee!
               </p>
               <p className="px-5 pt-5 text-3xl font-bold">
-                Negombo's Must-See Attractions
+                Feel the stunning beauty of Trincomalee!
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                It doesn’t matter whether you’re a beach lover, a history
+                enthusiast, or an ordinary visitor, there are multiple exciting
+                things to see and feel. For easier navigation, I will explore
+                the best places below!
               </p>
               <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
-                Beach
+                The most popular beaches
               </h2>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                Negombo Beach
+                Nilaveli beach
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Negombo Beach is a well-maintained and attractive beach that has
-                a wide expanse of natural golden sand. Negombo Beach is a great
-                place for literal swimmers who love swimming, sunbathing, and
-                multiple water sports. It provides a safe place for water
-                activities such as kitesurfing, windsurfing, and sailing are
-                popular. If you love to see the beauty of the sunset with your
-                loved ones, Negombo Beach is a popular place. Yeah, that’s why
-                this is a great place.
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Also, Negombo Beach is a famous and highly recommended holiday
-                destination stop that includes beautiful hotels, resorts, and
-                luxury restaurants. This beach always remembers visitors to
-                Italy because of its multiple historical churches and uncommon
-                historical architectural designs. Still, this is a trendy
-                tourist spot because of its amazing beauty!
+                Nilaveli Beach is the most popular beach in Sri Lanka currently
+                a lot of visitors must visit and enjoy a lot of activities. Just
+                off the shore, you will see Pigeon Island, it is an excellent
+                place for snorkelling. Another great way is you can explore the
+                waters of the Indian Ocean and spot dolphins and whales through
+                the boat tours.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                Browns Beach
+                Marble beach
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Browns Beach is an unspoiled private beach in Negombo that has
-                wide popularity among tourists. This beach attracts millions of
-                tourists' hearts because of its unique golden sands, turquoise
-                blue water, and breathtaking palm trees.
+                Marble Beach is one of the most stunning beaches in Sri Lanka
+                because of its white sand and amazing beauty. This white sand
+                shows you how pure and clean this beach is. Yeah, this is one of
+                the cleanest beaches in Sri Lanka which is grateful for Solo
+                travellers. And, don’t forget it has a small island nestled here
+                so the beach is also frequented by endemic bird and mammal
+                species of birds and mammals.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                Morawala Beach
+                Uppuveli beach
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                In Negombo City, Morawala Beach is much discussed among
-                visitors. It is popular to see the sunset in the evening!
-              </p>
-              <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
-                Church & Cathedral
-              </h2>
-              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                St. Mary’s Church
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                In Sri Lanka, St. Mary’s Church, well known as Maha Veediya
-                Palliya, is one of the largest cathedrals, located in the middle
-                of Negombo. The most exciting thing about this church is that it
-                is 140 years old and is popularly known for one painting of
-                Jesus that was painted by Buddhist painter, N.S. Godamanne. Due
-                to its numerous churches and Portuguese-Dutch influence, it was
-                also introduced as a “Little Rome ''. So, if you visit Negombo,
-                you can feel the beauty and old smell of this church.
+                Uppuveli Beach is a popular tourist spot. If you’re a Sri Lankan
+                fresh food lover, this beach is popular for tasting a wide
+                variety of local food options, especially seafood. Moreover,
+                this crystal water provides many activities for visitors who
+                want an enjoyable experience in Sri Lanka.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                St. Sebastian’s Church
+                Dutch Bay Beach
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Almost ruined by 2019’s suicide bomb, St. Sebastian’s church was
-                reconsecrated three months after the attack. The most exciting
-                fact about St. Sebastian’s Church is that it was designed in a
-                unique Gothic Revival style and the creator used to make this
-                church was the Reims Cathedral in France.
-              </p>
-              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                St. Stephen’s Anglican Church
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                St. Stephen’s Anglican Church looks like an ancient Dutch Fort
-                because it is located surrounded by lush green views. Similar to
-                Sebastian Church, this is designed in the Gothic Revival style
-                of architecture and we can see it features small stone crosses
-                on each ridge tile on top.
-              </p>
-              <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
-                National Park
-              </h2>
-              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                Wilpattu National Park
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                The Wilpattu National Park is the home for the elusive Sri
-                Lankan leopard so it gained a wide popularity among visitors in
-                Sri Lanka and other countries. And, it is specified by natural
-                sand-rimmed water basins called “willus” that fill with
-                rainwater. If you visit this amazing national park as a Safari,
-                you will see a vast array of elephants, Sloth bears, spotted
-                deer, a range of colorful uncommon birds, and various species of
-                butterflies.
+                As the name implies, Dutch Bay Beach is an attractive beach with
+                golden colour pure sand, and turquoise water spread across
+                several kilometres. What are the best experiences you can get at
+                this Dutch Bay Beach? If you visit this beach you will see local
+                fishing boats onshore waiting to go into the sea in the morning,
+                you can go jogging and feel the fresh air, and you can taste the
+                ice cream or seafood like barbecued crabs and lobsters.
               </p>
               <div className="flex justify-center mt-10 ">
                 <img
-                  src={Negombo3}
+                  src={Trincomalee3}
                   className="object-cover h-[500px]"
                   alt="Wallpaper"
                 />
               </div>
-
+              <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
+                Diving and snorkeling
+              </h2>
+              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
+                Pigeon Island
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                Pigeon Island is a popular place named after the Pigeons. This
+                island is used as a breeding island. Now, this island is also
+                home to a wide variety of rare and beautiful coral and fish
+                species proving it is an amazing place for snorkeling. Pigeon
+                Island is even a property for the Hawksbill Turtle, the Green
+                Turtle, and the Blacktip Reef Shark. In addition to the rich
+                underwater, visitors can see flocks of rock pigeons flying out
+                of the rocks on the island.
+              </p>
+              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
+                Scuba diving
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                Whether you’re a diving expert or a newbie, you can find
+                something for yourself at Trincomalee City! While Swami Rock
+                offers drift diving, Nilaveli is home to shallow reefs and
+                vibrant aquatic life. If you’re a diver who loves to investigate
+                the wreckage of H.M.S. Diomede and H.M.S. Hermes, yes, this
+                place has some interesting things to find. And, it will be a
+                great hope for divers. Plus, this is a beautiful place for
+                photography because you will see octopi, nudibranchs, seahorses,
+                frogfish, and various other species around this place.
+              </p>
+              <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
+                Temples
+              </h2>
+              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
+                Thirukonamalai Konesar Temple
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                The Konesar Temple is one of the main highlights of Trincomalee.
+                If you visit this temple, in every corner, you will see
+                breathtaking and historical views that you can’t believe your
+                eyes. This is popularly known as “Kailasa”, a religious
+                pilgrimage for the Hindus. Notably, the Koneswaram temple is
+                built to worship Lord Shiva- the supreme God of Hinduism and it
+                is one of the five “Pancha Ishwarams” (abodes of Shiva).
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                Konesar temple has a widely spread history that goes back 400
+                B.C.E., later to the 5th century, and finally to the 18th
+                century. So, if you’re a researcher and want to explore the
+                oldest architectural design, this is a great place to learn more
+                about the history!
+              </p>
+              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
+                Pathirakali Amman Temple
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                Pathirakali Amman Temple is a Hindu temple of the goddess Kali
+                located in Trincomalee. Hindu people believe that an incarnation
+                of the goddess Kali Amman owns this temple. This temple is built
+                in the classical Dravidian architecture style, similar to the
+                South India Hindu Kowil. The best thing about Pathirakali Amman
+                Temple is that it has a beautiful design and interior along with
+                beautiful sculptures that are nothing short of excellence. So,
+                now visitors can visit this place to see the Pathirakali Amman
+                Temple to see the real beauty of Hindu temples.
+              </p>
+              <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
+                Hot spring
+              </h2>
+              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
+                Kanniya Hot Spring
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                Kanniya Hot Spring is a highlighting spot that increases the
+                brightness of Trincomalee. The Kanniya Hot Spring is located on
+                the east coast of Sri Lanka in Trincomalee. It has seven wells
+                that are square-shaped each has a four-foot depth. Sri Lankan
+                people believe that the water from the well has healing
+                properties. Yes, this is a great example of the purest of
+                nature. The temperature of the water at these hot springs varies
+                between wells, but the average temperature is warm to hot.
+              </p>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                So, if you visit Kanniya Hot Spring, you can feel the natural
+                hot water without a technical water heating system.
+              </p>
+              <div className="flex justify-center mt-10">
+                <img
+                  src={Trincomalee4}
+                  className="object-cover h-[500px]"
+                  alt="Wallpaper"
+                />
+              </div>
               <p className="px-5 pt-5 text-3xl font-bold">
-                How to Get to Negombo from Airport
+                How to Get to Trincomalee from Colombo
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                A Bus Ride to Negombo
+                A Train Ride to Trincomalee
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                If you're at the bus stop close to the airport, you can easily
-                catch a bus headed to Negombo. Look out for buses numbered 187
-                or 240.
+                You can catch a train from Colombo Fort to Trincomalee, and
+                there are usually one to two trains running each day. The night
+                mail train will get you there in about 8 hours and 15 minutes,
+                while a regular train will take around 3 hours and 40 minutes.
+                You can check the train timetable{" "}
+                <a
+                  href="https://eservices.railway.gov.lk/schedule/searchTrain.action?lang=en"
+                  className="font-bold text-blue-600 "
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  here
+                </a>{" "}
+                for more details.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                By Taxi to Negombo
+                A Bus Ride to Trincomalee
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                The most convenient way to get from the airport to Negombo is by
-                grabbing a taxi through services like Uber or Pickme. It
-                typically runs between $8 to $15, and the ride lasts about 12
-                minutes.
-              </p>
-              <p className="px-5 pt-5 text-3xl font-bold">
-                How to Get from Colombo to Negombo
+                You can catch a bus from Colombo's Bastian Mawatha Bus Terminal
+                to Trincomalee (route 49), which will take approximately 6 and a
+                half hours to reach there. For planning your journey and
+                checking bus schedules, visit the Sri Lanka{" "}
+                <a
+                  href="https://www.ntc.gov.lk/"
+                  className="font-bold text-blue-600 "
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  National Transport Commission (NTC){" "}
+                </a>
+                official website.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                A Train Ride to Colombo
+                By Taxi to Trincomalee
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                You can catch trains frequently from Negombo to Colombo, and the
-                ride typically takes about an hour and a half.
+                If you prefer, you can hire a private car and driver to get to
+                Trincomalee from Colombo. It's the quickest option but can be
+                pricier. The journey typically takes about 5 and a half hours.
               </p>
               <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                A Bus Ride to Colombo
+                Rent a Tuktuk and Drive to Trincomalee!
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                You can catch a bus easily from Negombo's main bus station to
-                Colombo (bus no. 240). The journey usually takes about 1.5
-                hours, and there are plenty of buses running frequently.
-              </p>
-              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                By Taxi to Colombo
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                If you prefer, you can also opt for a private car and driver
-                service, which is the quickest but priciest option. This way,
-                you can expect to reach Colombo from Negombo in about 30 to 40
-                minutes.
-              </p>
-              <p className="px-5 pt-5 lg:text-2xl text-xl font-bold">
-                Rent a Tuktuk and Drive to Negombo!
+                Traveling from Colombo to Trincomalee in your own tuktuk offers
+                an incredible way to soak in the breathtaking scenery and
+                uncover Sri Lanka's hidden treasures. Renting a tuktuk adds a
+                thrilling element to your journey, granting you the liberty to
+                explore intriguing paths and stop wherever catches your eye.
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Traveling from Colombo to Negombo in your very own tuktuk is an
-                incredible way to soak in the stunning sights and uncover the
-                hidden treasures of Sri Lanka. Renting a tuktuk promises an
-                adventure-filled journey, giving you the liberty to navigate
-                through captivating paths and stop at any spot that catches your
-                eye.
-              </p>
-              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Hop onto our user-friendly online booking platform at{" "}
+                Ready to embark on this adventure? Simply visit our website,{" "}
                 <a href="https://tuktukmango.com">
                   <span className="font-bold">
                     tuktuk<span className="text-[#54B435]">mango</span>.com
                   </span>
                 </a>
-                . Simply pick your desired dates, select any extras you may
-                need, and provide your details. Proceed to the payment section,
-                and get ready to embark on an unforgettable tuktuk ride across
-                Sri Lanka!
+                , and make your reservation online. Choose your preferred dates,
+                select any extras you need, and fill in your information.
+                Proceed to the payment stage, and get ready to hit the road and
+                experience the joy of tuktuk travel in Sri Lanka.
               </p>
               <div className="flex flex-col items-center my-10">
                 <button
@@ -447,27 +498,31 @@ export default function Negombo() {
             </div>
             <div>
               <p className="px-5 pt-5 text-3xl font-bold">
-                Experience a hassle-free Negombo journey!
+                Visit all the mind-blowing places of Trincomalee safely!
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                Imagine this: traveling to Negombo in your own TikTok without
-                any hassle will be one of the unforgettable moments of your life
-                so you can add it to your travel diary as a mind-blowing
-                journey. TukTuk Mango is ready to take you through the colorful
-                cities of Negombo, fantastic beaches to feel the sunset and,
-                pray in old churches, and more.
+                Experience the wonderful beauty of Trincomalee peacefully and
+                safely by selecting TukTuk Mango as your partner! Whether it's
+                exploring ancient sites, and beautiful beaches, or immersing
+                yourself in local culture, our trusted TukTuk service promises
+                you to make your journey unforgettable with your own TukTuk. So,
+                choose TukTuk Mango and pick your own TukTuk to visit
+                Trincomalee safely!
               </p>
               <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
-                So, why are you still waiting? Join with TukTuk Mango and feel
-                the Negombo beauty!
+                So, don't miss out on any of the mesmerising attractions this
+                beautiful destination has to offer- choose TukTuk Mango be your
+                guide to unforgettable adventures in Trincomalee!
               </p>
             </div>
             <div>
-              <p className="px-5 pt-5 pb-10 text-3xl font-bold">Negombo Map</p>
+              <p className="px-5 pt-5 pb-10 text-3xl font-bold">
+                Trincomalee Map
+              </p>
               <div class="relative mx-5 h-[500px]">
                 <iframe
                   class="absolute top-0 left-0 w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126670.33644594673!2d79.77585073436786!3d7.189611414426807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ee9c6bb2f73b%3A0xa51626e908186f3e!2sNegombo!5e0!3m2!1sen!2slk!4v1711380204387!5m2!1sen!2slk"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63122.11417057675!2d81.17201672456065!3d8.583291985932245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afbbcb6902dbe27%3A0x7de76a7a331b0fbb!2sTrincomalee!5e0!3m2!1sen!2slk!4v1712083177681!5m2!1sen!2slk"
                   frameborder="0"
                   allowfullscreen=""
                   aria-hidden="false"

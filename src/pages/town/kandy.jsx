@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../../components/Layout/Navbar";
+import Footer from "../../components/Layout/Footer";
 import Kandy1 from "../../images/town/kandy1.jpg";
 import Kandy2 from "../../images/town/kandy2.jpg";
 import Kandy3 from "../../images/town/kandy3.jpg";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "../components/ScrollToTopButton";
+import ScrollToTopButton from "../../components/ScrollToTopButton";
 
 export default function Kandy() {
   const [loading, setLoading] = useState(false);
@@ -121,31 +121,35 @@ export default function Kandy() {
                   alt="Wallpaper"
                 />
               </div>
-              <p className="px-5 py-5 lg:text-3xl text-2xl font-bold">
+              <p className="px-5 pt-5 lg:text-3xl text-2xl font-bold">
                 Explore Kandy hassle-free: Rent from Tuktuk
                 <span className="text-[#54B435]">mango</span>.com!
               </p>
-
-              <ul className="px-10 lg:text-xl md:text-lg text-base leading-relaxed list-disc space-y-3">
-                <li>Choose Kandy as your pickup or drop-off location.</li>
-                <li>Select the dates you need the tuktuk for.</li>
+              <p className="px-5 pt-5 lg:text-xl md:text-lg text-base text-justify">
+                As a trusted TukTuk service, TukTuk Mango promises to provide
+                the opportunity to rent TukTuks: if you love to drive your own
+                TukTuk, yeah we can give it to you! If you select TukTuk Mango,
+                you can also enjoy these mind-blowing benefits:
+              </p>
+              <ul className="px-10 pt-5 lg:text-xl md:text-lg text-base leading-relaxed list-disc space-y-3">
+                <li>Trusted TukTuk service: your safety is our main thing.</li>
                 <li>
-                  Opt for the tuktuk licence option to drive legally in Sri
-                  Lanka (we'll help you get a Recognition Permit).
+                  You can select your own Tuk with our wide collection of
+                  services including the Classic Tuk, Transformable Tuk, and the
+                  Adventure Tuk.
                 </li>
+                <li>You can select your TukTuk booking dates.</li>
+                <li>Do your payment easily with your Debit or Credit cards.</li>
+                <li>24/7 unlimited customer support.</li>
+                <li>Seamless Kms</li>
+                <li>Comprehensive Insurance for users</li>
                 <li>
-                  Customize your ride with extras like coolers, Bluetooth
-                  speakers, and baby seats
+                  To drive legally, we provide a valid local driver's license.
                 </li>
-                <li>Enter your personal details.</li>
-                <li>Proceed to payment using your Debit or Credit card.</li>
+                <li>We offer a driving lesson and itinerary advice for you</li>
                 <li>
-                  Once payment is complete, check your email for a confirmation.
-                </li>
-                <li>
-                  In the confirmation email, you'll find a link to submit your
-                  licence details, info about our social business model, and a
-                  comprehensive guide to tuktuk rental and driving in Sri Lanka.
+                  Extra benefits: Phone chargers, Bluetooth speakers, coolers,
+                  and more
                 </li>
               </ul>
               <div className="flex flex-col items-center my-10">

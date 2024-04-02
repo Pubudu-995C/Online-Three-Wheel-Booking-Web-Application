@@ -4,10 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton"
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 // =================================================
 import wallpaper from "../images/wallpapers/wallpaper.jpg";
 import wallpaper2 from "../images/wallpapers/wallpaper2.jpg";
@@ -212,22 +212,22 @@ export default function Home() {
     {
       img: `/team/person (2).png`,
       name: `Pubudu`,
-      details: `Frontend Developer`,
+      details: `Tour Advisor`,
     },
     {
       img: `/team/person (1).png`,
       name: `Oshani`,
-      details: `Backend Developer`,
+      details: `Tour Advisor`,
     },
     {
       img: `/team/person (3).png`,
       name: `Sanjaya`,
-      details: `Digital Marketing Analyst`,
+      details: `Tour Advisor`,
     },
     {
       img: `/team/person (4).png`,
       name: `Oshani`,
-      details: `Web Designer`,
+      details: `Tour Advisor`,
     },
   ];
 
@@ -628,12 +628,14 @@ export default function Home() {
                     {team.map((t) => (
                       <div>
                         <img
-                          class="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
+                          class="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[100px] md:w-[150px]"
                           src={t.img}
                           alt=""
                         />
-                        <h5 class=" text-lg font-bold">{t.name}</h5>
-                        <p class="mb-6 lg:mb-0">{t.details}</p>
+                        <p class="text-lg font-bold">{t.name}</p>
+                        <p class="mb-6 lg:mb-0 text-sm md:text-lg">
+                          {t.details}
+                        </p>
                       </div>
                     ))}
                   </div>

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 import wallpaper6 from "../images/wallpapers/wallpaper6.jpg";
 import "./gallery.css";
 import CloseIcon from "@mui/icons-material/Close";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function Gallery() {
   const [loading, setLoading] = useState(false);

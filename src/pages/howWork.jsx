@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 
 import wallpaper3 from "../images/wallpapers/wallpaper3.jpg";
 import wallpaper4 from "../images/wallpapers/wallpaper4.jpg";
 import wallpaper5 from "../images/wallpapers/wallpaper5.jpg";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 export default function HowWork() {
   const [loading, setLoading] = useState(false);
@@ -99,7 +99,7 @@ export default function HowWork() {
             />
             <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
               <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
-                How It Works​
+                How things get done
               </h1>
             </div>
           </div>
@@ -107,10 +107,10 @@ export default function HowWork() {
           <div className="bg-gradient-to-br from-slate-50 to-lime-200">
             <div className="pt-20 m-0">
               <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
-                HOW IT WORKS
+                Understanding the way things operate
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center font md:text-4xl lg:text-5xl xl:text-6xl">
-                Let’s Get You Driving a Tuktuk!
+                Take the wheel! Explore by tuktuk.
               </h1>
 
               <p className="px-5 mt-12 text-lg text-center lg:text-xl">
