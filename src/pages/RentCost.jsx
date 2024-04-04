@@ -40,7 +40,9 @@ export default function RentCost() {
   const parsedDeposit = parseFloat(deposit);
 
   // Calculate the total price if tukQuantity is available, otherwise use totalPrice
-  const total = tukQuantity ? parsedTotalPrice * tukQuantity : parsedTotalPrice;
+  const totVehicle = tukQuantity
+    ? parsedTotalPrice * tukQuantity
+    : parsedTotalPrice;
   const totDeposit = tukQuantity ? parsedDeposit * tukQuantity : parsedDeposit;
 
   // Calculate the total cost of options
@@ -60,7 +62,7 @@ export default function RentCost() {
     : 0;
 
   // Calculate the grand total
-  const grandTotal = total + optionsTotal + totalDriverCost;
+  const grandTotal = totVehicle + optionsTotal + totalDriverCost;
 
   const [formData, setFormData] = useState({
     title: "",
@@ -86,21 +88,20 @@ export default function RentCost() {
     }));
   };
 
-  const handleConfirm = (e) => {
+  const handleConfirm = async (e) => {
     e.preventDefault();
     const dataToSend = {
       pickupCity,
       pickupDate,
       pickupTime,
-      pickupFee,
       returnCity,
       returnDate,
       returnTime,
-      returnFee,
       durationDays,
       vehicle,
-      total,
+      totVehicle,
       options,
+      optionsTotal,
       grandTotal,
       totDeposit,
       payNowPickUp,
@@ -110,8 +111,57 @@ export default function RentCost() {
       totalDriverCost,
     };
 
-    navigate("/ContactUs", { state: { data: dataToSend } });
+    try {
+      const response = await fetch("http://localhost:8081/rent_vehicle", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to insert data into database");
+      }
+
+      // Assuming the response from the backend contains a success message
+      // const responseData = await response.json();
+      // console.log(responseData);
+
+      // Redirect to another page if needed
+      // navigate("/success-page");
+    } catch (error) {
+      console.error("Error inserting data into database:", error);
+    }
   };
+
+  // const handleConfirm = (e) => {
+  //   e.preventDefault();
+  //   const dataToSend = {
+  //     pickupCity,
+  //     pickupDate,
+  //     pickupTime,
+  //     pickupFee,
+  //     returnCity,
+  //     returnDate,
+  //     returnTime,
+  //     returnFee,
+  //     durationDays,
+  //     vehicle,
+  //     totVehicle,
+  //     options,
+  //     optionsTotal,
+  //     grandTotal,
+  //     totDeposit,
+  //     payNowPickUp,
+  //     customerDetails: formData,
+  //     driQuantity,
+  //     driCost,
+  //     totalDriverCost,
+  //   };
+  //   console.log(dataToSend);
+  //   navigate("/ContactUs", { state: { data: dataToSend } });
+  // };
 
   // Calculate the "Pay Now / at Pick-up" amount
   const payNowPickUp = grandTotal + totDeposit;
@@ -191,7 +241,7 @@ export default function RentCost() {
                       </p>
                       <p className="md:text-2xl text-xl font-bold">Total</p>
                       <p className="mb-4 text-lg font-bold text-red-500">
-                        {total} USD
+                        {totVehicle} USD
                       </p>
                       {driQuantity && (
                         <div>
@@ -290,7 +340,7 @@ export default function RentCost() {
                     <div className="mb-5">
                       <p className="text-2xl font-bold">Total</p>
                       <p className="mt-4 text-lg font-bold text-red-500">
-                        {total} USD
+                        {totVehicle} USD
                       </p>
                     </div>
                     {driQuantity && (
