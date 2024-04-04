@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -7,10 +7,17 @@ import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 export default function RentOption() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { data } = location.state || {};
+  // const { data } = location.state || {};
+  const data = location.state?.data || null;
   const [selectedQuantities, setSelectedQuantities] = useState({});
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [selectedDrivers, setSelectedDrivers] = useState({});
+
+  //Rederect homepage without data
+  useEffect(() => {
+    if (!data) navigate("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const {
     pickupCity,

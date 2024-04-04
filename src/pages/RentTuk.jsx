@@ -38,7 +38,14 @@ const cityFees = {
 export default function RentTuk() {
   const navigate = useNavigate();
   const location = useLocation();
-  const formData = location.state?.formData || {};
+  // const formData = location.state?.formData || {};
+  const formData = location.state?.formData || null;
+
+  //Rederect homepage without data
+  useEffect(() => {
+    if (!formData) navigate("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [detail, setDetail] = useState([]);
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -7,7 +7,14 @@ import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 export default function RentCost() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { data } = location.state || {};
+  // const { data } = location.state || {};
+  const data = location.state?.data || null;
+
+  //Rederect homepage without data
+  useEffect(() => {
+    if (!data) navigate("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const {
     pickupCity,
@@ -27,7 +34,6 @@ export default function RentCost() {
     driCost,
     options,
   } = data || {};
-  console.log(data);
 
   // Convert totalPrice and deposit to numbers
   const parsedTotalPrice = parseFloat(totalPrice);
@@ -35,7 +41,7 @@ export default function RentCost() {
 
   // Calculate the total price if tukQuantity is available, otherwise use totalPrice
   const total = tukQuantity ? parsedTotalPrice * tukQuantity : parsedTotalPrice;
-  const result = tukQuantity ? parsedDeposit * tukQuantity : parsedDeposit;
+  const totDeposit = tukQuantity ? parsedDeposit * tukQuantity : parsedDeposit;
 
   // Calculate the total cost of options
   let optionsTotal = 0;
@@ -96,7 +102,7 @@ export default function RentCost() {
       total,
       options,
       grandTotal,
-      result,
+      totDeposit,
       payNowPickUp,
       customerDetails: formData,
       driQuantity,
@@ -108,7 +114,7 @@ export default function RentCost() {
   };
 
   // Calculate the "Pay Now / at Pick-up" amount
-  const payNowPickUp = grandTotal + result;
+  const payNowPickUp = grandTotal + totDeposit;
 
   return (
     <div
@@ -378,7 +384,7 @@ export default function RentCost() {
                     </p>
                   </p>
                   <p className="text-lg font-bold text-red-500 xl:hidden">
-                    {result.toFixed(2)} USD
+                    {totDeposit.toFixed(2)} USD
                   </p>
                   <p>Pay Now / at Pick-up:</p>
                   <p className="text-lg font-bold text-red-500 xl:hidden">
@@ -392,7 +398,7 @@ export default function RentCost() {
                 <div className="hidden xl:block">
                   <div className="grid grid-rows-4 text-lg font-bold text-right text-red-500 gap-y-2">
                     <p>{grandTotal.toFixed(2)} USD</p>
-                    <p>{result.toFixed(2)} USD</p>
+                    <p>{totDeposit.toFixed(2)} USD</p>
                     <p>{payNowPickUp.toFixed(2)} USD</p>
                     <p>USD</p>
                   </div>
