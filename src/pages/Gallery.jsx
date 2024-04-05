@@ -7,6 +7,7 @@ import "./gallery.css";
 import CloseIcon from "@mui/icons-material/Close";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import WhatsApp from "../components/WhatsApp";
 
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
@@ -151,6 +152,7 @@ export default function Gallery() {
             </button>
           </div>
           <Footer />
+          <WhatsApp />
         </div>
       )}
       <ScrollToTopButton />

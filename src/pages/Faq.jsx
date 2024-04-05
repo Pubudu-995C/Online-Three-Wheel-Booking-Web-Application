@@ -5,6 +5,7 @@ import Footer from "../components/Layout/Footer";
 import wallpaper8 from "../images/wallpapers/wallpaper8.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import WhatsApp from "../components/WhatsApp";
 
 export default function Faq() {
   const navigate = useNavigate();
@@ -199,6 +200,7 @@ export default function Faq() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

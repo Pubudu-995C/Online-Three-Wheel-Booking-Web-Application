@@ -7,6 +7,7 @@ import Negombo2 from "../../images/town/negombo2.jpg";
 import Negombo3 from "../../images/town/negombo3.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
+import WhatsApp from "../../components/WhatsApp";
 
 export default function Negombo() {
   const [loading, setLoading] = useState(false);
@@ -485,6 +486,7 @@ export default function Negombo() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

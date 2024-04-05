@@ -8,6 +8,7 @@ import Trincomalee3 from "../../images/town/trincomalee3.jpg";
 import Trincomalee4 from "../../images/town/trincomalee4.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
+import WhatsApp from "../../components/WhatsApp";
 
 export default function Trincomalee() {
   const [loading, setLoading] = useState(false);
@@ -540,6 +541,7 @@ export default function Trincomalee() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

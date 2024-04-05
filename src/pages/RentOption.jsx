@@ -32,6 +32,7 @@ export default function RentOption() {
     vehicle,
     totalPrice,
     deposit,
+    vehiPrice,
   } = data || {};
 
   const handleContinue = () => {
@@ -50,6 +51,7 @@ export default function RentOption() {
       returnFee,
       durationDays,
       vehicle,
+      vehiPrice,
       totalPrice,
       deposit,
       tukQuantity: selectedTukQuantity,
@@ -112,7 +114,7 @@ export default function RentOption() {
     {
       item: `Camping Kit`,
       deposit: `Not Required`,
-      cost: `2.00`,
+      cost: `5.00`,
       quantity: ["1", "2", "3", "4"],
     },
     {
@@ -124,31 +126,31 @@ export default function RentOption() {
     {
       item: `Seat Belt`,
       deposit: `Not Required`,
-      cost: `8.00`,
-      quantity: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      cost: `5.00`,
+      quantity: ["1", "2", "3", "4"],
     },
     {
       item: `Big Bluetooth Speakers`,
       deposit: `Not Required`,
-      cost: `10.00`,
+      cost: `5.00`,
       quantity: ["1", "2", "3"],
     },
     {
       item: `Baby Seat`,
       deposit: `Not Required`,
-      cost: `12.00`,
-      quantity: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      cost: `5.00`,
+      quantity: ["1", "2", "3", "4", "5", "6"],
     },
     {
       item: `Cooler / Esky`,
       deposit: `Not Required`,
-      cost: `10.00`,
+      cost: `5.00`,
       quantity: ["1", "2", "3", "4", "5", "6", "7"],
     },
     {
       item: `Train Transfer`,
       deposit: `Not Required`,
-      cost: `20.00`,
+      cost: `5.00`,
       quantity: ["1", "2", "3", "4", "5"],
     },
   ];
@@ -535,7 +537,7 @@ export default function RentOption() {
             <div className="flex justify-center mt-5 xl:justify-end xl:mt-0">
               <button
                 onClick={handleContinue}
-                className="bg-[#54B435] py-2 px-4 font-bold md:text-xl text-base text-white rounded-full mx-10"
+                className="bg-[#54B435] hover:bg-[#F0FF42] transition-colors duration-300  py-2 px-4 font-bold md:text-xl text-base text-white hover:text-black rounded-full mx-10"
               >
                 Continue
               </button>

@@ -7,6 +7,7 @@ import Kandy2 from "../../images/town/kandy2.jpg";
 import Kandy3 from "../../images/town/kandy3.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
+import WhatsApp from "../../components/WhatsApp";
 
 export default function Kandy() {
   const [loading, setLoading] = useState(false);
@@ -518,6 +519,7 @@ export default function Kandy() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

@@ -5,6 +5,7 @@ import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import WhatsApp from "../components/WhatsApp";
 
 export default function Trip() {
   const [loading, setLoading] = useState(false);
@@ -200,6 +201,7 @@ export default function Trip() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

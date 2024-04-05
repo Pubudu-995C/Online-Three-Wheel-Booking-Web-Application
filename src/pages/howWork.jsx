@@ -8,6 +8,7 @@ import wallpaper4 from "../images/wallpapers/wallpaper4.jpg";
 import wallpaper5 from "../images/wallpapers/wallpaper5.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import WhatsApp from "../components/WhatsApp";
 
 export default function HowWork() {
   const [loading, setLoading] = useState(false);
@@ -510,6 +511,7 @@ export default function HowWork() {
               </div>
             </div>
           </div>
+          <WhatsApp />
           <Footer />
         </div>
       )}

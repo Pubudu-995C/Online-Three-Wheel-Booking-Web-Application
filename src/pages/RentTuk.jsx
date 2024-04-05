@@ -94,6 +94,7 @@ export default function RentTuk() {
       vehicle: v.vehicle,
       totalPrice: durationDays * v.price,
       deposit: v.deposit,
+      vehiPrice: v.price,
     };
 
     navigate("/RentOption", { state: { data: dataToSend } });

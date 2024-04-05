@@ -3,6 +3,7 @@ import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
+import WhatsApp from "../components/WhatsApp";
 
 export default function Jobs() {
   const [loading, setLoading] = useState(false);
@@ -44,6 +45,7 @@ export default function Jobs() {
                   </h1>
                 </div>
               </div>
+              <WhatsApp />
               <Footer />
             </div>
           </div>

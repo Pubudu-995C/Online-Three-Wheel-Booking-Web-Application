@@ -16,6 +16,7 @@ import RentCost from "../pages/RentCost";
 import Faq from "../pages/Faq";
 import Jobs from "../pages/jobs";
 import ContactUs from "../pages/ContactUs";
+import Success from "../pages/Success";
 // ==================policy==================
 import PrivacyPolicy from "../pages/policy/PrivacyPolicy";
 import RefundPolicy from "../pages/policy/RefundPolicy";
@@ -41,6 +42,7 @@ const RouteList = () => {
       <Route path="/faq" element={<Faq />} />
       <Route path="/jobs" element={<Jobs />} />
       <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/success" element={<Success />} />
       {/* ================================================ */}
       <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       <Route path="/refundpolicy" element={<RefundPolicy />} />

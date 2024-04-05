@@ -7,7 +7,6 @@ import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 export default function RentCost() {
   const navigate = useNavigate();
   const location = useLocation();
-  // const { data } = location.state || {};
   const data = location.state?.data || null;
 
   //Rederect homepage without data
@@ -27,6 +26,7 @@ export default function RentCost() {
     returnFee,
     durationDays,
     vehicle,
+    vehiPrice,
     totalPrice,
     deposit,
     tukQuantity,
@@ -90,6 +90,22 @@ export default function RentCost() {
 
   const handleConfirm = async (e) => {
     e.preventDefault();
+
+    // Check if all required fields are filled
+    const requiredFields = [
+      "title",
+      "firstName",
+      "lastName",
+      "email",
+      "phone",
+      "agreeTerms",
+    ];
+    const missingFields = requiredFields.filter((field) => !formData[field]);
+
+    if (missingFields.length > 0) {
+      alert(`Please fill in the following fields: ${missingFields.join(", ")}`);
+      return;
+    }
     const dataToSend = {
       pickupCity,
       pickupDate,
@@ -124,44 +140,19 @@ export default function RentCost() {
         throw new Error("Failed to insert data into database");
       }
 
-      // Assuming the response from the backend contains a success message
-      // const responseData = await response.json();
-      // console.log(responseData);
-
-      // Redirect to another page if needed
-      // navigate("/success-page");
+      // send data for Success page Redirect
+      const dataTo = {
+        pickupCity,
+        pickupDate,
+        pickupTime,
+        pickupFee,
+      };
+      // ===============
+      navigate("/Success", { state: { data: dataTo } });
     } catch (error) {
       console.error("Error inserting data into database:", error);
     }
   };
-
-  // const handleConfirm = (e) => {
-  //   e.preventDefault();
-  //   const dataToSend = {
-  //     pickupCity,
-  //     pickupDate,
-  //     pickupTime,
-  //     pickupFee,
-  //     returnCity,
-  //     returnDate,
-  //     returnTime,
-  //     returnFee,
-  //     durationDays,
-  //     vehicle,
-  //     totVehicle,
-  //     options,
-  //     optionsTotal,
-  //     grandTotal,
-  //     totDeposit,
-  //     payNowPickUp,
-  //     customerDetails: formData,
-  //     driQuantity,
-  //     driCost,
-  //     totalDriverCost,
-  //   };
-  //   console.log(dataToSend);
-  //   navigate("/ContactUs", { state: { data: dataToSend } });
-  // };
 
   // Calculate the "Pay Now / at Pick-up" amount
   const payNowPickUp = grandTotal + totDeposit;
@@ -234,9 +225,9 @@ export default function RentCost() {
                         {vehicle}
                       </p>
                       <p className="md:text-2xl text-xl font-bold">Price</p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
+                      <p className="mb-4 text-lg font-bold text-blue-600">
                         {tukQuantity
-                          ? `$ ${totalPrice} x ${tukQuantity}`
+                          ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
                           : `$ ${totalPrice}`}
                       </p>
                       <p className="md:text-2xl text-xl font-bold">Total</p>
@@ -255,7 +246,7 @@ export default function RentCost() {
                           <p className="md:text-2xl text-xl font-bold">
                             Driver Price
                           </p>
-                          <p className="mb-4 text-lg font-bold text-red-500">
+                          <p className="mb-4 text-lg font-bold text-blue-600">
                             {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
                           </p>
                           <p className="md:text-2xl text-xl font-bold">
@@ -312,16 +303,16 @@ export default function RentCost() {
 
                   <div className="mt-5 xl:text-right ">
                     <p className="text-2xl font-bold">Price</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
+                    <p className="mt-4 text-lg font-bold text-blue-600">
                       {tukQuantity
-                        ? `$ ${totalPrice} x ${tukQuantity}`
+                        ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
                         : `$ ${totalPrice}`}
                     </p>
                   </div>
                   {driQuantity && (
                     <div className="mt-5 xl:text-right ">
                       <p className="text-2xl font-bold">Driver Price</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
+                      <p className="mt-4 text-lg font-bold text-blue-600">
                         {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
                       </p>
                     </div>
@@ -357,7 +348,6 @@ export default function RentCost() {
             </div>
             <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
             {/* ==============================PICK DETAILS=============================== */}
-
             <div>
               <div className="grid mt-8 text-center xl:grid-cols-3 xl:text-left">
                 <p className="text-lg font-bold">Pick up fee</p>
@@ -492,6 +482,7 @@ export default function RentCost() {
                             type="text"
                             name="lastName"
                             id="lastName"
+                            required
                             value={formData.lastName}
                             onChange={handleFormChange}
                             className="p-2 mt-2 rounded-full"
@@ -536,6 +527,7 @@ export default function RentCost() {
                             type="email"
                             name="email"
                             id="email"
+                            required
                             value={formData.email}
                             onChange={handleFormChange}
                             className="p-2 mt-2 rounded-full"
@@ -549,6 +541,7 @@ export default function RentCost() {
                             type="text"
                             name="firstName"
                             id="firstName"
+                            required
                             value={formData.firstName}
                             onChange={handleFormChange}
                             className="p-2 mt-2 rounded-full"
@@ -590,9 +583,10 @@ export default function RentCost() {
                         <div className="grid grid-cols-1 ">
                           <label htmlFor="phone">Phone:</label>
                           <input
-                            type="text"
+                            type="number"
                             name="phone"
                             id="phone"
+                            required
                             value={formData.phone}
                             onChange={handleFormChange}
                             className="p-2 mt-2 rounded-full"
@@ -619,8 +613,11 @@ export default function RentCost() {
                             onChange={handleFormChange}
                             className="w-6 h-5"
                           />
-                          <label htmlFor="">
-                            I agree with the terms & conditions
+                          <label
+                            htmlFor=""
+                            className=" hover:text-blue-600 cursor-pointer"
+                          >
+                            <a href> I agree with the terms & conditions</a>
                           </label>
                         </div>
                       </div>
@@ -662,6 +659,7 @@ export default function RentCost() {
                           type="text"
                           name="firstName"
                           id="firstName"
+                          required
                           value={formData.firstName}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
@@ -673,6 +671,7 @@ export default function RentCost() {
                           type="text"
                           name="lastName"
                           id="lastName"
+                          required
                           value={formData.lastName}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
@@ -747,9 +746,10 @@ export default function RentCost() {
                       <div className="grid grid-cols-1 ">
                         <label htmlFor="phone">Phone:</label>
                         <input
-                          type="text"
+                          type="number"
                           name="phone"
                           id="phone"
+                          required
                           value={formData.phone}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
@@ -761,6 +761,7 @@ export default function RentCost() {
                           type="email"
                           name="email"
                           id="email"
+                          required
                           value={formData.email}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
@@ -808,7 +809,7 @@ export default function RentCost() {
                       type="submit"
                       value="Confirm"
                       onClick={handleConfirm}
-                      className="bg-[#379237] hover:bg-[#F0FF42] transition-colors duration-300 py-2 px-5 lg:text-2xl text-white hover:text-black font-bold rounded-full"
+                      className="bg-[#379237] hover:bg-[#F0FF42] transition-colors duration-300 py-2 px-5 lg:text-2xl text-white hover:text-black font-bold rounded-full cursor-pointer"
                     />
                   </div>
                 </form>

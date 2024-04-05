@@ -5,7 +5,7 @@
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
     "img": "https://i.imgur.com/HzBnCwN.png",
-    "price": "15.00",
+    "price": 15.00,
     "deposit": "100.00"
   },
   {
@@ -14,7 +14,7 @@
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
     "img": "https://i.imgur.com/5ooYuEr.png",
-    "price": "20.00",
+    "price": 20.00,
     "deposit": "100.00"
   },
   {
@@ -23,7 +23,7 @@
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
     "img": "https://i.imgur.com/jppQWv6.png",
-    "price": "30.00",
+    "price": 30.00,
     "deposit": "100.00"
   }
 ]
