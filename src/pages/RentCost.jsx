@@ -99,6 +99,7 @@ export default function RentCost() {
       "email",
       "phone",
       "agreeTerms",
+      "dob",
     ];
     const missingFields = requiredFields.filter((field) => !formData[field]);
 
@@ -128,13 +129,16 @@ export default function RentCost() {
     };
 
     try {
-      const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/rent_vehicle", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataToSend),
-      });
+      const response = await fetch(
+        process.env.REACT_APP_BACKEND_URL + "/rent_vehicle",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(dataToSend),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to insert data into database");
@@ -553,6 +557,7 @@ export default function RentCost() {
                             type="date"
                             name="dob"
                             id="dob"
+                            required
                             value={formData.dob}
                             onChange={handleFormChange}
                             className="p-2 mt-2 rounded-full"
@@ -683,6 +688,7 @@ export default function RentCost() {
                           type="date"
                           name="dob"
                           id="dob"
+                          required
                           value={formData.dob}
                           onChange={handleFormChange}
                           className="p-2 mt-2 rounded-full"
