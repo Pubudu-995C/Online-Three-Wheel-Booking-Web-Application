@@ -128,7 +128,7 @@ export default function RentCost() {
     };
 
     try {
-      const response = await fetch("http://localhost:8081/rent_vehicle", {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL + "/rent_vehicle", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
