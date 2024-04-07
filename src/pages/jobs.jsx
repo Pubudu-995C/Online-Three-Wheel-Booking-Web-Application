@@ -35,14 +35,28 @@ export default function Jobs() {
                   jobs
                 </h1>
               </div>
-              <div className="px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
+              <div className="px-5 py-10 lg:py-10">
                 <div>
                   <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
                     Tuktuk Mango Jobs
                   </h2>
                   <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
-                    Contact Us to know More Details
+                    Unlock Your Potential: Join Our Team
                   </h1>
+                </div>
+                <div className="my-28 flex justify-center">
+                  <a
+                    href="/driver"
+                    class="block max-w-sm p-6 rounded-lg shadow hover:bg-gray-600 bg-gray-800 transition-colors duration-300 cursor-pointer"
+                  >
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      New TukTuk Registration in 2024
+                    </h5>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">
+                      Do you have a Tuk Tuk? Would you like to join Our Team?
+                      Then this is your chance.
+                    </p>
+                  </a>
                 </div>
               </div>
               <WhatsApp />

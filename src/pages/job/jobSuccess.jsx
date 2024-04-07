@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function Success() {
+export default function JobSuccess() {
   const navigate = useNavigate();
   const location = useLocation();
   const data = location.state?.data || null;
@@ -26,11 +26,10 @@ export default function Success() {
           </svg>
           <div class="text-center">
             <h3 class="md:text-2xl text-base text-gray-900 font-semibold text-center">
-              Registration Successfull...!
+              TukTuk Registration Successfull...!
             </h3>
             <p class="text-gray-600 my-2">
-              Thank you for Choosing Our TukTuk Mango Service. Please check Your
-              email inbox.
+              Thank you for Choosing Our TukTuk Mango Service.
             </p>
             <p> Have a great day! </p>
             <div class="py-10 text-center">

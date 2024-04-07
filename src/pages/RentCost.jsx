@@ -137,13 +137,12 @@ export default function RentCost() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(dataToSend),
-        }
+        },
       );
 
       if (!response.ok) {
         throw new Error("Failed to insert data into database");
       }
-
       // send data for Success page Redirect
       const dataTo = {
         pickupCity,
@@ -457,190 +456,11 @@ export default function RentCost() {
                   Customer Details
                 </h1>
               </div>
-              <div className="mt-10">
+              <div className="xl:mt-10 lg:mt-5">
                 <form action="" method="post">
-                  <div className="hidden md:block">
-                    <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 md:gap-x-3 xl:gap-x-10 xl:mx-10">
-                      <div className="space-y-5 font-bold">
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="title">Title</label>
-                          <select
-                            name="title"
-                            id="title"
-                            value={formData.title}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          >
-                            <option value=""></option>
-                            <option value="Mr.">Mr.</option>
-                            <option value="Ms.">Ms.</option>
-                            <option value="Mrs.">Mrs.</option>
-                            <option value="Miss.">Miss.</option>
-                            <option value="Dr.">Dr.</option>
-                            <option value="Prof.">Prof.</option>
-                          </select>
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="lastName">Last Name</label>
-                          <input
-                            type="text"
-                            name="lastName"
-                            id="lastName"
-                            required
-                            value={formData.lastName}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="address">Address</label>
-                          <input
-                            type="text"
-                            name="address"
-                            id="address"
-                            value={formData.address}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="state">State</label>
-                          <input
-                            type="text"
-                            name="state"
-                            id="state"
-                            value={formData.state}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="country">Country</label>
-                          <input
-                            type="text"
-                            name="country"
-                            id="country"
-                            value={formData.country}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="email">E-mail</label>
-                          <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            required
-                            value={formData.email}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                      </div>
-                      <div className="space-y-5 font-bold">
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="firstName">First Name</label>
-                          <input
-                            type="text"
-                            name="firstName"
-                            id="firstName"
-                            required
-                            value={formData.firstName}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="dob">Date of Birth:</label>
-                          <input
-                            type="date"
-                            name="dob"
-                            id="dob"
-                            required
-                            value={formData.dob}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="city">City:</label>
-                          <input
-                            type="text"
-                            name="city"
-                            id="city"
-                            value={formData.city}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="zipCode">Zip Code:</label>
-                          <input
-                            type="text"
-                            name="zipCode"
-                            id="zipCode"
-                            value={formData.zipCode}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="phone">Phone:</label>
-                          <input
-                            type="number"
-                            name="phone"
-                            id="phone"
-                            required
-                            value={formData.phone}
-                            onChange={handleFormChange}
-                            className="p-2 mt-2 rounded-full"
-                          />
-                        </div>
-                        <div className="grid grid-cols-1 ">
-                          <label htmlFor="comments">Additional Comments:</label>
-                          <textarea
-                            name="comments"
-                            id="comments"
-                            rows="4"
-                            cols="60"
-                            value={formData.comments}
-                            onChange={handleFormChange}
-                            className="p-4 mt-2 resize-none rounded-3xl"
-                          ></textarea>
-                        </div>
-                        <div className="flex items-center space-x-2 xl:justify-center">
-                          <input
-                            type="checkbox"
-                            name="agreeTerms"
-                            id="agreeTerms"
-                            checked={formData.agreeTerms}
-                            onChange={handleFormChange}
-                            className="w-6 h-5"
-                          />
-                          <label
-                            htmlFor=""
-                            className=" hover:text-blue-600 cursor-pointer"
-                          >
-                            <a href> I agree with the terms & conditions</a>
-                          </label>
-                        </div>
-                      </div>
-                      <div className="font-bold">
-                        <div className="space-y-5">
-                          <label htmlFor="">Pay by</label>
-                          <p>
-                            Pay for your tuktuk using our secure credit card
-                            payment gateway.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* ==========================Mobile Response========================= */}
-                  <div className="md:hidden">
-                    <div className="grid grid-cols-1 font-bold text-sm space-y-5">
-                      <div className="grid grid-cols-1 ">
+                  <div className="">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 md:gap-x-3 xl:gap-x-10 xl:mx-10 space-y-5 font-bold">
+                      <div className="grid grid-cols-1 pt-5 ">
                         <label htmlFor="title">Title</label>
                         <select
                           name="title"
@@ -761,7 +581,7 @@ export default function RentCost() {
                           className="p-2 mt-2 rounded-full"
                         />
                       </div>
-                      <div className="grid grid-cols-1 ">
+                      <div className="flex flex-col ">
                         <label htmlFor="email">E-mail</label>
                         <input
                           type="email"
@@ -784,21 +604,24 @@ export default function RentCost() {
                           onChange={handleFormChange}
                           className="p-4 mt-2 resize-none rounded-3xl"
                         ></textarea>
+                        <div className="flex items-center space-x-2 xl:justify-center mt-2">
+                          <input
+                            type="checkbox"
+                            name="agreeTerms"
+                            id="agreeTerms"
+                            checked={formData.agreeTerms}
+                            onChange={handleFormChange}
+                            className="w-6 h-5"
+                          />
+                          <label
+                            htmlFor=""
+                            className=" hover:text-blue-600 cursor-pointer"
+                          >
+                            <a href> I agree with the terms & conditions</a>
+                          </label>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2 xl:justify-center my-5">
-                        <input
-                          type="checkbox"
-                          name="agreeTerms"
-                          id="agreeTerms"
-                          checked={formData.agreeTerms}
-                          onChange={handleFormChange}
-                          className="w-6 h-5"
-                        />
-                        <label htmlFor="">
-                          I agree with the terms & conditions
-                        </label>
-                      </div>
-                      <div>
+                      <div className="font-bold">
                         <div className="space-y-5">
                           <label htmlFor="">Pay by</label>
                           <p>
@@ -809,8 +632,7 @@ export default function RentCost() {
                       </div>
                     </div>
                   </div>
-                  {/* ==========================End of Mobile Response========================= */}
-                  <div className="flex justify-center mt-10 xl:mt-0">
+                  <div className="flex justify-center md:mt-5 xl:mt-0">
                     <input
                       type="submit"
                       value="Confirm"
