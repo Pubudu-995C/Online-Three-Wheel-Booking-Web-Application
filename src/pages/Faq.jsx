@@ -6,6 +6,7 @@ import wallpaper8 from "../images/wallpapers/wallpaper8.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Faq() {
   const navigate = useNavigate();
@@ -38,11 +39,21 @@ export default function Faq() {
               className="object-cover w-full h-full brightness-50"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+            <div className="absolute top-0 left-0 grid justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
               <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
                 FAQ
               </h1>
             </div>
+            {/* ===========Breadcrumbs=========== */}
+            <Breadcrumbs className="justify-center">
+              <a href="/" className="opacity-60">
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a href="/faq" className="opacity-60">
+                <span>FAQ</span>
+              </a>
+            </Breadcrumbs>
+            {/* ===========Breadcrumbs=========== */}
           </div>
 
           <div>

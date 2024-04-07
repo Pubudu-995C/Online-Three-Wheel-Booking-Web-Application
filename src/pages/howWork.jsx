@@ -9,6 +9,7 @@ import wallpaper5 from "../images/wallpapers/wallpaper5.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function HowWork() {
   const [loading, setLoading] = useState(false);
@@ -103,6 +104,16 @@ export default function HowWork() {
                 How things get done
               </h1>
             </div>
+            {/* ===========Breadcrumbs=========== */}
+            <Breadcrumbs className="justify-center">
+              <a href="/" className="opacity-60">
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a href="/HowWork" className="opacity-60">
+                <span>HOW TO WORK</span>
+              </a>
+            </Breadcrumbs>
+            {/* ===========Breadcrumbs=========== */}
           </div>
           {/* ============================================================= */}
           <div className="bg-gradient-to-br from-slate-50 to-lime-200">

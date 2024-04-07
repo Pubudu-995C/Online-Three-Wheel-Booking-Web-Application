@@ -5,6 +5,7 @@ import Footer from "../components/Layout/Footer";
 import wallpaper10 from "../images/wallpapers/wallpaper10.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function ContactUs() {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,16 @@ export default function ContactUs() {
               className="object-cover w-full h-full brightness-50"
               alt="Wallpaper"
             />
+            {/* ===========Breadcrumbs=========== */}
+            <Breadcrumbs className="justify-center text-white">
+              <a href="/" className="opacity-60">
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a href="/ContactUs" className="opacity-60">
+                <span>CONTACT US</span>
+              </a>
+            </Breadcrumbs>
+            {/* ===========Breadcrumbs=========== */}
             <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
               <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
                 Reach Out and Connect Today

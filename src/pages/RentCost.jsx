@@ -169,191 +169,121 @@ export default function RentCost() {
       <div className="relative mb-10 pt-28">
         <div className="mx-0 md:mx-8 lg:mx-0">
           {/* =========================RENTAL DETAILS============================= */}
-          <div className="p-5 bg-gray-200 mx-full lg:mx-20 xl:mx-52 rounded-xl">
+          <div className="p-5 bg-gray-200 mx-full lg:mx-14 xl:mx-52 rounded-xl">
             <div>
               <div>
-                <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
+                <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
                   Rental Details
                 </h1>
               </div>
-              <div className="grid grid-cols-1 text-center xl:grid-cols-3 lg:grid-cols-2 xl:text-left">
-                <div className="mt-8">
-                  <div>
+              <div className="grid grid-cols-1 text-center xl:grid-cols-3 lg:grid-cols-3 xl:text-left lg:text-left">
+                <div className="mt-5 order-1 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">
+                    Pick-up Location
+                  </p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    {pickupCity}
+                  </p>
+                </div>
+                <div className="mt-5 order-3 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">
+                    Return Location
+                  </p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    {returnCity}
+                  </p>
+                </div>
+                <div className="mt-5 lg:text-right order-5 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">Period</p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    {durationDays} Days
+                  </p>
+                  <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
+                </div>
+                <div className="mt-5 order-2 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">
+                    Pick-up Date & Time
+                  </p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    <span className="text-blue-600">Date: </span>
+                    {pickupDate} <span className="text-blue-600 ">Time: </span>{" "}
+                    {pickupTime}
+                  </p>
+                  <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
+                </div>
+                <div className="mt-5 order-4 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">
+                    Return Date & Time
+                  </p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    <span className="text-blue-600">Date: </span>
+                    {returnDate} <span className="text-blue-600">Time: </span>{" "}
+                    {returnTime}
+                  </p>
+                  <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
+                </div>
+                <div />
+                <div className="mt-5 order-6 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">Selected Cars</p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    {vehicle}
+                  </p>
+                </div>
+                <div className="mt-5 lg:text-right order-7 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">Price</p>
+                  <p className="lg:mt-4 text-lg font-bold text-blue-600">
+                    {tukQuantity
+                      ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
+                      : `$ ${totalPrice}`}
+                  </p>
+                </div>
+                <div className="mt-5 lg:text-right order-8 lg:order-none">
+                  <p className="md:text-2xl text-xl font-bold">Total</p>
+                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    {totVehicle} USD
+                  </p>
+                  <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
+                </div>
+
+                {driQuantity && (
+                  <div className="mt-5 order-9 lg:order-none">
                     <p className="md:text-2xl text-xl font-bold">
-                      Pick-up Location
+                      Selected Driver(s)
                     </p>
-                    <p className="hidden lg:block mt-4 text-lg font-bold text-red-500">
-                      {pickupCity}
-                    </p>
-                    {/* ==============Mobile Response========== */}
-                    <p className="lg:hidden mb-4 text-lg font-bold text-red-500">
-                      {pickupCity}
-                    </p>
-                    <div className="lg:hidden">
-                      <p className="md:text-2xl text-xl font-bold">
-                        Pick-up Date & Time
-                      </p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        <span className="text-blue-600">Date: </span>
-                        {pickupDate}{" "}
-                        <span className="text-blue-600 ">Time: </span>{" "}
-                        {pickupTime}
-                      </p>
-                      <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="md:text-2xl text-xl font-bold">
-                        Return Location
-                      </p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        {returnCity}
-                      </p>
-                      <p className="md:text-2xl text-xl font-bold">
-                        Return Date & Time
-                      </p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        <span className="text-blue-600">Date: </span>
-                        {returnDate}{" "}
-                        <span className="text-blue-600">Time: </span>{" "}
-                        {returnTime}
-                      </p>
-                      <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="md:text-2xl text-xl font-bold">Period</p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        {durationDays} Days
-                      </p>
-                      <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                      <p className="md:text-2xl text-xl font-bold">
-                        Selected Cars
-                      </p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        {vehicle}
-                      </p>
-                      <p className="md:text-2xl text-xl font-bold">Price</p>
-                      <p className="mb-4 text-lg font-bold text-blue-600">
-                        {tukQuantity
-                          ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
-                          : `$ ${totalPrice}`}
-                      </p>
-                      <p className="md:text-2xl text-xl font-bold">Total</p>
-                      <p className="mb-4 text-lg font-bold text-red-500">
-                        {totVehicle} USD
-                      </p>
-                      {driQuantity && (
-                        <div>
-                          <hr className="h-2 bg-[#54B435] rounded-full my-5" />
-                          <p className="md:text-2xl text-xl font-bold">
-                            Selected Driver(s)
-                          </p>
-                          <p className="mb-4 text-lg font-bold text-red-500">
-                            {driQuantity} Driver(s)
-                          </p>
-                          <p className="md:text-2xl text-xl font-bold">
-                            Driver Price
-                          </p>
-                          <p className="mb-4 text-lg font-bold text-blue-600">
-                            {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
-                          </p>
-                          <p className="md:text-2xl text-xl font-bold">
-                            Driver Total
-                          </p>
-                          <p className="mb-4 text-lg font-bold text-red-500">
-                            {totalDriverCost} USD
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                    {/* ==============End of Mobile Response ========== */}
-                  </div>
-                  <div className="hidden mt-5 lg:block">
-                    <p className="text-2xl font-bold">Pick-up Date & Time</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
-                      <span className="text-blue-600">Date: </span>
-                      {pickupDate}{" "}
-                      <span className="text-blue-600 ">Time: </span>{" "}
-                      {pickupTime}
+                    <p className="lg:mt-4 text-lg font-bold text-red-500">
+                      {driQuantity} Driver(s)
                     </p>
                   </div>
-                  <div className="hidden mt-5 lg:block">
-                    <p className="text-2xl font-bold">Selected Cars</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
-                      {vehicle}
-                    </p>
-                  </div>
-                  {driQuantity && (
-                    <div className="hidden mt-5 lg:block">
-                      <p className="text-2xl font-bold">Selected Driver(s)</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
-                        {driQuantity} Driver(s)
-                      </p>
-                    </div>
-                  )}
-                </div>
-                <div className="hidden mt-8 lg:block">
-                  <div>
-                    <p className="text-2xl font-bold">Return Location</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
-                      {returnCity}
-                    </p>
-                  </div>
+                )}
 
-                  <div className="mt-5">
-                    <p className="text-2xl font-bold">Return Date & Time</p>
-                    <p className="mt-4 text-lg font-bold text-red-500">
-                      <span className="text-blue-600">Date: </span>
-                      {returnDate} <span className="text-blue-600">Time: </span>{" "}
-                      {returnTime}
+                {driQuantity && (
+                  <div className="mt-5 lg:text-right order-10 lg:order-none">
+                    <p className="md:text-2xl text-xl font-bold">
+                      Driver Price
+                    </p>
+                    <p className="lg:mt-4 text-lg font-bold text-blue-600">
+                      {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
                     </p>
                   </div>
+                )}
 
-                  <div className="mt-5 xl:text-right ">
-                    <p className="text-2xl font-bold">Price</p>
-                    <p className="mt-4 text-lg font-bold text-blue-600">
-                      {tukQuantity
-                        ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
-                        : `$ ${totalPrice}`}
+                {driQuantity && (
+                  <div className="mt-5 lg:text-right order-11 lg:order-none">
+                    <p className="md:text-2xl text-xl font-bold">
+                      Driver Total
+                    </p>
+                    <p className="lg:mt-4 text-lg font-bold text-red-500">
+                      {totalDriverCost} USD
                     </p>
                   </div>
-                  {driQuantity && (
-                    <div className="mt-5 xl:text-right ">
-                      <p className="text-2xl font-bold">Driver Price</p>
-                      <p className="mt-4 text-lg font-bold text-blue-600">
-                        {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                <div className="hidden lg:block">
-                  <div className="grid mt-8 xl:grid-rows-3 xl:text-right">
-                    <div>
-                      <p className="text-2xl font-bold">Period</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
-                        {durationDays} Days
-                      </p>
-                    </div>
-                    <div />
-                    <div className="mb-5">
-                      <p className="text-2xl font-bold">Total</p>
-                      <p className="mt-4 text-lg font-bold text-red-500">
-                        {totVehicle} USD
-                      </p>
-                    </div>
-                    {driQuantity && (
-                      <div>
-                        <p className="text-2xl font-bold">Driver Total</p>
-                        <p className="mt-4 text-lg font-bold text-red-500">
-                          {totalDriverCost} USD
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
+                )}
               </div>
             </div>
             <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
             {/* ==============================PICK DETAILS=============================== */}
             <div>
-              <div className="grid mt-8 text-center xl:grid-cols-3 xl:text-left">
-                <p className="text-lg font-bold">Pick up fee</p>
+              <div className="grid mt-8 text-center lg:grid-cols-3 xl:text-left">
+                <p className="md:text-2xl text-xl font-bold">Pick up fee</p>
                 <p className="text-lg font-bold text-center text-red-500 xl:text-right">
                   $ {pickupFee}
                 </p>
@@ -361,8 +291,8 @@ export default function RentCost() {
                   {pickupFee} USD
                 </p>
               </div>
-              <div className="grid mt-4 text-center xl:grid-cols-3 xl:text-left">
-                <p className="text-lg font-bold">Return fee</p>
+              <div className="grid mt-4 text-center lg:grid-cols-3 xl:text-left">
+                <p className="md:text-2xl text-xl font-bold">Return fee</p>
                 <p className="text-lg font-bold text-center text-red-500 xl:text-right">
                   $ {returnFee}
                 </p>
@@ -382,7 +312,7 @@ export default function RentCost() {
                   {options.map((option, index) => (
                     <div
                       key={index}
-                      className="grid grid-cols-1 mt-5 text-lg font-bold text-center xl:grid-cols-3 xl:text-left"
+                      className="grid grid-cols-1 mt-5 text-lg font-bold text-center lg:grid-cols-3 lg:text-left"
                     >
                       <p>{option.item}</p>
                       {option.quantity && (
@@ -391,7 +321,7 @@ export default function RentCost() {
                           {option.quantity ? `x ${option.quantity}` : ""}
                         </p>
                       )}
-                      <p className="text-center text-red-500 xl:text-right">
+                      <p className="text-center text-red-500 lg:text-right">
                         {option.quantity
                           ? ` ${
                               parseFloat(option.cost) *
@@ -456,7 +386,7 @@ export default function RentCost() {
                   Customer Details
                 </h1>
               </div>
-              <div className="xl:mt-10 lg:mt-5">
+              <div className="lg:mt-5">
                 <form action="" method="post">
                   <div className="">
                     <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 md:gap-x-3 xl:gap-x-10 xl:mx-10 space-y-5 font-bold">

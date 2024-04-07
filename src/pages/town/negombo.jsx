@@ -8,6 +8,7 @@ import Negombo3 from "../../images/town/negombo3.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import WhatsApp from "../../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Negombo() {
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ export default function Negombo() {
       setLoading(false);
     }, 4000);
   }, []);
-  
+
   const navigate = useNavigate();
   const homePageClick = () => {
     navigate("/");
@@ -67,6 +68,19 @@ export default function Negombo() {
               alt="Wallpaper"
             />
           </div>
+          {/* ===========Breadcrumbs=========== */}
+          <Breadcrumbs className="justify-center ">
+            <a href="/" className="opacity-60">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="/Trip" className="opacity-60">
+              <span>TRIP</span>
+            </a>
+            <a href="/negombo" className="opacity-60">
+              <span>NEGOMBO</span>
+            </a>
+          </Breadcrumbs>
+          {/* ===========Breadcrumbs=========== */}
           <div className="mt-10 lg:mx-12 xl:mx-28">
             <div>
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">

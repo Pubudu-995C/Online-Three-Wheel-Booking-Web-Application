@@ -6,6 +6,7 @@ import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Trip() {
   const [loading, setLoading] = useState(false);
@@ -107,6 +108,16 @@ export default function Trip() {
                   Discover sri lanka by tuktuk!
                 </h1>
               </div>
+              {/* ===========Breadcrumbs=========== */}
+              <Breadcrumbs className="justify-center ">
+                <a href="/" className="opacity-60">
+                  <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="/Trip" className="opacity-60">
+                  <span>TRIP</span>
+                </a>
+              </Breadcrumbs>
+              {/* ===========Breadcrumbs=========== */}
             </div>
           </div>
 
@@ -138,7 +149,7 @@ export default function Trip() {
               <div className="m-auto xl:w-5/7">
                 <div className="mt-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0 md:mx-20 lg:mx-10">
                   {trip.map((d) => (
-                    <div className="bg-white h-[550px] sm:h-[640px] lg:h-[540px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
+                    <div className="bg-white h-[500px] sm:h-[640px] lg:h-[540px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
                       <div className="flex rounded-t-xl">
                         <img
                           src={d.img}

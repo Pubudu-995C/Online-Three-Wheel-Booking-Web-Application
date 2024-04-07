@@ -29,7 +29,7 @@ export default function ScrollToTopButton() {
         id="to-top-button"
         onClick={scrollToTop}
         title="Go To Top"
-        className={`fixed z-50 lg:bottom-28 bottom-16 lg:right-10 right-5 p-4 border-0 lg:w-14 lg:h-14 w-10 h-10 rounded-full shadow-md bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold transition-colors duration-300 ${isVisible ? "" : "hidden"}`}
+        className={`fixed z-50 lg:bottom-28 bottom-20 lg:right-10 right-5 p-4 border-0 lg:w-14 lg:h-14 w-10 h-10 rounded-full shadow-md bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold transition-colors duration-300 ${isVisible ? "" : "hidden"}`}
       >
         <i class="fa-solid fa-up-long flex justify-center h-full items-center"></i>
         <span className="sr-only">Go to top</span>

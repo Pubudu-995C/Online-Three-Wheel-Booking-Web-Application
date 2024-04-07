@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import GridLoader from "react-spinners/GridLoader";
-import ScrollToTopButton from "../components/ScrollToTopButton"
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
@@ -68,6 +68,7 @@ export default function Home() {
     }
 
     navigate("/rentTuk", { state: { formData } });
+    window.scrollTo(0, 0);
   };
 
   const handleInputChange = (e) => {

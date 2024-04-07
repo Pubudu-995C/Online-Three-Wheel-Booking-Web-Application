@@ -8,16 +8,17 @@ import CloseIcon from "@mui/icons-material/Close";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  // }, []);
 
   const data = [
     {
@@ -102,6 +103,16 @@ export default function Gallery() {
                 Tuktuk Mango Travel Photos
               </h1>
             </div>
+            {/* ===========Breadcrumbs=========== */}
+            <Breadcrumbs className="justify-center">
+              <a href="/" className="opacity-60">
+                <i class="fa-solid fa-house"></i>
+              </a>
+              <a href="/Gallery" className="opacity-60">
+                <span>GALLERY</span>
+              </a>
+            </Breadcrumbs>
+            {/* ===========Breadcrumbs=========== */}
           </div>
 
           <div>

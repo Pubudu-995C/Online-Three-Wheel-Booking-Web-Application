@@ -8,6 +8,7 @@ import Kandy3 from "../../images/town/kandy3.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import WhatsApp from "../../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Kandy() {
   const [loading, setLoading] = useState(false);
@@ -75,6 +76,19 @@ export default function Kandy() {
               alt="Wallpaper"
             />
           </div>
+          {/* ===========Breadcrumbs=========== */}
+          <Breadcrumbs className="justify-center ">
+            <a href="/" className="opacity-60">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <a href="/Trip" className="opacity-60">
+              <span>TRIP</span>
+            </a>
+            <a href="/kandy" className="opacity-60">
+              <span>KANDY</span>
+            </a>
+          </Breadcrumbs>
+          {/* ===========Breadcrumbs=========== */}
           <div className="mt-10 lg:mx-12 xl:mx-28">
             <div>
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">

@@ -4,6 +4,7 @@ import Footer from "../components/Layout/Footer";
 import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import WhatsApp from "../components/WhatsApp";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Jobs() {
   const [loading, setLoading] = useState(false);
@@ -30,11 +31,21 @@ export default function Jobs() {
                 className="object-cover w-full h-full brightness-50"
                 alt="Wallpaper"
               />
-              <div className="absolute top-0 left-0 flex justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
+              <div className="absolute top-0 left-0 grid justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
                 <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
                   jobs
                 </h1>
               </div>
+              {/* ===========Breadcrumbs=========== */}
+              <Breadcrumbs className="justify-center">
+                <a href="/" className="opacity-60">
+                  <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="/jobs" className="opacity-60">
+                  <span>JOBS</span>
+                </a>
+              </Breadcrumbs>
+              {/* ===========Breadcrumbs=========== */}
               <div className="px-5 py-10 lg:py-10">
                 <div>
                   <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
