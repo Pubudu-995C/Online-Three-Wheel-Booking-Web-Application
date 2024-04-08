@@ -13,12 +13,12 @@ import { Breadcrumbs } from "@material-tailwind/react";
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
 
   const data = [
     {

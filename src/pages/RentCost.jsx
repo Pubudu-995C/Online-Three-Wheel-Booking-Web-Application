@@ -169,7 +169,7 @@ export default function RentCost() {
       <div className="relative mb-10 pt-28">
         <div className="mx-0 md:mx-8 lg:mx-0">
           {/* =========================RENTAL DETAILS============================= */}
-          <div className="p-5 bg-gray-200 mx-full lg:mx-14 xl:mx-52 rounded-xl">
+          <div className="p-5 bg-gray-200 mx-full lg:mx-14 xl:mx-48 rounded-xl">
             <div>
               <div>
                 <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
@@ -178,33 +178,33 @@ export default function RentCost() {
               </div>
               <div className="grid grid-cols-1 text-center xl:grid-cols-3 lg:grid-cols-3 xl:text-left lg:text-left">
                 <div className="mt-5 order-1 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">
+                  <p className="lg:text-xl xl:text-2xl font-bold">
                     Pick-up Location
                   </p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     {pickupCity}
                   </p>
                 </div>
                 <div className="mt-5 order-3 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">
+                  <p className="lg:text-xl xl:text-2xl font-bold">
                     Return Location
                   </p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     {returnCity}
                   </p>
                 </div>
                 <div className="mt-5 lg:text-right order-5 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">Period</p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:text-xl xl:text-2xl font-bold">Period</p>
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     {durationDays} Days
                   </p>
                   <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
                 </div>
                 <div className="mt-5 order-2 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">
+                  <p className="lg:text-xl xl:text-2xl font-bold">
                     Pick-up Date & Time
                   </p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     <span className="text-blue-600">Date: </span>
                     {pickupDate} <span className="text-blue-600 ">Time: </span>{" "}
                     {pickupTime}
@@ -212,10 +212,10 @@ export default function RentCost() {
                   <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
                 </div>
                 <div className="mt-5 order-4 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">
+                  <p className="lg:text-xl xl:text-2xl font-bold">
                     Return Date & Time
                   </p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     <span className="text-blue-600">Date: </span>
                     {returnDate} <span className="text-blue-600">Time: </span>{" "}
                     {returnTime}
@@ -224,22 +224,24 @@ export default function RentCost() {
                 </div>
                 <div />
                 <div className="mt-5 order-6 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">Selected Cars</p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:text-xl xl:text-2xl font-bold">
+                    Selected Cars
+                  </p>
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     {vehicle}
                   </p>
                 </div>
                 <div className="mt-5 lg:text-right order-7 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">Price</p>
-                  <p className="lg:mt-4 text-lg font-bold text-blue-600">
+                  <p className="lg:text-xl xl:text-2xl font-bold">Price</p>
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-blue-600">
                     {tukQuantity
                       ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
                       : `$ ${totalPrice}`}
                   </p>
                 </div>
                 <div className="mt-5 lg:text-right order-8 lg:order-none">
-                  <p className="md:text-2xl text-xl font-bold">Total</p>
-                  <p className="lg:mt-4 text-lg font-bold text-red-500">
+                  <p className="lg:text-xl xl:text-2xl font-bold">Total</p>
+                  <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                     {totVehicle} USD
                   </p>
                   <hr className="h-2 bg-[#54B435] rounded-full mt-5 lg:hidden" />
@@ -247,10 +249,10 @@ export default function RentCost() {
 
                 {driQuantity && (
                   <div className="mt-5 order-9 lg:order-none">
-                    <p className="md:text-2xl text-xl font-bold">
+                    <p className="lg:text-xl xl:text-2xl font-bold">
                       Selected Driver(s)
                     </p>
-                    <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                       {driQuantity} Driver(s)
                     </p>
                   </div>
@@ -258,10 +260,10 @@ export default function RentCost() {
 
                 {driQuantity && (
                   <div className="mt-5 lg:text-right order-10 lg:order-none">
-                    <p className="md:text-2xl text-xl font-bold">
+                    <p className="lg:text-xl xl:text-2xl font-bold">
                       Driver Price
                     </p>
-                    <p className="lg:mt-4 text-lg font-bold text-blue-600">
+                    <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-blue-600">
                       {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
                     </p>
                   </div>
@@ -269,10 +271,10 @@ export default function RentCost() {
 
                 {driQuantity && (
                   <div className="mt-5 lg:text-right order-11 lg:order-none">
-                    <p className="md:text-2xl text-xl font-bold">
+                    <p className="lg:text-xl xl:text-2xl font-bold">
                       Driver Total
                     </p>
-                    <p className="lg:mt-4 text-lg font-bold text-red-500">
+                    <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-red-500">
                       {totalDriverCost} USD
                     </p>
                   </div>
@@ -282,21 +284,23 @@ export default function RentCost() {
             <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
             {/* ==============================PICK DETAILS=============================== */}
             <div>
-              <div className="grid mt-8 text-center lg:grid-cols-3 xl:text-left">
-                <p className="md:text-2xl text-xl font-bold">Pick up fee</p>
-                <p className="text-lg font-bold text-center text-red-500 xl:text-right">
+              <div className="grid md:grid-cols-3 text-center lg:text-left">
+                <p className="lg:text-xl xl:text-2xl font-bold mt-5">
+                  Pick up fee
+                </p>
+                <p className="text-lg font-bold text-center text-red-500 lg:text-right md:mt-5">
                   $ {pickupFee}
                 </p>
-                <p className="flex justify-center text-lg font-bold text-red-500 xl:justify-end">
+                <p className="flex justify-center text-lg font-bold text-red-500 lg:justify-end md:mt-5">
                   {pickupFee} USD
                 </p>
-              </div>
-              <div className="grid mt-4 text-center lg:grid-cols-3 xl:text-left">
-                <p className="md:text-2xl text-xl font-bold">Return fee</p>
-                <p className="text-lg font-bold text-center text-red-500 xl:text-right">
+                <p className="lg:text-xl xl:text-2xl font-bold mt-5">
+                  Return fee
+                </p>
+                <p className="text-lg font-bold text-center text-red-500 lg:text-right md:mt-5">
                   $ {returnFee}
                 </p>
-                <p className="flex justify-center text-lg font-bold text-red-500 xl:justify-end">
+                <p className="flex justify-center text-lg font-bold text-red-500 lg:justify-end md:mt-5">
                   {returnFee} USD
                 </p>
               </div>
@@ -562,7 +566,7 @@ export default function RentCost() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center md:mt-5 xl:mt-0">
+                  <div className="flex justify-center mt-4 md:mt-5 xl:mt-0">
                     <input
                       type="submit"
                       value="Confirm"

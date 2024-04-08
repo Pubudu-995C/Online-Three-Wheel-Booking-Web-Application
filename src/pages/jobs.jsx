@@ -8,6 +8,36 @@ import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Jobs() {
   const [loading, setLoading] = useState(false);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch("http://localhost/apiman/index.php/datalayer/general", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // Include your authentication credentials here
+        // Authorization: "Basic cG1zX3VzZXI6cG1zdXNlcg==",
+        "X-Requested-With": "XMLHttpRequest",
+        Authorization: "Basic " + btoa("pms_user:pmsuser"),
+      },
+      body: JSON.stringify({
+        apiName: "test",
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data); // Assuming your API returns data that you want to set in your component state
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  // ==fetch data==
 
   useEffect(() => {
     setLoading(true);
