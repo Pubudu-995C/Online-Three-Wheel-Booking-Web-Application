@@ -5,6 +5,7 @@ import wallpaper9 from "../images/wallpapers/wallpaper9.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import WhatsApp from "../components/WhatsApp";
 import { Breadcrumbs } from "@material-tailwind/react";
+import Driver from "../images/job/joinTeam.jpg";
 
 export default function Jobs() {
   const [loading, setLoading] = useState(false);
@@ -76,32 +77,39 @@ export default function Jobs() {
                 </a>
               </Breadcrumbs>
               {/* ===========Breadcrumbs=========== */}
-              <div className="px-5 py-10 lg:py-10">
+              <div>
                 <div>
                   <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
                     Tuktuk Mango Jobs
                   </h2>
                   <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
-                    Unlock Your Potential: Join Our Team
+                    Join Our Team
                   </h1>
                 </div>
-                <div className="my-28 flex justify-center">
+                <div className="my-28 flex justify-center px-5">
                   <a
                     href="/driver"
-                    class="block max-w-sm p-6 rounded-lg shadow hover:bg-gray-600 bg-gray-800 transition-colors duration-300 cursor-pointer"
+                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                   >
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      New TukTuk Registration in 2024
-                    </h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">
-                      Do you have a Tuk Tuk? Would you like to join Our Team?
-                      Then this is your chance.
-                    </p>
+                    <img
+                      class="object-cover w-full rounded-t-lg h-96 md:h-48 md:w-72 md:rounded-none md:rounded-s-lg"
+                      src={Driver}
+                      alt=""
+                    />
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-black">
+                        New TukTuk Registration in 2024
+                      </h5>
+                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 transition-colors">
+                        Do you have a Tuk Tuk? Would you like to join Our Team?
+                        Then this is your chance.
+                      </p>
+                    </div>
                   </a>
                 </div>
+                <WhatsApp />
+                <Footer />
               </div>
-              <WhatsApp />
-              <Footer />
             </div>
           </div>
         </div>

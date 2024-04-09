@@ -13,48 +13,48 @@ import { Breadcrumbs } from "@material-tailwind/react";
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 4000);
+  // }, []);
 
   const data = [
     {
       id: 1,
-      img: `/images/Freedom.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/trip/trip (3).jpg`,
+      caption: `Come and immerse yourself in the serene atmosphere of this temple, where you can witness the sacred relic of Lord Buddha's tooth and experience the essence of Buddhism. Admire the intricate architecture, take part in traditional ceremonies, and bask in the peaceful ambiance.`,
     },
     {
       id: 2,
-      img: `/images/Hassle.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/trincomalee3.jpg`,
+      caption: `Nilaveli Beach is the most popular beach in Sri Lanka currently a lot of visitors must visit and enjoy a lot of activities. Just off the shore, you will see Pigeon Island, it is an excellent place for snorkelling. Another great way is you can explore the waters of the Indian Ocean and spot dolphins and whales through the boat tours.`,
     },
     {
       id: 3,
-      img: `/images/Social.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/negombo4.jpg`,
+      caption: `Browns Beach is an unspoiled private beach in Negombo that has wide popularity among tourists. This beach attracts millions of tourists' hearts because of its unique golden sands, turquoise blue water, and breathtaking palm trees.`,
     },
     {
       id: 4,
-      img: `/trip/trip (1).jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/negombo3.jpg`,
+      caption: `The Wilpattu National Park is the home for the elusive Sri Lankan leopard so it gained a wide popularity among visitors in Sri Lanka and other countries. And, it is specified by natural sand-rimmed water basins called “willus” that fill with rainwater.`,
     },
     {
       id: 5,
-      img: `/trip/trip (2).jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/trincomalee2.jpg`,
+      caption: `The Konesar Temple is one of the main highlights of Trincomalee. If you visit this temple, in every corner, you will see breathtaking and historical views that you can’t believe your eyes. This is popularly known as “Kailasa”, a religious pilgrimage for the Hindus.`,
     },
     {
       id: 6,
-      img: `/trip/trip (3).jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/kandy4.jpg`,
+      caption: `Experience the breathtaking beauty of Kandy from the picturesque Kandy View Point. Take in the panoramic cityscape, marvel at the majestic Temple of the Tooth, and admire the lush green mountains in the backdrop. Enjoy a delightful tuktuk ride to the viewpoint and soak in the stunning scenery along the way.`,
     },
     {
       id: 7,
-      img: `/wallpapers/wallpaper6.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
+      img: `/town/trincomalee5.JPG`,
+      caption: `Kanniya Hot Spring is a highlighting spot that increases the brightness of Trincomalee. The Kanniya Hot Spring is located on the east coast of Sri Lanka in Trincomalee. It has seven wells that are square-shaped each has a four-foot depth. Sri Lankan people believe that the water from the well has healing properties.`,
     },
     {
       id: 8,
@@ -137,15 +137,20 @@ export default function Gallery() {
                 {data.map((item, index) => {
                   return (
                     <div
-                      className="pics"
+                      className="pics border-green-500 border-2 rounded-md p-2 bg-green-50"
                       key={index}
                       onClick={() => getImg(item.img)}
                       onMouseEnter={() => setCaption(item.caption)} // Set caption on mouse enter
                       onMouseLeave={() => setCaption("")} // Clear caption on mouse leave
                     >
                       {" "}
-                      <img src={item.img} alt="" style={{ width: "100%" }} />
-                      <p className="img-caption">{item.caption}</p>{" "}
+                      <img
+                        src={item.img}
+                        alt=""
+                        style={{ width: "100%" }}
+                        className="border rounded-md"
+                      />
+                      <p className="img-caption text-red-400">{item.caption}</p>{" "}
                       {/* Add caption */}
                     </div>
                   );

@@ -19,7 +19,7 @@ export default function Footer() {
                 </a>
               </h4>
               <p className="text-gray-500 hover:text-gray-400">
-                No 202/1/A, <br /> Winrose Garden, <br /> Gelioya. <br />
+                {/* No 202/1/A, <br /> Winrose Garden, <br /> Gelioya. <br /> */}
                 <strong>Phone:</strong> +(94) 012 345 6789 <br />
                 <strong>Email:</strong> info@tuktukmango.com <br />
               </p>
@@ -88,7 +88,7 @@ export default function Footer() {
                     Refund Policy
                   </a>
                 </li>
-                <li className="pb-4">
+                {/* <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
                   <a href className=" hover:text-yellow-500">
                     {" "}
@@ -101,7 +101,7 @@ export default function Footer() {
                     {" "}
                     Ella
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="mb-5">
