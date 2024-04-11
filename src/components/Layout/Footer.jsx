@@ -19,9 +19,9 @@ export default function Footer() {
                 </a>
               </h4>
               <p className="text-gray-500 hover:text-gray-400">
-                {/* No 202/1/A, <br /> Winrose Garden, <br /> Gelioya. <br /> */}
-                <strong>Phone:</strong> +(94) 012 345 6789 <br />
-                <strong>Email:</strong> info@tuktukmango.com <br />
+                No 333, <br /> William Gopallawa Mawatha, <br /> Kandy. <br />
+                <strong>Phone:</strong> +(94) 704 239 249 <br />
+                <strong>Email:</strong> mangoglobal87@gmail.com <br />
               </p>
             </div>
             <div className="mb-5">
