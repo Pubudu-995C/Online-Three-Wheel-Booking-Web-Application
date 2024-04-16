@@ -46,6 +46,7 @@ export default function Jobs() {
       setLoading(false);
     }, 4000);
   }, []);
+
   return (
     <div>
       {loading ? (
@@ -86,30 +87,30 @@ export default function Jobs() {
                     Join Our Team
                   </h1>
                 </div>
-                <div className="my-28 flex justify-center px-5">
+                <div className="my-28 flex justify-center mx-5 md:mx-10 lg:mx-0">
                   <a
                     href="/driver"
-                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+                    class="flex flex-col items-center bg-green-200 hover:bg-gray-600 border rounded-lg shadow md:flex-row md:max-w-3xl border-yellow-500 transition-colors duration-300"
                   >
                     <img
-                      class="object-cover w-full rounded-t-lg h-96 md:h-48 md:w-72 md:rounded-none md:rounded-s-lg"
+                      class="object-cover w-full rounded-t-lg h-48 md:w-72 md:rounded-none md:rounded-s-lg"
                       src={Driver}
                       alt=""
                     />
                     <div class="flex flex-col justify-between p-4 leading-normal">
-                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-200 dark:text-black">
+                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-yellow-500">
                         New TukTuk Registration in 2024
                       </h5>
-                      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 transition-colors">
+                      <p class="mb-3 font-normal text-gray-400  transition-colors">
                         Do you have a Tuk Tuk? Would you like to join Our Team?
                         Then this is your chance.
                       </p>
                     </div>
                   </a>
                 </div>
-                <WhatsApp />
-                <Footer />
               </div>
+              <WhatsApp />
+              <Footer />
             </div>
           </div>
         </div>

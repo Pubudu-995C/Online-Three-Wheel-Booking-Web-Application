@@ -19,6 +19,7 @@ export default function Kandy() {
       setLoading(false);
     }, 4000);
   }, []);
+
   const navigate = useNavigate();
   const homePageClick = () => {
     navigate("/");
@@ -94,7 +95,7 @@ export default function Kandy() {
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
                 A city brimming with culture and heritage
               </h2>
-              <h1 className="mx-4 mt-3 font-serif text-3xl font-bold font lg:text-5xl xl:text-6xl">
+              <h1 className="px-4 pt-3 font-serif text-3xl font-bold font lg:text-5xl xl:text-6xl">
                 Explore the beauty of Kandy with TukTuk Mango
               </h1>
               <p className="px-5 pt-8 lg:text-xl md:text-lg text-base text-justify">
@@ -146,7 +147,7 @@ export default function Kandy() {
                 TukTuk, yeah we can give it to you! If you select TukTuk Mango,
                 you can also enjoy these mind-blowing benefits:
               </p>
-              <ul className="px-10 pt-5 lg:text-xl md:text-lg text-base leading-relaxed list-disc space-y-3">
+              <ul className="pl-10 pr-5 pt-5 lg:text-xl md:text-lg text-base leading-relaxed list-disc space-y-3">
                 <li>Trusted TukTuk service: your safety is our main thing.</li>
                 <li>
                   You can select your own Tuk with our wide collection of
@@ -476,11 +477,11 @@ export default function Kandy() {
                 Frequently Asked Questions
               </p>
             </div>
-            <div className="pt-5 px-5 relative xl:h-[550px] lg:h-[600px] md:h-[550px] h-[720px]">
+            <div className="pt-5 px-5 relative">
               {faqData.map((faq) => (
                 <div
                   key={faq.id}
-                  className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] mt-4`}
+                  className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] `}
                 >
                   <div
                     className="flex items-center justify-between cursor-pointer"
@@ -511,7 +512,7 @@ export default function Kandy() {
               ))}
             </div>
             <div>
-              <p className="px-5 lg:pt-5 pb-10 text-3xl font-bold">Kandy Map</p>
+              <p className="px-5 pt-5 pb-10 text-3xl font-bold">Kandy Map</p>
               <div class="relative mx-5 h-[500px]">
                 <iframe
                   class="absolute top-0 left-0 w-full h-full"

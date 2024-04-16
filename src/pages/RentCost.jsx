@@ -169,7 +169,7 @@ export default function RentCost() {
       <div className="relative mb-10 pt-28">
         <div className="mx-0 md:mx-8 lg:mx-0">
           {/* =========================RENTAL DETAILS============================= */}
-          <div className="p-5 bg-gray-200 mx-full lg:mx-14 xl:mx-48 rounded-xl">
+          <div className="p-5 bg-gray-200 mx-full lg:mx-10 xl:mx-44 rounded-xl">
             <div>
               <div>
                 <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
@@ -383,7 +383,7 @@ export default function RentCost() {
               </div>
             </div>
             <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
-            {/* =======================================CUSTOMER DETAILS========================================== */}
+            {/* ============================CUSTOMER DETAILS=============================== */}
             <div>
               <div>
                 <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
@@ -401,7 +401,7 @@ export default function RentCost() {
                           id="title"
                           value={formData.title}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         >
                           <option value=""></option>
                           <option value="Mr.">Mr.</option>
@@ -421,7 +421,7 @@ export default function RentCost() {
                           required
                           value={formData.firstName}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -433,7 +433,7 @@ export default function RentCost() {
                           required
                           value={formData.lastName}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -445,7 +445,7 @@ export default function RentCost() {
                           required
                           value={formData.dob}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -456,7 +456,7 @@ export default function RentCost() {
                           id="address"
                           value={formData.address}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -467,7 +467,7 @@ export default function RentCost() {
                           id="city"
                           value={formData.city}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -478,7 +478,7 @@ export default function RentCost() {
                           id="state"
                           value={formData.state}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -489,7 +489,7 @@ export default function RentCost() {
                           id="zipCode"
                           value={formData.zipCode}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -500,7 +500,7 @@ export default function RentCost() {
                           id="country"
                           value={formData.country}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -512,7 +512,7 @@ export default function RentCost() {
                           required
                           value={formData.phone}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="flex flex-col ">
@@ -524,7 +524,7 @@ export default function RentCost() {
                           required
                           value={formData.email}
                           onChange={handleFormChange}
-                          className="p-2 mt-2 rounded-full"
+                          className="p-2 mt-2 rounded-xl"
                         />
                       </div>
                       <div className="grid grid-cols-1 ">
@@ -536,7 +536,7 @@ export default function RentCost() {
                           cols="60"
                           value={formData.comments}
                           onChange={handleFormChange}
-                          className="p-4 mt-2 resize-none rounded-3xl"
+                          className="p-4 mt-2 resize-none rounded-xl"
                         ></textarea>
                         <div className="flex items-center space-x-2 xl:justify-center mt-2">
                           <input
