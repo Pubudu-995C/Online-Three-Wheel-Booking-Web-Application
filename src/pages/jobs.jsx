@@ -9,37 +9,34 @@ import Driver from "../images/job/joinTeam.jpg";
 
 export default function Jobs() {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+
+  // =========DATA FROM API HERE============
+  const [jobData, setJobData] = useState(null); // State to store fetched job data
 
   useEffect(() => {
-    setLoading(true);
-    fetch("http://localhost/apiman/index.php/datalayer/general", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // Include your authentication credentials here
-        // Authorization: "Basic cG1zX3VzZXI6cG1zdXNlcg==",
-        "X-Requested-With": "XMLHttpRequest",
-        Authorization: "Basic " + btoa("pms_user:pmsuser"),
-      },
-      body: JSON.stringify({
-        apiName: "test",
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data); // Assuming your API returns data that you want to set in your component state
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
+    fetchData();
   }, []);
 
-  // ==fetch data==
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch("http://localhost:6069/fetchData", {
+        method: "POST",
+      });
 
+      if (!response.ok) {
+        throw new Error("Failed to fetch job data");
+      }
+
+      const data = await response.json();
+      setJobData(data);
+    } catch (error) {
+      console.error("Error fetching job data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -90,7 +87,7 @@ export default function Jobs() {
                 <div className="my-28 flex justify-center mx-5 md:mx-10 lg:mx-0">
                   <a
                     href="/driver"
-                    class="flex flex-col items-center bg-green-200 hover:bg-gray-600 border rounded-lg shadow md:flex-row md:max-w-3xl border-yellow-500 transition-colors duration-300"
+                    class="flex flex-col items-center hover:bg-gray-500 border rounded-lg shadow md:flex-row md:max-w-3xl border-yellow-500 transition-colors duration-300"
                   >
                     <img
                       class="object-cover w-full rounded-t-lg h-48 md:w-72 md:rounded-none md:rounded-s-lg"
@@ -101,7 +98,7 @@ export default function Jobs() {
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-yellow-500">
                         New TukTuk Registration in 2024
                       </h5>
-                      <p class="mb-3 font-normal text-gray-400  transition-colors">
+                      <p class="mb-3 font-semibold text-gray-800  transition-colors">
                         Do you have a Tuk Tuk? Would you like to join Our Team?
                         Then this is your chance.
                       </p>

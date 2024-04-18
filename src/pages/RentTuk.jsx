@@ -7,32 +7,21 @@ import vehicles from "../temporary/vehicles.json";
 
 // Define a map of city fees
 const cityFees = {
-  "1. Colombo Bandaranaike International Airport / Katunayaka Office (+$0)": 0,
-  "2. Negombo Main Office (+$0)": 0,
-  "3. Colombo (+$15)": 15,
-  "4. Mirissa (+$89)": 89,
-  "5. Weligama (+$89)": 89,
-  "6. Ella (+$40)": 40,
-  "7. Hikkaduwa (+$59)": 59,
-  "8. Galle / Unawatuna (+$70)": 70,
-  "9. Kandy (+$59)": 59,
-  "10. Arugam Bay (+$170)": 170,
-  "11. Sigiriya / Dambulla (+$90)": 90,
-  "12. Kalpitiya (+$60)": 60,
-  "13. Trincomalee / Uppaveli / Nilaveli (+$150)": 150,
-  "14. Tangalle (+$99)": 99,
-  "15. Hiriketiya / Dickwella (+$80)": 80,
-  "16. Anuradhapura (+$90)": 90,
-  "17. Kataragama (+$133)": 133,
-  "18. Matara (+$92)": 92,
-  "19. Udawalawe (+$72)": 72,
-  "20. Tissamaharama (+$110)": 110,
-  "21. Jaffna (+$186)": 186,
-  "22. Batticoala (+$160)": 160,
-  "23. Bentota (+$46)": 46,
-  "24. Nuwara Eliya (+$96)": 96,
-  "25. Polonnaruwa (+$114)": 114,
-  "26. Ahangama (+$80)": 80,
+  "1. Negombo": 0,
+  "2. Sigiriya": 30,
+  "3. Dambulla": 15,
+  "4. Anuradhapura": 89,
+  "5. Polonnaruwa": 89,
+  "6. Kandy": 40,
+  "7. Kitulgala": 59,
+  "8. Ella": 70,
+  "9. Nuwara Eliya": 59,
+  "10. Galle": 170,
+  "11. Mirissa": 90,
+  "12. Trincomalee": 60,
+  "13. Nilaveli": 150,
+  "14. Arugam Bay": 99,
+  "15. Jaffna": 80,
 };
 
 export default function RentTuk() {
@@ -154,11 +143,15 @@ export default function RentTuk() {
               </p>
               <p className="font-bold text-cyan-600 md:text-lg text-base pt-2 order-8 lg:order-none">
                 Fee:{" "}
-                <span className="font-bold text-red-500"> ${pickupFee} </span>
+                <span className="font-bold text-red-500">
+                  $ {pickupFee} USD
+                </span>
               </p>
               <p className="font-bold text-cyan-600 md:text-lg text-base pt-2 order-12 lg:order-none">
                 Fee:{" "}
-                <span className="font-bold text-red-500 ">${returnFee} </span>
+                <span className="font-bold text-red-500 ">
+                  $ {returnFee} USD
+                </span>
               </p>
             </div>
             {/* =======================Search Results=================== */}
@@ -209,7 +202,7 @@ export default function RentTuk() {
                           Total Price: $ {durationDays * v.price}
                         </p>
                         <p className="text-base font-bold text-cyan-600 lg:text-xl md:text-lg text-center lg:text-end">
-                          $ {v.price} / Day
+                          $ {v.price} /per day
                         </p>
                       </div>
 

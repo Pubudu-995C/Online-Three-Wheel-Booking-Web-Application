@@ -62,6 +62,11 @@ export default function RentOption() {
     navigate("/RentCost", { state: { data: dataToSend } });
     window.scrollTo(0, 0);
   };
+  
+  // Navigate back using window.history
+  const handlePrevious = () => {
+    window.history.back();
+  };
 
   const handleQuantityChange = (index, value, item, cost) => {
     if (index === "driQuantity") {
@@ -212,11 +217,16 @@ export default function RentOption() {
                 </p>
                 <p className="font-bold text-cyan-600 md:text-lg text-base pt-2 order-8 lg:order-none">
                   Fee:{" "}
-                  <span className="font-bold text-red-500"> ${pickupFee} </span>
+                  <span className="font-bold text-red-500">
+                    {" "}
+                    $ {pickupFee} USD
+                  </span>
                 </p>
                 <p className="font-bold text-cyan-600 md:text-lg text-base pt-2 order-12 lg:order-none">
                   Fee:{" "}
-                  <span className="font-bold text-red-500 ">${returnFee} </span>
+                  <span className="font-bold text-red-500 ">
+                    $ {returnFee} USD
+                  </span>
                 </p>
               </div>
             </div>
@@ -381,10 +391,16 @@ export default function RentOption() {
                 ))}
               </div>
             </div>
-            <div className="flex justify-center mt-5 xl:justify-end xl:mt-0">
+            <div className="flex justify-center mt-5 xl:mt-0 gap-x-16">
+              <button
+                onClick={handlePrevious}
+                className="bg-[#54B435] hover:bg-[#F0FF42] transition-colors duration-300  py-2 px-4 font-bold md:text-xl text-base text-white hover:text-black rounded-xl"
+              >
+                Previous
+              </button>
               <button
                 onClick={handleContinue}
-                className="bg-[#54B435] hover:bg-[#F0FF42] transition-colors duration-300  py-2 px-4 font-bold md:text-xl text-base text-white hover:text-black rounded-full mx-10"
+                className="bg-[#54B435] hover:bg-[#F0FF42] transition-colors duration-300  py-2 px-4 font-bold md:text-xl text-base text-white hover:text-black rounded-xl"
               >
                 Continue
               </button>

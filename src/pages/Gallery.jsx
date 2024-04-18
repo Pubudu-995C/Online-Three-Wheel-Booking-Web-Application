@@ -56,16 +56,6 @@ export default function Gallery() {
       img: `/town/trincomalee5.JPG`,
       caption: `Kanniya Hot Spring is a highlighting spot that increases the brightness of Trincomalee. The Kanniya Hot Spring is located on the east coast of Sri Lanka in Trincomalee. It has seven wells that are square-shaped each has a four-foot depth. Sri Lankan people believe that the water from the well has healing properties.`,
     },
-    {
-      id: 8,
-      img: `/wallpapers/wallpaper4.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
-    },
-    {
-      id: 9,
-      img: `/wallpapers/wallpaper8.jpg`,
-      caption: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, enim et laboriosam nihil officia qui architecto, eos ipsa repellendus eveniet veniam fugiat obcaecati. Quos praesentium laborum adipisci iusto perferendis mollitia. Facilis eveniet vitae repellat aspernatur suscipit ullam doloremque accusantium sapiente?`,
-    },
   ];
 
   const [model, setModel] = useState(false);
