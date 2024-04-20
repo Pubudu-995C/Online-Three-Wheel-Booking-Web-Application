@@ -28,13 +28,13 @@ export default function HowWork() {
 
   const enjoy = [
     {
-      img: `/wallpapers/wallpaper.jpg`,
+      img: `/how/Book.png`,
       topic: `Book Your Tuk`,
       details: `Begin by choosing the dates and locations for the start and end of your journey, along with your preferred tuktuk, to finalize your travel plans.`,
       btn: `Book Now`,
     },
     {
-      img: `/wallpapers/wallpaper2.jpg`,
+      img: `/how/Extras.png`,
       topic: `Pick Your Extras`,
       details: `Ready to catch some waves? Bringing along some precious cargo?
                 Take your pick from our awesome selection of add-ons, featuring
@@ -42,7 +42,7 @@ export default function HowWork() {
       btn: `Browse Extras`,
     },
     {
-      img: `/wallpapers/wallpaper3.jpg`,
+      img: `/how/Licence.png`,
       topic: `Get Your Local Licence`,
       details: `To cruise around Sri Lanka hassle-free, you'll need a local
                 permit, but fret not! We've got your back. Once you've booked,
@@ -52,7 +52,7 @@ export default function HowWork() {
       btn: `Read More`,
     },
     {
-      img: `/wallpapers/wallpaper4.jpg`,
+      img: `/how/Plan.png`,
       topic: `Plan Your Trip`,
       details: ` If you've got just a short stint in Sri Lanka, it's a great idea
                 to plan ahead to squeeze the most out of your time there. Need a
@@ -61,7 +61,7 @@ export default function HowWork() {
       btn: `Get Start`,
     },
     {
-      img: `/wallpapers/wallpaper5.jpg`,
+      img: `/how/Lesson.png`,
       topic: `Take Your Driving Lesson`,
       details: ` Upon your arrival, one of our friendly instructors will provide
                 you with a customized tuk-tuk driving lesson to help you feel
@@ -73,7 +73,7 @@ export default function HowWork() {
       btn: `Read More`,
     },
     {
-      img: `/wallpapers/wallpaper6.jpg`,
+      img: `/how/Hit.png`,
       topic: `Hit The Road`,
       details: `Once you've wrapped up your driving lesson, you're all set to
                 hit the road and embark on your exciting journey. We're here for
@@ -138,8 +138,8 @@ export default function HowWork() {
 
             <div className="p-10">
               {enjoy.map((j) => (
-                <div className="items-center justify-center space-y-5 text-center lg:flex gap-x-4 lg:text-justify">
-                  <div className="lg:p-5 lg:w-3/6">
+                <div className="items-center justify-center lg:space-y-5 space-y-14 text-center lg:flex gap-x-4 lg:text-justify">
+                  <div className="lg:p-5 lg:w-4/6 xl:w-3/6">
                     <p className="py-4 text-xl font-bold lg:text-2xl lg:py-0">
                       {j.topic}
                     </p>
@@ -153,7 +153,11 @@ export default function HowWork() {
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <img src={j.img} className="w-[500px]" alt="Wallpaper" />
+                    <img
+                      src={j.img}
+                      className="xl:w-48 lg:w-40 md:w-32 w-24"
+                      alt="Wallpaper"
+                    />
                   </div>
                 </div>
               ))}

@@ -301,6 +301,17 @@ export default function Trincomalee() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://www.beyondgetawaystravels.com/tour-destinations/"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  beyondgetawaystravels
+                </a>
+              </p>
               <h2 className="px-5 pt-5 font-mono font-bold lg:text-3xl text-xl  text-[#54B435] uppercase">
                 Diving and snorkeling
               </h2>
@@ -394,6 +405,17 @@ export default function Trincomalee() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://www.padi.com/awareweek"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  padi
+                </a>
+              </p>
               <p className="px-5 pt-5 text-3xl font-bold">
                 How to Get to Trincomalee from Colombo
               </p>

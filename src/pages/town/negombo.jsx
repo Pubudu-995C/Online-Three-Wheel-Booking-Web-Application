@@ -131,6 +131,17 @@ export default function Negombo() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://www.colibri-reisen.de/touren/jewels-of-sri-lanka/"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  colibri-reisen
+                </a>
+              </p>
               <p className="px-5 pt-5 lg:text-3xl text-2xl font-bold">
                 Explore Negombo hassle-free: Rent from Tuktuk
                 <span className="text-[#54B435]">mango</span>.com!
@@ -343,6 +354,17 @@ export default function Negombo() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://lankaescapes.com/destinations/wilpattu/"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  lankaescapes
+                </a>
+              </p>
 
               <p className="px-5 pt-5 text-3xl font-bold">
                 How to Get to Negombo from Airport

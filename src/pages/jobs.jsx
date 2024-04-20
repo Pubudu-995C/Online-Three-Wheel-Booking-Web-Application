@@ -62,7 +62,7 @@ export default function Jobs() {
               />
               <div className="absolute top-0 left-0 grid justify-center w-full xl:mt-60 lg:mt-48 md:mt-34 mt-36">
                 <h1 className="mt-0 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl md:text-4xl">
-                  jobs
+                  careers
                 </h1>
               </div>
               {/* ===========Breadcrumbs=========== */}
@@ -71,7 +71,7 @@ export default function Jobs() {
                   <i class="fa-solid fa-house"></i>
                 </a>
                 <a href="/jobs" className="opacity-60">
-                  <span>JOBS</span>
+                  <span>CAREERS</span>
                 </a>
               </Breadcrumbs>
               {/* ===========Breadcrumbs=========== */}

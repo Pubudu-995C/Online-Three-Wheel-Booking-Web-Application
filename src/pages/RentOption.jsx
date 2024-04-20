@@ -11,6 +11,11 @@ export default function RentOption() {
   const [selectedQuantities, setSelectedQuantities] = useState({});
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [selectedDrivers, setSelectedDrivers] = useState({});
+  const [selectedLicOptions, setSelectedLicOptions] = useState({});
+
+  const [selectedTukQuantity, setSelectedTukQuantity] = useState({});
+  const [selectedDriQuantity, setSelectedDriQuantity] = useState({});
+  const [selectedDriCost, setSelectedDriCost] = useState({});
 
   //Rederect homepage without data
   useEffect(() => {
@@ -35,9 +40,9 @@ export default function RentOption() {
   } = data || {};
 
   const handleContinue = () => {
-    const selectedTukQuantity = selectedQuantities["tukQuantity"];
-    const selectedDriQuantity = selectedQuantities["driQuantity"];
-    const selectedDriCost = selectedDrivers["driCost"];
+    // const selectedTukQuantity = selectedQuantities["tukQuantity"];
+    // const selectedDriQuantity = selectedQuantities["driQuantity"];
+    // const selectedDriCost = selectedDrivers["driCost"];
 
     const dataToSend = {
       pickupCity,
@@ -57,12 +62,14 @@ export default function RentOption() {
       driQuantity: selectedDriQuantity,
       driCost: selectedDriCost,
       options: selectedOptions,
+      licences: selectedLicOptions,
     };
 
     navigate("/RentCost", { state: { data: dataToSend } });
     window.scrollTo(0, 0);
+    console.log(dataToSend);
   };
-  
+
   // Navigate back using window.history
   const handlePrevious = () => {
     window.history.back();
@@ -151,11 +158,22 @@ export default function RentOption() {
       cost: `5.00`,
       quantity: ["1", "2", "3", "4", "5", "6", "7"],
     },
+  ];
+
+  const licence = [
     {
-      item: `Train Transfer`,
-      deposit: `Not Required`,
-      cost: `5.00`,
-      quantity: ["1", "2", "3", "4", "5"],
+      licItem: `We'll arrange for your local license. It'll be prepared for you upon your arrival within a day.`,
+      licAction: `You must choose at least one licensing option.`,
+      licCost: `40.00`,
+      licDeposit: `Not Required`,
+      licQuantity: ["1", "2", "3", "4", "5"],
+    },
+    {
+      licItem: `I need someone to transport my tuktuk between Kandy, Hatton, or Nanu Oya and Ella, or vice versa, to facilitate my train journey. Excluding fuel expenses.`,
+      licAction: `Optional`,
+      licCost: `45.00`,
+      licDeposit: `Not Required`,
+      licQuantity: ["1", "2", "3", "4", "5"],
     },
   ];
 
@@ -305,12 +323,11 @@ export default function RentOption() {
                     className="h-8 w-28 text-center rounded-lg"
                     value={selectedQuantities["driQuantity"] || ""}
                     onChange={(e) =>
-                      handleQuantityChange(
-                        "driQuantity",
-                        e.target.value,
-                        "driver",
-                        driQuantity[0].driCost,
-                      )
+                      setSelectedLicOptions({
+                        quantity: e.target.value,
+                        cost: d.driCost,
+                        item: l.licItem,
+                      })
                     }
                   >
                     <option value="">Select</option>
@@ -321,6 +338,82 @@ export default function RentOption() {
                     ))}
                   </select>
                 </div>
+              </div>
+            </div>
+            {/* =============================licence and tuktuk deliver=============================== */}
+            <div>
+              <h1 className="font-bold uppercase xl:text-3xl lg:text-2xl md:text-xl text-lg pt-10">
+                licence and tuktuk deliver
+              </h1>
+              <div className="justify-center grid lg:grid-cols-4 grid-cols-1 font-bold">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block"></p>
+                <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
+                  Deposit
+                </p>
+                <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
+                  Cost
+                </p>
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
+                  Quantity
+                </p>
+                {licence.map((l, index) => (
+                  <>
+                    <div className="flex lg:justify-start lg:mb-5 mt-5 lg:mt-0 justify-center md:text-lg text-base lg:w-[400px] lg:text-justify pr-2">
+                      <span className="text-cyan-600 lg:hidden">Item:</span>
+                      &nbsp;
+                      <span className="text-black">
+                        {l.licItem}{" "}
+                        <span className="text-red-500">{l.licAction}</span>
+                      </span>
+                    </div>
+
+                    <div className="flex justify-end md:text-lg text-base">
+                      {" "}
+                      <span className="lg:hidden">Deposit:</span>
+                      &nbsp;
+                      {l.licDeposit}
+                    </div>
+                    <div className="flex justify-end md:text-lg text-base">
+                      {" "}
+                      <span className="lg:hidden">Cost:</span>
+                      &nbsp;
+                      {l.licCost} USD
+                    </div>
+                    <div className="flex justify-center mt-10 lg:mt-0">
+                      <span className="lg:hidden">Quantity:</span>&nbsp;
+                      <div key={index} className="">
+                        <select
+                          name={`licQuantity-${index}`}
+                          id={`licQuantity-${index}`}
+                          className="h-8 text-center rounded-lg w-28"
+                          value={selectedLicOptions[index] || ""}
+                          onChange={
+                            (e) =>
+                              setSelectedLicOptions({
+                                quantity: e.target.value,
+                                cost: l.licCost,
+                                item: l.licItem,
+                              })
+                            // handleQuantityChange(
+                            //   index,
+                            //   e.target.value,
+                            //   l.licItem,
+                            //   l.licCost,
+                            // )
+                          }
+                        >
+                          <option value="">Select</option>
+                          {l.licQuantity.map((quantity, qIndex) => (
+                            <option key={qIndex} value={quantity}>
+                              {quantity}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <hr className="h-0.5 bg-black mt-5 lg:hidden" />
+                  </>
+                ))}
               </div>
             </div>
             {/* ==============================Rental Options=============================== */}
@@ -367,17 +460,23 @@ export default function RentOption() {
                           name={`quantity-${index}`}
                           id={`quantity-${index}`}
                           className="h-8 text-center rounded-lg w-28"
-                          value={selectedQuantities[index] || ""}
-                          onChange={(e) =>
-                            handleQuantityChange(
-                              index,
-                              e.target.value,
-                              p.item,
-                              p.cost,
-                            )
+                          value={selectedQuantities.quantity || ""}
+                          onChange={
+                            (e) =>
+                              setSelectedOptions({
+                                quantity: e.target.value,
+                                cost: p.cost,
+                                item: p.item,
+                              })
+                            // handleQuantityChange(
+                            //   index,
+                            //   e.target.value,
+                            //   p.item,
+                            //   p.cost,
+                            // )
                           }
                         >
-                          <option value="">Select</option>
+                          {/* <option value="">Select</option> */}
                           {p.quantity.map((quantity, qIndex) => (
                             <option key={qIndex} value={quantity}>
                               {quantity}

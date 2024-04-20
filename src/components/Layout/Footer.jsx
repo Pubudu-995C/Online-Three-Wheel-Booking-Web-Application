@@ -19,7 +19,7 @@ export default function Footer() {
                 </a>
               </h4>
               <p className="text-gray-500 hover:text-gray-400">
-                No 333, <br /> William Gopallawa Mawatha, <br /> Kandy. <br />
+                {/* No 333, <br /> William Gopallawa Mawatha, <br /> Kandy. <br /> */}
                 <strong>Phone:</strong> +(94) 704 239 249 <br />
                 <strong>Email:</strong> mangoglobal87@gmail.com <br />
               </p>

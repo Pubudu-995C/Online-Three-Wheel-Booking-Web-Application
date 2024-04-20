@@ -81,10 +81,10 @@ export default function ContactUs() {
                             Our Address
                           </h3>
                           <p class="text-gray-600 dark:text-slate-400">
-                            1230 Maecenas Street Donec Road
+                            {/* 1230 Maecenas Street Donec Road */}
                           </p>
                           <p class="text-gray-600 dark:text-slate-400">
-                            New York, EEUU
+                            {/* New York, EEUU */}
                           </p>
                         </div>
                       </li>
@@ -100,7 +100,7 @@ export default function ContactUs() {
                             Mobile: +94 (070) 4 239-249
                           </p>
                           <p class="text-gray-600 dark:text-slate-400">
-                            Mail: info@tuktukmango.com
+                            Mail: mangoglobal87@gmail.com
                           </p>
                         </div>
                       </li>

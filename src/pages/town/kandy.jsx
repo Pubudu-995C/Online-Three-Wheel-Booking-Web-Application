@@ -137,6 +137,17 @@ export default function Kandy() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://en.m.wikipedia.org/wiki/File:SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  wikipedia
+                </a>
+              </p>
               <p className="px-5 pt-5 lg:text-3xl text-2xl font-bold">
                 Explore Kandy hassle-free: Rent from Tuktuk
                 <span className="text-[#54B435]">mango</span>.com!
@@ -389,6 +400,17 @@ export default function Kandy() {
                   alt="Wallpaper"
                 />
               </div>
+              <p className="flex justify-center font-medium mt-2">
+                Reference: &nbsp;
+                <a
+                  href="https://www.greatgardensoftheworld.com/gardens/peradeniya-botanic-gardens/"
+                  className="italic"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  greatgardensoftheworld
+                </a>
+              </p>
               <p className="px-5 pt-5 text-3xl font-bold">
                 How to Get to Kandy from Colombo
               </p>

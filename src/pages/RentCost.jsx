@@ -39,10 +39,14 @@ export default function RentCost() {
   const parsedTotalPrice = parseFloat(totalPrice);
   const parsedDeposit = parseFloat(deposit);
 
+  const parsedTotalPickup = parseFloat(pickupFee);
+  const parsedTotalReturn = parseFloat(returnFee);
+
   // Calculate the total price if tukQuantity is available, otherwise use totalPrice
   const totVehicle = tukQuantity
     ? parsedTotalPrice * tukQuantity
     : parsedTotalPrice;
+
   const totDeposit = tukQuantity ? parsedDeposit * tukQuantity : parsedDeposit;
 
   // Calculate the total cost of options
@@ -50,7 +54,7 @@ export default function RentCost() {
   if (options && options.length > 0) {
     optionsTotal = options.reduce((acc, option) => {
       if (option.quantity) {
-        acc += parseFloat(option.cost) * parseInt(option.quantity);
+        acc += parseFloat(option.cost) * parseInt(option.quantity) * durationDays;
       }
       return acc;
     }, 0);
@@ -62,7 +66,19 @@ export default function RentCost() {
     : 0;
 
   //pick up and return fee
-  const totalTransport = pickupFee + returnFee;
+  const totpickupFee = !isNaN(parsedTotalPickup)
+    ? tukQuantity
+      ? parsedTotalPickup * tukQuantity
+      : parsedTotalPickup
+    : 0;
+
+  const totreturnFee = !isNaN(parsedTotalReturn)
+    ? tukQuantity
+      ? parsedTotalReturn * tukQuantity
+      : parsedTotalReturn
+    : 0;
+
+  const totalTransport = totpickupFee + totreturnFee;
 
   // Calculate the grand total
   const grandTotal =
@@ -244,7 +260,7 @@ export default function RentCost() {
                   <p className="lg:text-xl xl:text-2xl font-bold">Price</p>
                   <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-blue-600">
                     {tukQuantity
-                      ? `$ ${vehiPrice} Tuk-cost x ${durationDays} Day(s) x ${tukQuantity} tuk-Qty`
+                      ? `$ ${vehiPrice} (Tuk-cost) x ${durationDays} Day(s) x ${tukQuantity} Tuk(s)`
                       : `$ ${totalPrice}`}
                   </p>
                 </div>
@@ -273,7 +289,7 @@ export default function RentCost() {
                       Driver Price
                     </p>
                     <p className="lg:mt-4 xl:text-lg lg:text-base font-bold text-blue-600">
-                      {`${driQuantity} Driver(s) x ${driCost} USD x ${durationDays} Days`}
+                      {`${driQuantity} Driver(s) x $${driCost} (Driver) x ${durationDays} Day(s)`}
                     </p>
                   </div>
                 )}
@@ -297,20 +313,24 @@ export default function RentCost() {
                 <p className="lg:text-xl xl:text-2xl font-bold mt-5">
                   Pick up fee
                 </p>
-                <p className="text-lg font-bold text-center text-red-500 lg:text-right md:mt-5">
-                  $ {pickupFee}
+                <p className="xl:text-lg lg:text-base font-bold text-center text-blue-600 lg:text-right md:mt-5">
+                  {tukQuantity
+                    ? `$ ${pickupFee} (Per-tuk) x ${tukQuantity} Tuk(s)`
+                    : `$ ${pickupFee}`}
                 </p>
-                <p className="flex justify-center text-lg font-bold text-red-500 lg:justify-end md:mt-5">
-                  {pickupFee} USD
+                <p className="flex justify-center xl:text-lg lg:text-base font-bold text-red-500 lg:justify-end md:mt-5">
+                  {totpickupFee} USD
                 </p>
                 <p className="lg:text-xl xl:text-2xl font-bold mt-5">
                   Return fee
                 </p>
-                <p className="text-lg font-bold text-center text-red-500 lg:text-right md:mt-5">
-                  $ {returnFee}
+                <p className="xl:text-lg lg:text-base font-bold text-center text-blue-600 lg:text-right md:mt-5">
+                  {tukQuantity
+                    ? `$ ${returnFee} (Per-tuk) x ${tukQuantity} Tuk(s)`
+                    : `$ ${returnFee}`}
                 </p>
-                <p className="flex justify-center text-lg font-bold text-red-500 lg:justify-end md:mt-5">
-                  {returnFee} USD
+                <p className="flex justify-center xl:text-lg lg:text-base font-bold text-red-500 lg:justify-end md:mt-5">
+                  {totreturnFee} USD
                 </p>
               </div>
             </div>
@@ -325,20 +345,23 @@ export default function RentCost() {
                   {options.map((option, index) => (
                     <div
                       key={index}
-                      className="grid grid-cols-1 mt-5 text-lg font-bold text-center lg:grid-cols-3 lg:text-left"
+                      className="grid grid-cols-1 mt-5 font-bold text-center lg:grid-cols-3 lg:text-left"
                     >
-                      <p>{option.item}</p>
+                      <p className="xl:text-lg lg:text-base">{option.item}</p>
                       {option.quantity && (
-                        <p className="text-center text-red-500 xl:text-right">
+                        <p className="text-center text-blue-600 xl:text-right xl:text-lg lg:text-base">
                           $ {option.cost}{" "}
-                          {option.quantity ? `x ${option.quantity}` : ""}
+                          {option.quantity
+                            ? `x ${option.quantity} (Qty) x ${durationDays} Day(s)`
+                            : ""}
                         </p>
                       )}
                       <p className="text-center text-red-500 lg:text-right">
                         {option.quantity
                           ? ` ${
                               parseFloat(option.cost) *
-                              parseInt(option.quantity)
+                              parseInt(option.quantity) *
+                              durationDays
                             }`
                           : ""}{" "}
                         USD
@@ -365,7 +388,7 @@ export default function RentCost() {
                     <p className="text-lg">Deposit:</p>
                     <p className="lg:text-lg text-base text-blue-600">
                       {tukQuantity
-                        ? `$ ${deposit} x ${tukQuantity}`
+                        ? `$ ${deposit} x ${tukQuantity} Tuk(s)`
                         : `$ ${deposit}`}
                     </p>
                   </p>

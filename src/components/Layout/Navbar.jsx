@@ -127,7 +127,7 @@ export default function Navbar() {
                     isActivePage("/jobs") ? "text-[#F0FF42]" : "text-gray-300"
                   } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
                 >
-                  JOBS
+                  CAREERS
                 </Link>
               </li>
               <li>

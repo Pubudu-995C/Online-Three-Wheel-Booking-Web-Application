@@ -8,20 +8,20 @@ import vehicles from "../temporary/vehicles.json";
 // Define a map of city fees
 const cityFees = {
   "1. Negombo": 0,
-  "2. Sigiriya": 30,
-  "3. Dambulla": 15,
-  "4. Anuradhapura": 89,
-  "5. Polonnaruwa": 89,
-  "6. Kandy": 40,
-  "7. Kitulgala": 59,
-  "8. Ella": 70,
-  "9. Nuwara Eliya": 59,
+  "2. Sigiriya": 80,
+  "3. Dambulla": 70,
+  "4. Anuradhapura": 80,
+  "5. Polonnaruwa": 90,
+  "6. Kandy": 50,
+  "7. Kitulgala": 60,
+  "8. Ella": 50,
+  "9. Nuwara Eliya": 90,
   "10. Galle": 170,
-  "11. Mirissa": 90,
-  "12. Trincomalee": 60,
-  "13. Nilaveli": 150,
-  "14. Arugam Bay": 99,
-  "15. Jaffna": 80,
+  "11. Mirissa": 80,
+  "12. Trincomalee": 120,
+  "13. Nilaveli": 130,
+  "14. Arugam Bay": 150,
+  "15. Jaffna": 170,
 };
 
 export default function RentTuk() {
