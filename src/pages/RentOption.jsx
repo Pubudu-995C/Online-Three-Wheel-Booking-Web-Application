@@ -300,11 +300,13 @@ export default function RentOption() {
                 licence and tuktuk deliver
               </h1>
               <div className="justify-center grid lg:grid-cols-4 grid-cols-1 font-bold">
-                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block"></p>
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
+                  Action
+                </p>
                 <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
                   Deposit
                 </p>
-                <p className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
+                <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
                   Cost
                 </p>
                 <p className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
@@ -312,22 +314,20 @@ export default function RentOption() {
                 </p>
                 {licence.map((l, index) => (
                   <>
-                    <div className="flex lg:justify-start lg:mb-5 mt-5 lg:mt-0 justify-center md:text-lg text-base lg:w-[400px] lg:text-justify pr-2">
-                      <span className="text-cyan-600 lg:hidden">Item:</span>
-                      &nbsp;
+                    <div className="flex lg:justify-start lg:mb-5 mt-5 lg:mt-0 justify-center md:text-lg text-base xl:w-[400px] lg:w-[320px] text-justify lg:pr-2">
                       <span className="text-black">
                         {l.licItem}{" "}
                         <span className="text-red-500">{l.licAction}</span>
                       </span>
                     </div>
 
-                    <div className="flex justify-end md:text-lg text-base">
+                    <div className="flex lg:justify-end justify-center md:text-lg text-base lg:mt-0 mt-5">
                       {" "}
                       <span className="lg:hidden">Deposit:</span>
                       &nbsp;
                       {l.licDeposit}
                     </div>
-                    <div className="flex justify-end md:text-lg text-base">
+                    <div className="flex lg:justify-center justify-center md:text-lg text-base">
                       {" "}
                       <span className="lg:hidden">Cost:</span>
                       &nbsp;

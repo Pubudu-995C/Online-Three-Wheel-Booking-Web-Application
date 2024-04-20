@@ -32,6 +32,7 @@ export default function RentCost() {
     tukQuantity,
     driQuantity,
     driCost,
+    licences,
     options,
   } = data || {};
 
@@ -61,6 +62,17 @@ export default function RentCost() {
     });
   }
 
+  // Calculate the total licences of options
+  let licencesTotal = 0;
+  if (licences && licences.length !== 0) {
+    licences.forEach((licence) => {
+      if (licence) {
+        licencesTotal =
+          licencesTotal + parseFloat(licence.cost) * parseInt(licence.quantity);
+      }
+    });
+  }
+
   // Calculate total driver cost
   const totalDriverCost = driQuantity
     ? driQuantity * driCost * durationDays
@@ -83,7 +95,11 @@ export default function RentCost() {
 
   // Calculate the grand total
   const grandTotal =
-    totVehicle + optionsTotal + totalDriverCost + totalTransport;
+    totVehicle +
+    optionsTotal +
+    totalDriverCost +
+    totalTransport +
+    licencesTotal;
 
   const [formData, setFormData] = useState({
     title: "",
@@ -158,7 +174,7 @@ export default function RentCost() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(dataToSend),
-        }
+        },
       );
 
       if (!response.ok) {
@@ -336,6 +352,47 @@ export default function RentCost() {
               </div>
             </div>
             <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
+            {/* ===============================Licences DETAILS============================= */}
+            <div>
+              {licences && licences.length > 0 && (
+                <div>
+                  <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
+                    licence and train transport
+                  </h1>
+                  {licences.map((licence, index) => (
+                    <>
+                      {licence && (
+                        <div
+                          key={index}
+                          className="grid grid-cols-1 mt-5 font-bold text-center lg:grid-cols-3 lg:text-left"
+                        >
+                          <p className="xl:text-lg lg:text-base text-justify">
+                            {licence.item}
+                          </p>
+                          {licence.quantity && (
+                            <p className="text-center text-blue-600 lg:text-right xl:text-lg lg:text-base lg:mt-0 mt-5">
+                              {licence.quantity
+                                ? `$ ${licence.cost} (Cost) x ${licence.quantity} (Qty)`
+                                : ""}
+                            </p>
+                          )}
+                          <p className="text-center text-red-500 lg:text-right xl:text-lg lg:text-base">
+                            {licence.quantity
+                              ? ` ${
+                                  parseFloat(licence.cost) *
+                                  parseInt(licence.quantity)
+                                }`
+                              : ""}{" "}
+                            USD
+                          </p>
+                        </div>
+                      )}
+                    </>
+                  ))}
+                  <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
+                </div>
+              )}
+            </div>
             {/* ===============================Extra Options============================= */}
             <div>
               {options && options.length > 0 && (
@@ -354,14 +411,14 @@ export default function RentCost() {
                             {option.item}
                           </p>
                           {option.quantity && (
-                            <p className="text-center text-blue-600 xl:text-right xl:text-lg lg:text-base">
+                            <p className="text-center text-blue-600 lg:text-right xl:text-lg lg:text-base">
                               $ {option.cost}{" "}
                               {option.quantity
                                 ? `x ${option.quantity} (Qty) x ${durationDays} Day(s)`
                                 : ""}
                             </p>
                           )}
-                          <p className="text-center text-red-500 lg:text-right">
+                          <p className="text-center text-red-500 lg:text-right xl:text-lg lg:text-base">
                             {option.quantity
                               ? ` ${
                                   parseFloat(option.cost) *
