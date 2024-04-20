@@ -51,13 +51,14 @@ export default function RentCost() {
 
   // Calculate the total cost of options
   let optionsTotal = 0;
-  if (options && options.length > 0) {
-    optionsTotal = options.reduce((acc, option) => {
-      if (option.quantity) {
-        acc += parseFloat(option.cost) * parseInt(option.quantity) * durationDays;
+  if (options && options.length !== 0) {
+    options.forEach((option) => {
+      if (option) {
+        optionsTotal =
+          optionsTotal +
+          parseFloat(option.cost) * parseInt(option.quantity) * durationDays;
       }
-      return acc;
-    }, 0);
+    });
   }
 
   // Calculate total driver cost
@@ -157,7 +158,7 @@ export default function RentCost() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(dataToSend),
-        },
+        }
       );
 
       if (!response.ok) {
@@ -343,30 +344,36 @@ export default function RentCost() {
                     Extra Options
                   </h1>
                   {options.map((option, index) => (
-                    <div
-                      key={index}
-                      className="grid grid-cols-1 mt-5 font-bold text-center lg:grid-cols-3 lg:text-left"
-                    >
-                      <p className="xl:text-lg lg:text-base">{option.item}</p>
-                      {option.quantity && (
-                        <p className="text-center text-blue-600 xl:text-right xl:text-lg lg:text-base">
-                          $ {option.cost}{" "}
-                          {option.quantity
-                            ? `x ${option.quantity} (Qty) x ${durationDays} Day(s)`
-                            : ""}
-                        </p>
+                    <>
+                      {option && (
+                        <div
+                          key={index}
+                          className="grid grid-cols-1 mt-5 font-bold text-center lg:grid-cols-3 lg:text-left"
+                        >
+                          <p className="xl:text-lg lg:text-base">
+                            {option.item}
+                          </p>
+                          {option.quantity && (
+                            <p className="text-center text-blue-600 xl:text-right xl:text-lg lg:text-base">
+                              $ {option.cost}{" "}
+                              {option.quantity
+                                ? `x ${option.quantity} (Qty) x ${durationDays} Day(s)`
+                                : ""}
+                            </p>
+                          )}
+                          <p className="text-center text-red-500 lg:text-right">
+                            {option.quantity
+                              ? ` ${
+                                  parseFloat(option.cost) *
+                                  parseInt(option.quantity) *
+                                  durationDays
+                                }`
+                              : ""}{" "}
+                            USD
+                          </p>
+                        </div>
                       )}
-                      <p className="text-center text-red-500 lg:text-right">
-                        {option.quantity
-                          ? ` ${
-                              parseFloat(option.cost) *
-                              parseInt(option.quantity) *
-                              durationDays
-                            }`
-                          : ""}{" "}
-                        USD
-                      </p>
-                    </div>
+                    </>
                   ))}
                   <hr className="bg-[#379237] h-3 mt-5 rounded-full" />
                 </div>

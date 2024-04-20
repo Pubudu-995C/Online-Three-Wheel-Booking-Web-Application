@@ -7,15 +7,13 @@ import wallpaper7 from "../images/wallpapers/wallpaper7.jpg";
 export default function RentOption() {
   const navigate = useNavigate();
   const location = useLocation();
+
   const data = location.state?.data || null;
-  const [selectedQuantities, setSelectedQuantities] = useState({});
-  const [selectedOptions, setSelectedOptions] = useState([]);
-  const [selectedDrivers, setSelectedDrivers] = useState({});
-  const [selectedLicOptions, setSelectedLicOptions] = useState({});
 
   const [selectedTukQuantity, setSelectedTukQuantity] = useState({});
   const [selectedDriQuantity, setSelectedDriQuantity] = useState({});
-  const [selectedDriCost, setSelectedDriCost] = useState({});
+  const [selectedLicOptions, setSelectedLicOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
   //Rederect homepage without data
   useEffect(() => {
@@ -40,10 +38,6 @@ export default function RentOption() {
   } = data || {};
 
   const handleContinue = () => {
-    // const selectedTukQuantity = selectedQuantities["tukQuantity"];
-    // const selectedDriQuantity = selectedQuantities["driQuantity"];
-    // const selectedDriCost = selectedDrivers["driCost"];
-
     const dataToSend = {
       pickupCity,
       pickupDate,
@@ -58,11 +52,12 @@ export default function RentOption() {
       vehiPrice,
       totalPrice,
       deposit,
+
       tukQuantity: selectedTukQuantity,
-      driQuantity: selectedDriQuantity,
-      driCost: selectedDriCost,
-      options: selectedOptions,
+      driQuantity: selectedDriQuantity.quantity,
+      driCost: selectedDriQuantity.cost,
       licences: selectedLicOptions,
+      options: selectedOptions,
     };
 
     navigate("/RentCost", { state: { data: dataToSend } });
@@ -75,51 +70,15 @@ export default function RentOption() {
     window.history.back();
   };
 
-  const handleQuantityChange = (index, value, item, cost) => {
-    if (index === "driQuantity") {
-      setSelectedQuantities({ ...selectedQuantities, [index]: value });
-      setSelectedDrivers({ driCost: cost });
-    } else {
-      setSelectedQuantities({ ...selectedQuantities, [index]: value });
-      if (value !== "") {
-        if (index !== "tukQuantity") {
-          const existingOptionIndex = selectedOptions.findIndex(
-            (option) => option.item === item,
-          );
-
-          if (existingOptionIndex !== -1) {
-            const updatedOptions = [...selectedOptions];
-            updatedOptions[existingOptionIndex] = {
-              ...updatedOptions[existingOptionIndex],
-              quantity: value,
-            };
-            setSelectedOptions(updatedOptions);
-          } else {
-            setSelectedOptions([
-              ...selectedOptions,
-              { item, cost, quantity: value },
-            ]);
-          }
-        }
-      } else {
-        setSelectedOptions(
-          selectedOptions.filter((option) => option.item !== item),
-        );
-      }
-    }
-  };
-
   const tukQuantity = [
     {
       tukQun: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
     },
   ];
-  const driQuantity = [
-    {
-      driQun: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-      driCost: `25.00`,
-    },
-  ];
+  const driQuantity = {
+    driQun: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    driCost: `25.00`,
+  };
 
   const option = [
     {
@@ -285,10 +244,8 @@ export default function RentOption() {
                     name="tukQuantity"
                     id="tukQuantity"
                     className="h-8 w-28 text-center rounded-lg"
-                    value={selectedQuantities["tukQuantity"] || ""}
-                    onChange={(e) =>
-                      handleQuantityChange("tukQuantity", e.target.value)
-                    }
+                    value={selectedTukQuantity || ""}
+                    onChange={(e) => setSelectedTukQuantity(e.target.value)}
                   >
                     <option value="">Select</option>
                     {tukQuantity[0].tukQun.map((quantity, index) => (
@@ -304,14 +261,12 @@ export default function RentOption() {
                     Driver (If you Need)
                   </span>
                 </p>
-                {driQuantity.map((d) => (
-                  <div>
-                    <p className="md:text-lg text-base text-center pt-5 lg:pt-4">
-                      {" "}
-                      $ {d.driCost} / Per Driver
-                    </p>
-                  </div>
-                ))}
+                <div>
+                  <p className="md:text-lg text-base text-center pt-5 lg:pt-4">
+                    {" "}
+                    $ {driQuantity.driCost} / Per Driver
+                  </p>
+                </div>
                 <p className="text-center md:text-lg text-base pt-0 lg:pt-4">
                   Not Requird
                 </p>
@@ -321,17 +276,16 @@ export default function RentOption() {
                     name="driQuantity"
                     id="driQuantity"
                     className="h-8 w-28 text-center rounded-lg"
-                    value={selectedQuantities["driQuantity"] || ""}
+                    value={selectedDriQuantity.quantity || ""}
                     onChange={(e) =>
-                      setSelectedLicOptions({
+                      setSelectedDriQuantity({
                         quantity: e.target.value,
-                        cost: d.driCost,
-                        item: l.licItem,
+                        cost: driQuantity.driCost,
                       })
                     }
                   >
                     <option value="">Select</option>
-                    {driQuantity[0].driQun.map((quantity, index) => (
+                    {driQuantity.driQun.map((quantity, index) => (
                       <option key={index} value={quantity}>
                         {quantity}
                       </option>
@@ -386,21 +340,17 @@ export default function RentOption() {
                           name={`licQuantity-${index}`}
                           id={`licQuantity-${index}`}
                           className="h-8 text-center rounded-lg w-28"
-                          value={selectedLicOptions[index] || ""}
-                          onChange={
-                            (e) =>
-                              setSelectedLicOptions({
-                                quantity: e.target.value,
-                                cost: l.licCost,
-                                item: l.licItem,
-                              })
-                            // handleQuantityChange(
-                            //   index,
-                            //   e.target.value,
-                            //   l.licItem,
-                            //   l.licCost,
-                            // )
-                          }
+                          value={selectedLicOptions[index]?.quantity || ""}
+                          onChange={(e) => {
+                            const updatedOptions = [...selectedLicOptions];
+                            updatedOptions[index] = {
+                              ...updatedOptions[index],
+                              quantity: e.target.value,
+                              cost: l.licCost,
+                              item: l.licItem,
+                            };
+                            setSelectedLicOptions(updatedOptions);
+                          }}
                         >
                           <option value="">Select</option>
                           {l.licQuantity.map((quantity, qIndex) => (
@@ -460,23 +410,20 @@ export default function RentOption() {
                           name={`quantity-${index}`}
                           id={`quantity-${index}`}
                           className="h-8 text-center rounded-lg w-28"
-                          value={selectedQuantities.quantity || ""}
-                          onChange={
-                            (e) =>
-                              setSelectedOptions({
-                                quantity: e.target.value,
-                                cost: p.cost,
-                                item: p.item,
-                              })
-                            // handleQuantityChange(
-                            //   index,
-                            //   e.target.value,
-                            //   p.item,
-                            //   p.cost,
-                            // )
-                          }
+                          value={selectedOptions[index]?.quantity || ""}
+                          onChange={(e) => {
+                            const updatedOptions = [...selectedOptions];
+                            updatedOptions[index] = {
+                              ...updatedOptions[index],
+                              quantity: e.target.value,
+                              cost: p.cost,
+                              item: p.item,
+                              deposit: p.deposit,
+                            };
+                            setSelectedOptions(updatedOptions);
+                          }}
                         >
-                          {/* <option value="">Select</option> */}
+                          <option value="">Select</option>
                           {p.quantity.map((quantity, qIndex) => (
                             <option key={qIndex} value={quantity}>
                               {quantity}

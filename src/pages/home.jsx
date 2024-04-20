@@ -36,10 +36,10 @@ export default function Home() {
     const options = [];
     for (let hour = 0; hour < 24; hour++) {
       options.push(
-        <option key={hour} value={`${hour}:00`}>{`${hour}:00`}</option>,
+        <option key={hour} value={`${hour}:00`}>{`${hour}:00`}</option>
       );
       options.push(
-        <option key={`${hour}-30`} value={`${hour}:30`}>{`${hour}:30`}</option>,
+        <option key={`${hour}-30`} value={`${hour}:30`}>{`${hour}:30`}</option>
       );
     }
     return options;
@@ -89,7 +89,7 @@ export default function Home() {
 
   const toggleExpand = (faqId) => {
     setExpandedItem((prevExpandedItem) =>
-      prevExpandedItem === faqId ? null : faqId,
+      prevExpandedItem === faqId ? null : faqId
     );
   };
 
@@ -424,7 +424,7 @@ export default function Home() {
                         name="endDate"
                         id="returnDate"
                         value={formData.returnDate}
-                        min={currentDate}
+                        min={formData.pickupDate}
                         onChange={handleInputChange}
                         class="border border-gray-400 rounded-lg px-3 py-2 w-full"
                       />
