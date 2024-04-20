@@ -62,7 +62,6 @@ export default function RentOption() {
 
     navigate("/RentCost", { state: { data: dataToSend } });
     window.scrollTo(0, 0);
-    console.log(dataToSend);
   };
 
   // Navigate back using window.history
