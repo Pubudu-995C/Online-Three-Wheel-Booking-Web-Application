@@ -163,6 +163,8 @@ export default function RentCost() {
       driQuantity,
       driCost,
       totalDriverCost,
+      licences,
+      licencesTotal,
     };
 
     try {
