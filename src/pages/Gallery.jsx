@@ -105,57 +105,57 @@ export default function Gallery() {
             {/* ===========Breadcrumbs=========== */}
           </div>
 
-          <div>
+          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5">
             <div className="pt-20">
-              <h2 className="text-center font-mono font xl:text-3xl text-xl text-[#54B435] mx-5">
+              <h2 className="text-center font-mono xl:text-3xl text-xl text-[#54B435]">
                 CREATING MEMORIES ONE STEP AT A TIME
               </h2>
-              <h1 className="mx-8 mt-3 font-serif text-3xl font-bold text-center lg:mx-20 font lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Embarking on an adventure across the globe with three wheels
               </h1>
             </div>
-          </div>
-
-          <div className="my-10 md:mx-10">
-            <>
-              <div className={model ? "model open" : "model"}>
-                <img src={tempimg} alt="" />
-                <p className="caption">{caption}</p>
-                <CloseIcon onClick={() => setModel(false)} />
-              </div>
-              <div className="gallery">
-                {data.map((item, index) => {
-                  return (
-                    <div
-                      className="pics border-green-500 border-2 rounded-md p-2 bg-green-50"
-                      key={index}
-                      onClick={() => getImg(item.img)}
-                      onMouseEnter={() => setCaption(item.caption)} // Set caption on mouse enter
-                      onMouseLeave={() => setCaption("")} // Clear caption on mouse leave
-                    >
-                      {" "}
-                      <img
-                        src={item.img}
-                        alt=""
-                        style={{ width: "100%" }}
-                        className="border rounded-md"
-                      />
-                      <p className="img-caption text-red-400">{item.caption}</p>{" "}
-                      {/* Add caption */}
-                    </div>
-                  );
-                })}
-              </div>
-            </>
-          </div>
-
-          <div className="flex flex-col items-center my-10">
-            <button
-              onClick={homePageClick}
-              className="font-bold lg:text-xl text-base text-white hover:text-black bg-[#82CD47] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#F0FF42]"
-            >
-              RESERVE YOUR TUKTUK!
-            </button>
+            <div className="my-10">
+              <>
+                <div className={model ? "model open" : "model"}>
+                  <img src={tempimg} alt="" />
+                  <p className="caption">{caption}</p>
+                  <CloseIcon onClick={() => setModel(false)} />
+                </div>
+                <div className="gallery">
+                  {data.map((item, index) => {
+                    return (
+                      <div
+                        className="pics border-green-500 border-2 rounded-md p-2 bg-green-50"
+                        key={index}
+                        onClick={() => getImg(item.img)}
+                        onMouseEnter={() => setCaption(item.caption)} // Set caption on mouse enter
+                        onMouseLeave={() => setCaption("")} // Clear caption on mouse leave
+                      >
+                        {" "}
+                        <img
+                          src={item.img}
+                          alt=""
+                          style={{ width: "100%" }}
+                          className="border rounded-md"
+                        />
+                        <p className="img-caption text-red-400">
+                          {item.caption}
+                        </p>{" "}
+                        {/* Add caption */}
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            </div>
+            <div className="flex flex-col items-center my-10">
+              <button
+                onClick={homePageClick}
+                className="font-bold lg:text-xl text-base text-white hover:text-black bg-[#82CD47] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#F0FF42]"
+              >
+                RESERVE YOUR TUKTUK!
+              </button>
+            </div>
           </div>
           <Footer />
           <WhatsApp />

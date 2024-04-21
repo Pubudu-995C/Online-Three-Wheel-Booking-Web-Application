@@ -47,8 +47,8 @@ export default function ContactUs() {
             </div>
           </div>
 
-          <div class="dark:bg-sky-950" id="contact">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="bg-sky-950" id="contact">
+            <div class="py-16 lg:py-20 2xl:px-72 xl:px-34 lg:px-20 px-5">
               <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                   <p class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
@@ -109,13 +109,13 @@ export default function ContactUs() {
                           <i class="fa-regular fa-clock"></i>
                         </div>
                         <div class="ml-4 mb-4">
-                          <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
+                          <h3 class="mb-2 text-lg font-medium leading-6 text-white">
                             Working hours
                           </h3>
-                          <p class="text-gray-600 dark:text-slate-400">
+                          <p class="text-slate-400">
                             Monday - Friday: 08:00 - 17:00
                           </p>
-                          <p class="text-gray-600 dark:text-slate-400">
+                          <p class="text-slate-400">
                             Saturday &amp; Sunday: 08:00 - 12:00
                           </p>
                         </div>
@@ -139,7 +139,7 @@ export default function ContactUs() {
                               id="name"
                               autocomplete="given-name"
                               placeholder="Your name"
-                              class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-800 sm:mb-0"
+                              class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md text-gray-800 sm:mb-0"
                               name="name"
                             />
                           </div>
@@ -153,7 +153,7 @@ export default function ContactUs() {
                               id="email"
                               autocomplete="email"
                               placeholder="Your email address"
-                              class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-800 sm:mb-0"
+                              class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md text-gray-800 sm:mb-0"
                               name="email"
                             />
                           </div>
@@ -169,7 +169,7 @@ export default function ContactUs() {
                             cols="30"
                             rows="5"
                             placeholder="Write your message..."
-                            class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-800 sm:mb-0 resize-none"
+                            class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-mdtext-gray-800 sm:mb-0 resize-none"
                           ></textarea>
                         </div>
                       </div>

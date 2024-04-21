@@ -116,16 +116,16 @@ export default function HowWork() {
             {/* ===========Breadcrumbs=========== */}
           </div>
           {/* ============================================================= */}
-          <div className="bg-gradient-to-br from-slate-50 to-lime-200">
+          <div className="bg-gradient-to-br from-slate-50 to-lime-200 2xl:px-72 xl:px-24 lg:px-20 px-5">
             <div className="pt-20 m-0">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 Understanding the way things operate
               </h2>
-              <h1 className="mt-3 font-serif text-3xl font-bold text-center font md:text-4xl lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center md:text-4xl lg:text-5xl xl:text-6xl">
                 Take the wheel! Explore by tuktuk.
               </h1>
 
-              <p className="px-5 mt-12 text-lg text-center lg:text-xl">
+              <p className="mt-12 text-lg text-center lg:text-xl">
                 Driving your own tuktuk in Sri Lanka is easy with{" "}
                 <span className="font-bold">
                   tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -136,10 +136,10 @@ export default function HowWork() {
               </p>
             </div>
 
-            <div className="p-10">
+            <div className="py-10">
               {enjoy.map((j) => (
-                <div className="items-center justify-center lg:space-y-5 space-y-14 text-center lg:flex gap-x-4 lg:text-justify">
-                  <div className="lg:p-5 lg:w-4/6 xl:w-3/6">
+                <div className="items-center justify-center lg:space-y-5 space-y-14 text-center lg:flex gap-x-28 lg:text-justify">
+                  <div className="lg:p-5 lg:w-4/6 xl:w-3/6 2xl:w-4/6">
                     <p className="py-4 text-xl font-bold lg:text-2xl lg:py-0">
                       {j.topic}
                     </p>
@@ -171,11 +171,11 @@ export default function HowWork() {
               className="object-cover w-full h-full brightness-50"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full px-5 mt-20 md:px-10 xl:px-20">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
+            <div className="absolute top-0 w-full px-5 pt-20 2xl:px-72 xl:px-24 lg:px-20">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 OUR COMPANY HAS GROWN EXPONENTIALLY
               </h2>
-              <h1 className="mt-3 font-serif text-2xl font-bold text-center text-white font md:text-4xl lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-2xl font-bold text-center text-white md:text-4xl lg:text-5xl xl:text-6xl">
                 How Does <br /> TukTuk
                 <span className="text-[#54B435]">Mango</span>
                 .com Work?
@@ -236,11 +236,11 @@ export default function HowWork() {
           </div>
           {/* ============================================== */}
           <div>
-            <div className="pt-20 mx-8 lg:mx-20 xl:mx-32">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
+            <div className="pt-20 2xl:px-72 xl:px-24 lg:px-20 px-5">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 TUK TUK DRIVING IN SRI LANKA
               </h2>
-              <h1 className="mt-3 font-serif text-3xl font-bold text-center  font lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Can you drive a Tuktuk in Sri Lanka without any legal issues?
               </h1>
 
@@ -500,11 +500,11 @@ export default function HowWork() {
               className="object-cover w-full h-full opacity-20"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full px-5 mt-20">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
+            <div className="absolute top-0 w-full pt-20 2xl:px-72 xl:px-24 lg:px-20 px-5">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 STILL READING? BOOK NOW...
               </h2>
-              <h1 className="mt-3 font-serif text-2xl font-bold text-center font md:text-4xl lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-2xl font-bold text-center md:text-4xl lg:text-5xl xl:text-6xl">
                 Sure, let's Get Started!
               </h1>
 

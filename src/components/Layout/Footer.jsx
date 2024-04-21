@@ -29,9 +29,9 @@ export default function Footer() {
               <ul className="text-gray-500">
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href="/" className=" hover:text-yellow-500">
+                  <a href="/Trip" className=" hover:text-yellow-500">
                     {" "}
-                    Booking
+                    Trip
                   </a>
                 </li>
                 <li className="pb-4">
@@ -43,9 +43,9 @@ export default function Footer() {
                 </li>
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href className=" hover:text-yellow-500">
+                  <a href="/Gallery" className=" hover:text-yellow-500">
                     {" "}
-                    About Us
+                    Gallery
                   </a>
                 </li>
                 <li className="pb-4">
@@ -57,9 +57,9 @@ export default function Footer() {
                 </li>
                 <li className="pb-4">
                   <i class="fa-solid fa-splotch text-[#FFD43B]"></i>
-                  <a href className=" hover:text-yellow-500">
+                  <a href="/jobs" className=" hover:text-yellow-500">
                     {" "}
-                    Job
+                    Careers
                   </a>
                 </li>
               </ul>

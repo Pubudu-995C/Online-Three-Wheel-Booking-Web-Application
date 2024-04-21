@@ -36,10 +36,10 @@ export default function Home() {
     const options = [];
     for (let hour = 0; hour < 24; hour++) {
       options.push(
-        <option key={hour} value={`${hour}:00`}>{`${hour}:00`}</option>
+        <option key={hour} value={`${hour}:00`}>{`${hour}:00`}</option>,
       );
       options.push(
-        <option key={`${hour}-30`} value={`${hour}:30`}>{`${hour}:30`}</option>
+        <option key={`${hour}-30`} value={`${hour}:30`}>{`${hour}:30`}</option>,
       );
     }
     return options;
@@ -89,7 +89,7 @@ export default function Home() {
 
   const toggleExpand = (faqId) => {
     setExpandedItem((prevExpandedItem) =>
-      prevExpandedItem === faqId ? null : faqId
+      prevExpandedItem === faqId ? null : faqId,
     );
   };
 
@@ -217,8 +217,8 @@ export default function Home() {
       details: `Tour Advisor`,
     },
     {
-      img: `/team/person (1).png`,
-      name: `Oshani`,
+      img: `/team/person (5).png`,
+      name: `Roshan`,
       details: `Tour Advisor`,
     },
     {
@@ -300,19 +300,19 @@ export default function Home() {
       ) : (
         <div>
           <Navbar />
-          <div className="xl:h-[850px] lg:h-[900px] md:h-[1000px] h-[1200px]">
+          <div className="xl:h-[900px] lg:h-[900px] md:h-[1000px] h-[1200px]">
             <img
               src={wallpaper}
               className="object-cover w-full h-full brightness-[70%]"
               alt="Wallpaper"
             />
 
-            <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12">
+            <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12 2xl:px-72 xl:px-24 lg:px-20 px-5">
               <h1 className="mt-20 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl lg:leading-normal">
                 Explore Sri Lanka with Tuktuk rentals
               </h1>
-              <div className="grid xl:grid-cols-2 lg:grid-cols-2 xl:mx-32 lg:mx-10 lg:justify-center md:justify-center">
-                <div class="flex flex-col max-w-md rounded-lg p-4 bg-[#82CD47] mx-4 md:mx-auto md:w-full lg:mx-0 mt-10 md:mt-20">
+              <div className="grid lg:grid-cols-2 ">
+                <div class="flex flex-col max-w-md rounded-lg p-4 bg-[#82CD47] mx-0 md:mx-auto md:w-full mt-10 md:mt-20">
                   <h1 class="font-bold text-xl mb-2">Start Your Trip Here</h1>
                   <div class="flex flex-col mb-4">
                     <select
@@ -462,9 +462,9 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
+          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
             <div>
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Set out on a remarkable journey that you'll always remember
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
@@ -477,7 +477,7 @@ export default function Home() {
                 time of your life!
               </p>
 
-              <p className="mt-8 text-lg text-center lg:text-xl xl:px-40">
+              <p className="mt-8 text-lg text-center lg:text-xl">
                 We provide travelers with the opportunity to rent tuktuks,
                 allowing them to experience the true essence of Sri Lanka
                 through the joy of driving an authentic and dependable rickshaw!
@@ -489,7 +489,7 @@ export default function Home() {
             <div>
               <div className="mt-10 space-y-10 lg:flex lg:my-10 lg:space-y-0">
                 {drive.map((d) => (
-                  <div class="xl:max-w-96 lg:max-w-[300px] md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
+                  <div class="xl:max-w-96 lg:max-w-[250px] md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
                     <div>
                       <div>
                         <img
@@ -514,15 +514,15 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="flex flex-col px-5 py-10 bg-gray-200 lg:px-20">
+          <div className="flex flex-col py-10 bg-gray-200 2xl:px-72 xl:px-24 lg:px-20 px-5">
             <div>
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Experience Traveling as a Local
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Our Vehicles
               </h1>
-              <p className="mt-8 text-lg text-center lg:text-xl lg:px-28">
+              <p className="mt-8 text-lg text-center lg:text-xl">
                 Choose your own tuktuk and express your individuality with our
                 wide array of choices, featuring the Classic Tuk, Transformable
                 Tuk, and the Camper Tuk.
@@ -605,16 +605,16 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="px-5 pt-20 bg-gradient-to-tl from-lime-300 to-yellow-100">
+          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 pt-20 bg-gradient-to-tl from-lime-300 to-yellow-100">
             <div>
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Travel Planning Assistance, Absolutely Free!
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Seeking Free Sri Lanka Travel Tips?
               </h1>
 
-              <p className="mt-8 text-lg text-center lg:text-xl lg:mx-40">
+              <p className="mt-8 text-lg text-center lg:text-xl">
                 Our team specializing in tuktuk rentals is passionately
                 dedicated to exploring the wonders of Sri Lanka. Regardless of
                 whether you choose to rent a tuktuk or not, you have the option
@@ -652,15 +652,15 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div>
+          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5">
             <div>
-              <h2 className="text-center font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
+              <h2 className="text-center font-mono lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
                 Everything is covered, including the TukTuk Mango experience
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Why Choose Us for Booking?
               </h1>
-              <p className="px-5 mt-8 text-lg text-center lg:text-xl">
+              <p className="mt-8 text-lg text-center lg:text-xl">
                 When you book with{" "}
                 <span className="font-bold">
                   tuktuk<span className="text-[#54B435]">mango</span>.com
@@ -669,18 +669,17 @@ export default function Home() {
                 rest.
               </p>
             </div>
-
-            <div className="px-5 mt-20 text-xl">
+            <div className="mt-20 text-xl">
               <div className="text-center">
                 <div className="grid grid-cols-2 lg:grid-cols-4">
                   {benifits.map((b) => (
                     <div>
                       <img
                         src={b.img}
-                        className="w-16 mx-auto mb-4 lg:w-24"
+                        className="w-16 mx-auto mb-4 xl:w-24"
                         alt=""
                       />
-                      <p className="mb-10 text-base lg:px-20 lg:text-xl">
+                      <p className="mb-10 text-base xl:mx-20 lg:mx-10 mx-2 xl:text-xl lg:text-base">
                         {b.details}
                       </p>
                     </div>
@@ -691,67 +690,66 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="relative mt-20 xl:h-[750px] lg:h-[800px] md:h-[850px] h-[1000px]">
+          <div className="relative mt-20 xl:h-[750px] lg:h-[800px] md:h-[750px] h-[900px]">
             <img
               src={wallpaper2}
               className="object-cover w-full h-full opacity-30"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl mt-20 text-[#54B435] uppercase">
+            <div className="absolute top-0 w-full 2xl:px-72 xl:px-24 lg:px-20 px-5">
+              <h2 className="text-center font-mono lg:text-3xl text-xl mt-20 text-[#54B435] uppercase">
                 Important details to understand
               </h2>
               <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Frequently Asked Questions
               </h1>
-            </div>
-
-            <div className="absolute px-5 pt-10 mt-20 lg:m-20 top-28">
-              {faqData.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] mt-4`}
-                >
+              <div className="mt-10 top-28">
+                {faqData.map((faq) => (
                   <div
-                    className="flex items-center justify-between cursor-pointer"
-                    onClick={() => toggleExpand(faq.id)}
+                    key={faq.id}
+                    className={`faq-container border rounded-md p-4 mb-4 bg-[#82CD47] mt-4`}
                   >
-                    <h2 className="text-sm font-semibold uppercase lg:text-lg">
-                      {faq.question}
-                    </h2>
-                    <span
-                      className={`text-xl transform transition-transform ${
-                        expandedItem === faq.id ? "rotate-30" : "-rotate-45"
-                      }`}
-                      style={{ fontSize: "3rem" }}
+                    <div
+                      className="flex items-center justify-between cursor-pointer"
+                      onClick={() => toggleExpand(faq.id)}
                     >
-                      {expandedItem === faq.id ? "-" : "+"}
-                    </span>
+                      <h2 className="text-sm font-semibold uppercase lg:text-lg">
+                        {faq.question}
+                      </h2>
+                      <span
+                        className={`text-xl transform transition-transform ${
+                          expandedItem === faq.id ? "rotate-30" : "-rotate-45"
+                        }`}
+                        style={{ fontSize: "3rem" }}
+                      >
+                        {expandedItem === faq.id ? "-" : "+"}
+                      </span>
+                    </div>
+                    <div
+                      className={`faq-answer mt-2 overflow-hidden transition-max-h ${
+                        expandedItem === faq.id ? "max-h-96" : "max-h-0"
+                      } duration-500 ease-in-out`}
+                    >
+                      <p className="text-sm text-justify lg:text-base">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    className={`faq-answer mt-2 overflow-hidden transition-max-h ${
-                      expandedItem === faq.id ? "max-h-96" : "max-h-0"
-                    } duration-500 ease-in-out`}
-                  >
-                    <p className="text-sm text-justify lg:text-base">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="absolute flex flex-col items-center w-full lg:mt-0 bottom-10">
-              <button
-                onClick={faqPageClick}
-                className="font-bold lg:text-xl text-sm bg-[#F0FF42] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#82CD47]"
-              >
-                MORE QUESTIONS
-              </button>
+                ))}
+              </div>
+              <div className="flex flex-col items-center w-full lg:mt-10 bottom-10">
+                <button
+                  onClick={faqPageClick}
+                  className="font-bold lg:text-xl text-sm bg-[#F0FF42] px-10 py-2 rounded-full transition-colors duration-300 hover:bg-[#82CD47]"
+                >
+                  MORE QUESTIONS
+                </button>
+              </div>
             </div>
           </div>
           {/* ===================================================================== */}
-          <WhatsApp />
           <Footer />
+          <WhatsApp />
         </div>
       )}
       <ScrollToTopButton />

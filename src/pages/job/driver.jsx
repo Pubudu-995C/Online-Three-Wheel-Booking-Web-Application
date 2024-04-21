@@ -70,8 +70,8 @@ export default function Driver() {
   };
 
   return (
-    <div className="grid h-screen items-center">
-      <div className="bg-gray-200 lg:mx-20 md:mx-10">
+    <div className="grid h-screen items-center 2xl:px-72 xl:px-34 lg:px-20 px-5">
+      <div className="bg-gray-200">
         <div>
           <h1 className="mt-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg text-center pt-5">
             tuktuk Registration

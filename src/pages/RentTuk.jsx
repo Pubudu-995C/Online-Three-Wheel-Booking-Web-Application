@@ -95,9 +95,9 @@ export default function RentTuk() {
       style={{ backgroundImage: `url(${wallpaper7})` }}
     >
       <Navbar />
-      <div className="relative mb-10 pt-28">
-        <div className="mx-0 md:mx-8 lg:mx-0">
-          <div className="p-5 bg-gray-200 mx-full lg:mx-10 xl:mx-44 rounded-xl">
+      <div className="relative pb-10 pt-28">
+        <div className="2xl:px-72 xl:px-24 lg:px-10 md:px-5">
+          <div className="p-5 bg-gray-200 rounded-xl">
             <h1 className="mt-5 md:text-2xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
               Reservation Details
             </h1>
@@ -160,7 +160,7 @@ export default function RentTuk() {
                 Search Results
               </h1>
               <div className="justify-center grid lg:grid-cols-3 grid-cols-1">
-                <div className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5">
+                <div className="bg-[#54B435] text-center text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">
                   Class
                 </div>
                 <div className="bg-[#54B435] text-right text-white font-bold xl:text-2xl lg:text-xl md:text-xl text-lg md:py-2 my-5 hidden lg:block">

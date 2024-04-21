@@ -211,9 +211,9 @@ export default function RentCost() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="mx-0 md:mx-8 lg:mx-0">
+        <div className="2xl:px-72 xl:px-24 lg:px-10 md:px-5">
           {/* =========================RENTAL DETAILS============================= */}
-          <div className="p-5 bg-gray-200 mx-full lg:mx-10 xl:mx-44 rounded-xl">
+          <div className="p-5 bg-gray-200 rounded-xl">
             <div>
               <div>
                 <h1 className="my-5 md:text-xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
@@ -675,7 +675,7 @@ export default function RentCost() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center mt-4 md:mt-5 xl:mt-0 gap-x-16">
+                  <div className="flex justify-center mt-4 md:mt-5 xl:mt-5 gap-x-16">
                     <input
                       type="button"
                       value="Previous"

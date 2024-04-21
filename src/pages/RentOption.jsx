@@ -142,8 +142,8 @@ export default function RentOption() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="mx-0 md:mx-8 lg:mx-0">
-          <div className="p-5 bg-gray-200 lg:mx-10 xl:mx-44 rounded-xl">
+        <div className="2xl:px-72 xl:px-24 lg:px-10 md:px-5">
+          <div className="p-5 bg-gray-200 rounded-xl">
             {/* ===========================Reservation Details============================= */}
             <div>
               <h1 className="font-bold uppercase xl:text-3xl lg:text-2xl md:text-xl text-lg pt-5 ">

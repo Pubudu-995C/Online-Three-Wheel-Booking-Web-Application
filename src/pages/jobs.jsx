@@ -36,7 +36,7 @@ export default function Jobs() {
       setLoading(false);
     }
   };
-  
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -77,7 +77,7 @@ export default function Jobs() {
               {/* ===========Breadcrumbs=========== */}
               <div>
                 <div>
-                  <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
+                  <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                     Tuktuk Mango Jobs
                   </h2>
                   <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">

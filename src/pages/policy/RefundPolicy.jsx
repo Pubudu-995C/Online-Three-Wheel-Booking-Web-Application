@@ -6,7 +6,7 @@ export default function RefundPolicy() {
   return (
     <div>
       <Navbar />
-      <div className="2xl:px-72 xl:px-40 lg:px-20 mx-5 my-20 text-justify lg:mt-40 mt-28">
+      <div className="2xl:px-72 xl:px-34 lg:px-20 mx-5 my-20 text-justify lg:mt-40 mt-28">
         {/* ===========Breadcrumbs=========== */}
         <Breadcrumbs className="justify-center">
           <a href="/" className="opacity-60">

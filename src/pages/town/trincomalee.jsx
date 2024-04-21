@@ -81,7 +81,7 @@ export default function Trincomalee() {
             </a>
           </Breadcrumbs>
           {/* ===========Breadcrumbs=========== */}
-          <div className="mt-10 lg:mx-12 xl:mx-28">
+          <div className="2xl:px-72 xl:px-34 lg:px-20 mt-10">
             <div>
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
                 Trincomalee: Crystal Seas, Marine Marvels, Tales of Splendor.

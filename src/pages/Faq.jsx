@@ -56,18 +56,18 @@ export default function Faq() {
             {/* ===========Breadcrumbs=========== */}
           </div>
 
-          <div>
+          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 mt-10">
             <div className="pt-20">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435] uppercase">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 have inquiries on your mind? discover solutions to your
                 questions right here!
               </h2>
-              <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Frequently Asked Questions
               </h1>
             </div>
 
-            <div className="mx-8 xl:mx-34 lg:mx-20">
+            <div>
               <p className="mt-12 xl:text-2xl text-xl font-bold py-5 text-[#379237]">
                 What does your insurance cover?
               </p>

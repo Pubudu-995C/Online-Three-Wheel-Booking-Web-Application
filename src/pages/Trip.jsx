@@ -121,16 +121,16 @@ export default function Trip() {
             </div>
           </div>
 
-          <div className="px-5 pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
-            <div className="pt-20 ">
-              <h2 className="text-center font-mono font lg:text-3xl text-xl text-[#54B435]">
+          <div className="2xl:px-72 xl:px-34 lg:px-20 px-5 pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
+            <div className="pt-20">
+              <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 TUKTUK ITINERARIES
               </h2>
-              <h1 className="mt-3 font-serif text-3xl font-bold text-center font lg:text-5xl xl:text-6xl">
+              <h1 className="mt-3 font-serif text-3xl font-bold text-center lg:text-5xl xl:text-6xl">
                 Explore the wonders of Sri Lanka aboard a tuktuk!
               </h1>
 
-              <p className="mt-12 text-base text-center xl:text-xl md:text-lg lg:mx-10 xl:mx-20">
+              <p className="mt-12 text-base text-center xl:text-xl md:text-lg">
                 Experience all that Sri Lanka has to offer from the unique
                 vantage point of a tuktuk! When you choose to book a tuktuk
                 through{" "}
@@ -175,39 +175,38 @@ export default function Trip() {
           {/* ====================================================================== */}
 
           <div>
-            <div className="relative xl:h-full lg:h-[750px] md:h-[650px] h-[900px]">
+            <div className="relative xl:h-[800px] lg:h-[750px] md:h-[650px] h-[900px]">
               <img
                 src={wallpaper9}
                 className="object-cover w-full h-full brightness-50"
                 alt="Wallpaper"
               />
-              <div className="absolute top-0 w-full">
-                <h2 className="text-center font-mono font lg:text-3xl text-xl mt-20 text-[#54B435]">
+              <div className="absolute top-0 2xl:px-72 xl:px-34 lg:px-20 w-full">
+                <h2 className="text-center font-mono lg:text-3xl text-xl mt-20 text-[#54B435]">
                   GATHER INDELIBLE MOMENTS
                 </h2>
-                <h1 className="mx-4 mt-3 font-serif text-3xl font-bold text-center text-white font lg:text-5xl xl:text-6xl">
+                <h1 className="mx-4 mt-3 font-serif text-3xl font-bold text-center text-white lg:text-5xl xl:text-6xl">
                   Discover beautiful places on the beautiful island
                 </h1>
-              </div>
-
-              <div className="absolute top-0 left-0 right-0 mt-80 md:mt-60 lg:mt-72 sm:mx-20 xl:mx-40 lg:mx-28">
-                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3">
-                  {townList.map((town, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-wrap justify-center p-3 text-lg"
-                    >
-                      <a
-                        href={
-                          town.details ? `/${town.town.toLowerCase()}` : "#"
-                        }
-                        className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg md:text-sm text-xs font-bold"
+                <div className="top-0 left-0 right-0 mt-20">
+                  <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3">
+                    {townList.map((town, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-wrap justify-center p-3 text-lg"
                       >
-                        <i className="mx-2 text-xs lg:mx-5 md:text-sm fa-solid fa-location-dot xl:text-2xl"></i>
-                        {town.town}
-                      </a>
-                    </div>
-                  ))}
+                        <a
+                          href={
+                            town.details ? `/${town.town.toLowerCase()}` : "#"
+                          }
+                          className="bg-gray-100 hover:bg-[#82CD47] transition-colors duration-200 flex-grow text-black hover:text-white border-l-8 border-[#F0FF42] rounded-md xl:px-3 px-2 xl:py-4 py-3 xl:text-xl lg:text-lg md:text-sm text-xs font-bold"
+                        >
+                          <i className="mx-2 text-xs lg:mx-5 md:text-sm fa-solid fa-location-dot xl:text-2xl"></i>
+                          {town.town}
+                        </a>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
