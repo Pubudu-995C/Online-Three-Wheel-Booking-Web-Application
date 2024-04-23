@@ -18,24 +18,6 @@ export default function Trip() {
     }, 4000);
   }, []);
 
-  // const trip = [
-  //   {
-  //     name: `7 Days Trip`,
-  //     img: `/trip/trip (1).jpg`,
-  //     review: `You can't go wrong with a timeless favorite! Our standard tuktuk is powered by a dependable four-stroke Bajaj RE engine, making it a reliable choice for your travels. It's a familiar sight on the roads, adding a touch of familiarity to your journey.`,
-  //   },
-  //   {
-  //     name: `14 Days Trip`,
-  //     img: `/trip/trip (2).jpg`,
-  //     review: `Craving that wind-in-your-hair feeling? Choose our exclusive custom convertible tuk-tuk from tutukmango.com for an enhanced view and a more laid-back travel experience.`,
-  //   },
-  //   {
-  //     name: `21 Days Trip`,
-  //     img: `/trip/trip (3).jpg`,
-  //     review: `Ready for an adventure in the great outdoors? Introducing our Camping Tuk-Tuk – the perfect companion for your outdoor escapades. With rugged charm and all the essentials, it's your ticket to a cozy and memorable camping experience on the road. Explore nature in style and comfort with our trusty Camping Tuk-Tuk!`,
-  //   },
-  // ];
-
   const townList = [
     {
       town: `Negombo`,
@@ -144,33 +126,6 @@ export default function Trip() {
                 lengths.
               </p>
             </div>
-
-            {/* <div>
-              <div className="m-auto xl:w-5/7">
-                <div className="mt-10 space-y-5 lg:flex lg:space-x-10 lg:space-y-0 md:mx-20 lg:mx-10">
-                  {trip.map((d) => (
-                    <div className="bg-white h-[500px] sm:h-[640px] lg:h-[540px] xl:h-[550px] w-full text-black rounded-xl flex flex-col ">
-                      <div className="flex rounded-t-xl">
-                        <img
-                          src={d.img}
-                          alt=""
-                          className="xl:h-[230px] lg:h-[150px] w-full object-cover rounded-t-lg"
-                        />
-                      </div>
-                      <div className="flex flex-col items-center justify-center flex-1 gap-4 p-4">
-                        <p className="text-xl font-semibold">{d.name}</p>
-                        <p className="text-sm text-justify lg:text-base">
-                          {d.review}
-                        </p>
-                        <button className="px-6 py-1 mt-auto text-lg text-white bg-[#379237] hover:bg-[#82CD47] transition-colors duration-300 font-bold rounded-lg">
-                          Read More
-                        </button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div> */}
           </div>
           {/* ====================================================================== */}
 
