@@ -83,13 +83,13 @@ export default function RentOption() {
     {
       item: `Camping Kit`,
       deposit: `Not Required`,
-      cost: `5.00`,
+      cost: `12.00`,
       quantity: ["1", "2", "3", "4"],
     },
     {
       item: `Adventure Kit`,
       deposit: `Not Required`,
-      cost: `5.00`,
+      cost: `14.00`,
       quantity: ["1", "2", "3", "4", "5", "6"],
     },
     {

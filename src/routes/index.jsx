@@ -10,12 +10,12 @@ import Home from "../pages/home";
 import HowWork from "../pages/howWork";
 import Trip from "../pages/Trip";
 import Gallery from "../pages/Gallery";
-import RentOption from "../pages/RentOption";
 import Faq from "../pages/Faq";
 import Jobs from "../pages/jobs";
+import ContactUs from "../pages/ContactUs";
 // =================Rent=================
 import RentTuk from "../pages/RentTuk";
-import ContactUs from "../pages/ContactUs";
+import RentOption from "../pages/RentOption";
 import RentCost from "../pages/RentCost";
 import Success from "../pages/Success";
 // ==================policy==================
