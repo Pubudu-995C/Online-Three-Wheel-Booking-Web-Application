@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Layout/Navbar";
 import Footer from "../../components/Layout/Footer";
-import Kandy1 from "../../images/town/kandy1.jpg";
-import Kandy2 from "../../images/town/kandy2.jpg";
-import Kandy3 from "../../images/town/kandy3.jpg";
+import Kandy1 from "../../images/town/kandy/kandy1.jpg";
+import Kandy2 from "../../images/town/kandy/kandy2.jpg";
+import Kandy3 from "../../images/town/kandy/kandy3.jpg";
 import GridLoader from "react-spinners/GridLoader";
 import ScrollToTopButton from "../../components/ScrollToTopButton";
 import WhatsApp from "../../components/WhatsApp";
@@ -130,7 +130,7 @@ export default function Kandy() {
                 It’s the second-largest city in Sri Lanka
               </p>
 
-              <div className="flex justify-center ">
+              <div className="flex justify-center">
                 <img
                   src={Kandy2}
                   className="object-cover h-[500px]"

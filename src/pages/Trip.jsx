@@ -44,6 +44,7 @@ export default function Trip() {
     },
     {
       town: `Ella`,
+      details: `./town/ella.jsx`,
     },
     {
       town: `Nuwara Eliya`,
@@ -130,7 +131,7 @@ export default function Trip() {
           {/* ====================================================================== */}
 
           <div>
-            <div className="relative xl:h-[800px] lg:h-[750px] md:h-[650px] h-[900px]">
+            <div className="relative xl:h-[850px] lg:h-[750px] md:h-[650px] h-[900px]">
               <img
                 src={wallpaper9}
                 className="object-cover w-full h-full brightness-50"

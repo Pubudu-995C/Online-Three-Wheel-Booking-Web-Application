@@ -26,6 +26,7 @@ import Conditions from "../pages/policy/Conditions";
 import Kandy from "../pages/town/kandy";
 import Negombo from "../pages/town/negombo";
 import Trincomalee from "../pages/town/trincomalee";
+import Ella from "../pages/town/ella";
 // ==================Town==================
 import Driver from "../pages/job/driver";
 import JobSuccess from "../pages/job/jobSuccess";
@@ -56,6 +57,7 @@ const RouteList = () => {
       <Route path="/kandy" element={<Kandy />} />
       <Route path="/negombo" element={<Negombo />} />
       <Route path="/trincomalee" element={<Trincomalee />} />
+      <Route path="/ella" element={<Ella />} />
       {/* ================================================ */}
       <Route path="/driver" element={<Driver />} />
       <Route path="/jobSuccess" element={<JobSuccess />} />
