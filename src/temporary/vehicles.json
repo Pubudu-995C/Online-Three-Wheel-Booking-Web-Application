@@ -4,7 +4,7 @@
     "gear": "Gearbox: Manual",
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
-    "img": "https://i.imgur.com/HzBnCwN.png",
+    "img": "/tuktuk/Regular.png",
     "price": 15.00,
     "deposit": "100.00"
   },
@@ -13,7 +13,7 @@
     "gear": "Gearbox: Manual",
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
-    "img": "https://i.imgur.com/5ooYuEr.png",
+    "img": "/tuktuk/Convertible.png",
     "price": 20.00,
     "deposit": "100.00"
   },
@@ -22,7 +22,7 @@
     "gear": "Gearbox: Manual",
     "passenger": "Max Passengers: 4",
     "fuel": "Fuel: Petrol",
-    "img": "https://i.imgur.com/jppQWv6.png",
+    "img": "/tuktuk/Camping.png",
     "price": 30.00,
     "deposit": "100.00"
   }
