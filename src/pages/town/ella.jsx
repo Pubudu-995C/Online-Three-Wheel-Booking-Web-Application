@@ -13,7 +13,6 @@ import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Ella() {
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -532,7 +531,7 @@ export default function Ella() {
                 along with other wildlife such as buffalo, deer, monkeys, and a
                 variety of bird species. Also, visitors can do these amazing
                 things:
-                <ul className="list-disc mt-5 ml-28">
+                <ul className="list-disc mt-5 md:ml-14 ml-8">
                   <li>Elephant watching</li>
                   <li>Bird watching</li>
                   <li>Nature trails</li>

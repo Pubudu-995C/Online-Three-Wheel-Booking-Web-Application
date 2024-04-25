@@ -27,6 +27,7 @@ import Kandy from "../pages/town/kandy";
 import Negombo from "../pages/town/negombo";
 import Trincomalee from "../pages/town/trincomalee";
 import Ella from "../pages/town/ella";
+import Jaffna from "../pages/town/jaffna";
 // ==================Town==================
 import Driver from "../pages/job/driver";
 import JobSuccess from "../pages/job/jobSuccess";
@@ -58,6 +59,7 @@ const RouteList = () => {
       <Route path="/negombo" element={<Negombo />} />
       <Route path="/trincomalee" element={<Trincomalee />} />
       <Route path="/ella" element={<Ella />} />
+      <Route path="/jaffna" element={<Jaffna />} />
       {/* ================================================ */}
       <Route path="/driver" element={<Driver />} />
       <Route path="/jobSuccess" element={<JobSuccess />} />

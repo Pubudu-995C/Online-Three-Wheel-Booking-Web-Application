@@ -67,6 +67,7 @@ export default function Trip() {
     },
     {
       town: `Jaffna`,
+      details: `./town/jaffna.jsx`,
     },
   ];
 

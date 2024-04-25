@@ -404,7 +404,7 @@ export default function HowWork() {
                   </p>
                   <ul className="py-5 pl-10 text-base list-disc xl:text-xl md:text-lg">
                     <li>Big Bluetooth Speakers</li>
-                    <li>Surfboard roof racks</li>
+                    <li>Camping Kit</li>
                     <li>Baby-seats</li>
                     <li>Cooler / Esky</li>
                     <li>USB Charging Port</li>
