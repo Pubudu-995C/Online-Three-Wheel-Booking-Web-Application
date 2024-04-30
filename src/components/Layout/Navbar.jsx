@@ -77,7 +77,7 @@ export default function Navbar() {
                   onClick={scrollToTop}
                   className={`${
                     isActivePage("/Trip") ? "text-[#F0FF42]" : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0 lg:dark:hover:bg-transparent font-bold text-lg`}
                 >
                   TRIP
                 </Link>
@@ -90,7 +90,7 @@ export default function Navbar() {
                     isActivePage("/HowWork")
                       ? "text-[#F0FF42]"
                       : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0   lg:dark:hover:bg-transparent  font-bold text-lg`}
                 >
                   HOW IT WORKS
                 </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
                     isActivePage("/Gallery")
                       ? "text-[#F0FF42]"
                       : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0   lg:dark:hover:bg-transparent  font-bold text-lg`}
                 >
                   GALLERY
                 </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
                   onClick={scrollToTop}
                   className={`${
                     isActivePage("/faq") ? "text-[#F0FF42]" : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0   lg:dark:hover:bg-transparent  font-bold text-lg`}
                 >
                   FAQ
                 </Link>
@@ -125,7 +125,7 @@ export default function Navbar() {
                   onClick={scrollToTop}
                   className={`${
                     isActivePage("/jobs") ? "text-[#F0FF42]" : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0   lg:dark:hover:bg-transparent  font-bold text-lg`}
                 >
                   CAREERS
                 </Link>
@@ -138,7 +138,7 @@ export default function Navbar() {
                     isActivePage("/ContactUs")
                       ? "text-[#F0FF42]"
                       : "text-gray-300"
-                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:border-0 lg:p-0  dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 font-bold text-lg`}
+                  } hover:text-white block py-2 pl-3 pr-4 border-b border-gray-100  lg:border-0 lg:p-0   lg:dark:hover:bg-transparent  font-bold text-lg`}
                 >
                   CONTACT US
                 </Link>
