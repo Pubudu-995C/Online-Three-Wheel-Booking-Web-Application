@@ -13,6 +13,7 @@ import wallpaper from "../images/wallpapers/wallpaper.jpg";
 import wallpaper2 from "../images/wallpapers/wallpaper2.jpg";
 import srilanka from "../videos/srilanka.mp4";
 import WhatsApp from "../components/WhatsApp";
+import Facebook from "../components/Facebook";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -750,6 +751,7 @@ export default function Home() {
           {/* ===================================================================== */}
           <Footer />
           <WhatsApp />
+          <Facebook />
         </div>
       )}
       <ScrollToTopButton />
