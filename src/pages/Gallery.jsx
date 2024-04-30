@@ -105,7 +105,7 @@ export default function Gallery() {
             {/* ===========Breadcrumbs=========== */}
           </div>
 
-          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5">
+          <div className="2xl:px-40 xl:px-24 lg:px-20 px-5">
             <div className="pt-20">
               <h2 className="text-center font-mono xl:text-3xl text-xl text-[#54B435]">
                 CREATING MEMORIES ONE STEP AT A TIME

@@ -96,7 +96,7 @@ export default function RentTuk() {
     >
       <Navbar />
       <div className="relative pb-10 pt-28">
-        <div className="2xl:px-72 xl:px-24 lg:px-10 md:px-5">
+        <div className="2xl:px-40 xl:px-24 lg:px-10 md:px-5">
           <div className="p-5 bg-gray-200 rounded-xl">
             <h1 className="mt-5 md:text-2xl font-bold uppercase xl:text-3xl lg:text-2xl text-lg">
               Reservation Details

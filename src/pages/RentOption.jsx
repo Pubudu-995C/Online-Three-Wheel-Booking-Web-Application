@@ -142,7 +142,7 @@ export default function RentOption() {
     >
       <Navbar />
       <div className="relative mb-10 pt-28">
-        <div className="2xl:px-72 xl:px-24 lg:px-10 md:px-5">
+        <div className="2xl:px-40 xl:px-24 lg:px-10 md:px-5">
           <div className="p-5 bg-gray-200 rounded-xl">
             {/* ===========================Reservation Details============================= */}
             <div>

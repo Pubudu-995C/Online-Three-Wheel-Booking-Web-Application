@@ -171,7 +171,7 @@ export default function HowWork() {
               className="object-cover w-full h-full brightness-50"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full px-5 pt-20 2xl:px-72 xl:px-24 lg:px-20">
+            <div className="absolute top-0 w-full px-5 pt-20 2xl:px-40 xl:px-24 lg:px-20">
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 OUR COMPANY HAS GROWN EXPONENTIALLY
               </h2>
@@ -236,7 +236,7 @@ export default function HowWork() {
           </div>
           {/* ============================================== */}
           <div>
-            <div className="pt-20 2xl:px-72 xl:px-24 lg:px-20 px-5">
+            <div className="pt-20 2xl:px-40 xl:px-24 lg:px-20 px-5">
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 TUK TUK DRIVING IN SRI LANKA
               </h2>
@@ -500,7 +500,7 @@ export default function HowWork() {
               className="object-cover w-full h-full opacity-20"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full pt-20 2xl:px-72 xl:px-24 lg:px-20 px-5">
+            <div className="absolute top-0 w-full pt-20 2xl:px-40 xl:px-24 lg:px-20 px-5">
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 STILL READING? BOOK NOW...
               </h2>

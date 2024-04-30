@@ -90,7 +90,7 @@ export default function Kandy() {
             </a>
           </Breadcrumbs>
           {/* ===========Breadcrumbs=========== */}
-          <div className="2xl:px-72 xl:px-34 lg:px-20 mt-10">
+          <div className="2xl:px-40 xl:px-34 lg:px-20 mt-10">
             <div>
               <h2 className="font-mono font lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
                 A city brimming with culture and heritage

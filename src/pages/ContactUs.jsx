@@ -48,7 +48,7 @@ export default function ContactUs() {
           </div>
 
           <div class="bg-sky-950" id="contact">
-            <div class="py-16 lg:py-20 2xl:px-72 xl:px-34 lg:px-20 px-5">
+            <div class="py-16 lg:py-20 2xl:px-40 xl:px-34 lg:px-20 px-5">
               <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                   <p class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">

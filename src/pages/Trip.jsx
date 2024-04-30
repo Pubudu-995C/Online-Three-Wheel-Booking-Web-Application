@@ -105,7 +105,7 @@ export default function Trip() {
             </div>
           </div>
 
-          <div className="2xl:px-72 xl:px-34 lg:px-20 px-5 pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
+          <div className="2xl:px-40 xl:px-34 lg:px-20 px-5 pb-5 bg-gradient-to-tl from-lime-300 to-yellow-100">
             <div className="pt-20">
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435]">
                 TUKTUK ITINERARIES
@@ -138,7 +138,7 @@ export default function Trip() {
                 className="object-cover w-full h-full brightness-50"
                 alt="Wallpaper"
               />
-              <div className="absolute top-0 2xl:px-72 xl:px-34 lg:px-20 w-full">
+              <div className="absolute top-0 2xl:px-40 xl:px-34 lg:px-20 w-full">
                 <h2 className="text-center font-mono lg:text-3xl text-xl mt-20 text-[#54B435]">
                   GATHER INDELIBLE MOMENTS
                 </h2>

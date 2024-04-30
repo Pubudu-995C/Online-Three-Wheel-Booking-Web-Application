@@ -56,7 +56,7 @@ export default function Faq() {
             {/* ===========Breadcrumbs=========== */}
           </div>
 
-          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 mt-10">
+          <div className="2xl:px-40 xl:px-24 lg:px-20 px-5 mt-10">
             <div className="pt-20">
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 have inquiries on your mind? discover solutions to your

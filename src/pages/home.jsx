@@ -307,7 +307,7 @@ export default function Home() {
               alt="Wallpaper"
             />
 
-            <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12 2xl:px-72 xl:px-24 lg:px-20 px-5">
+            <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12 2xl:px-40 xl:px-24 lg:px-20 px-5">
               <h1 className="mt-20 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl lg:leading-normal">
                 Explore Sri Lanka with Tuktuk rentals
               </h1>
@@ -462,7 +462,7 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
+          <div className="2xl:px-40 xl:px-24 lg:px-20 px-5 py-10 bg-gradient-to-tl from-lime-300 to-yellow-100 lg:py-10 ">
             <div>
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Set out on a remarkable journey that you'll always remember
@@ -514,7 +514,7 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="flex flex-col py-10 bg-gray-200 2xl:px-72 xl:px-24 lg:px-20 px-5">
+          <div className="flex flex-col py-10 bg-gray-200 2xl:px-40 xl:px-24 lg:px-20 px-5">
             <div>
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Experience Traveling as a Local
@@ -605,7 +605,7 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5 pt-20 bg-gradient-to-tl from-lime-300 to-yellow-100">
+          <div className="2xl:px-40 xl:px-24 lg:px-20 px-5 pt-20 bg-gradient-to-tl from-lime-300 to-yellow-100">
             <div>
               <h2 className="text-center font-mono lg:text-3xl text-xl text-[#54B435] uppercase">
                 Travel Planning Assistance, Absolutely Free!
@@ -652,7 +652,7 @@ export default function Home() {
           </div>
           {/* ===================================================================== */}
 
-          <div className="2xl:px-72 xl:px-24 lg:px-20 px-5">
+          <div className="2xl:px-40 xl:px-24 lg:px-20 px-5">
             <div>
               <h2 className="text-center font-mono lg:text-3xl text-xl px-5 text-[#54B435] uppercase">
                 Everything is covered, including the TukTuk Mango experience
@@ -696,7 +696,7 @@ export default function Home() {
               className="object-cover w-full h-full opacity-30"
               alt="Wallpaper"
             />
-            <div className="absolute top-0 w-full 2xl:px-72 xl:px-24 lg:px-20 px-5">
+            <div className="absolute top-0 w-full 2xl:px-40 xl:px-24 lg:px-20 px-5">
               <h2 className="text-center font-mono lg:text-3xl text-xl mt-20 text-[#54B435] uppercase">
                 Important details to understand
               </h2>
