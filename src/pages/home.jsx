@@ -313,88 +313,18 @@ export default function Home() {
                 Explore Sri Lanka with Tuktuk rentals
               </h1>
               <div className="grid lg:grid-cols-2 ">
-                <div class="flex flex-col max-w-md rounded-lg p-4 bg-[#82CD47] mx-0 md:mx-auto md:w-full mt-10 md:mt-20">
-                  <h1 class="font-bold text-xl mb-2">Start Your Trip Here</h1>
-                  <div class="flex flex-col mb-4">
-                    <select
-                      id="pickupCity"
-                      value={formData.pickupCity}
-                      onChange={handleInputChange}
-                      class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                    >
-                      <option value="0" selected="selected">
-                        Pick-Up City &amp; Location:
-                      </option>
-                      <option value="1. Negombo">1. Negombo</option>
-                      <option value="2. Sigiriya">2. Sigiriya</option>
-                      <option value="3. Dambulla">3. Dambulla</option>
-                      <option value="4. Anuradhapura">4. Anuradhapura</option>
-                      <option value="5. Polonnaruwa">5. Polonnaruwa</option>
-                      <option value="6. Kandy">6. Kandy</option>
-                      <option value="7. Kitulgala">7. Kitulgala</option>
-                      <option value="8. Ella">8. Ella</option>
-                      <option value="9. Nuwara Eliya">9. Nuwara Eliya</option>
-                      <option value="10. Galle">10. Galle</option>
-                      <option value="11. Mirissa">11. Mirissa</option>
-                      <option value="12. Trincomalee">12. Trincomalee</option>
-                      <option value="13. Nilaveli">13. Nilaveli</option>
-                      <option value="14. Arugam Bay">14. Arugam Bay</option>
-                      <option value="15. Jaffna">15. Jaffna</option>
-                    </select>
-                  </div>
-
-                  <div class="md:flex mb-4 md:space-x-4">
-                    <div className="flex flex-col w-full lg:w-full">
-                      <label for="date" class="text-sm font-medium">
-                        Date
-                      </label>
-                      <input
-                        type="date"
-                        name="startDate"
-                        id="pickupDate"
-                        value={formData.pickupDate}
-                        min={currentDate}
-                        onChange={handleInputChange}
-                        class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      />
-                    </div>
-                    <div className="flex flex-col w-full lg:w-full">
-                      <label for="time" class="text-sm font-medium">
-                        Time
-                      </label>
+                <div>
+                  <div class="flex flex-col max-w-md rounded-lg p-4 bg-[#82CD47] md:mx-auto md:w-full mt-10 md:mt-20 mx-auto">
+                    <h1 class="font-bold text-xl mb-2">Start Your Trip Here</h1>
+                    <div class="flex flex-col mb-4">
                       <select
-                        name="startTime"
-                        id="pickupTime"
-                        value={formData.pickupTime}
-                        onChange={handleInputChange}
-                        className="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      >
-                        {generateTimeOptions()}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center mb-4">
-                    <input
-                      type="text"
-                      id="return-city"
-                      class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      placeholder="I have coupon code: "
-                    />
-                  </div>
-
-                  <h1 class="font-bold text-xl mb-2">End Your Trip Here</h1>
-
-                  <div class="flex flex-col mb-4">
-                    <div class="flex flex-col">
-                      <select
-                        id="returnCity"
-                        value={formData.returnCity}
+                        id="pickupCity"
+                        value={formData.pickupCity}
                         onChange={handleInputChange}
                         class="border border-gray-400 rounded-lg px-3 py-2 w-full"
                       >
                         <option value="0" selected="selected">
-                          Return City & Location:
+                          Pick-Up City &amp; Location:
                         </option>
                         <option value="1. Negombo">1. Negombo</option>
                         <option value="2. Sigiriya">2. Sigiriya</option>
@@ -413,45 +343,117 @@ export default function Home() {
                         <option value="15. Jaffna">15. Jaffna</option>
                       </select>
                     </div>
-                  </div>
 
-                  <div class="md:flex mb-4 md:space-x-4">
-                    <div className="flex flex-col w-full">
-                      <label for="endDate" class="text-sm font-medium">
-                        Date
-                      </label>
+                    <div class="md:flex mb-4 md:space-x-4">
+                      <div className="flex flex-col w-full lg:w-full">
+                        <label for="date" class="text-sm font-medium">
+                          Date
+                        </label>
+                        <input
+                          type="date"
+                          name="startDate"
+                          id="pickupDate"
+                          value={formData.pickupDate}
+                          min={currentDate}
+                          onChange={handleInputChange}
+                          class="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        />
+                      </div>
+                      <div className="flex flex-col w-full lg:w-full">
+                        <label for="time" class="text-sm font-medium">
+                          Time
+                        </label>
+                        <select
+                          name="startTime"
+                          id="pickupTime"
+                          value={formData.pickupTime}
+                          onChange={handleInputChange}
+                          className="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        >
+                          {generateTimeOptions()}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center mb-4">
                       <input
-                        type="date"
-                        name="endDate"
-                        id="returnDate"
-                        value={formData.returnDate}
-                        min={formData.pickupDate}
-                        onChange={handleInputChange}
+                        type="text"
+                        id="return-city"
                         class="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        placeholder="I have coupon code: "
                       />
                     </div>
-                    <div className="flex flex-col w-full">
-                      <label for="endTime" class="text-sm font-medium">
-                        Time
-                      </label>
-                      <select
-                        name="endTime"
-                        id="returnTime"
-                        value={formData.returnTime}
-                        onChange={handleInputChange}
-                        class="border border-gray-400 rounded-lg px-3 py-2 w-full"
-                      >
-                        {generateTimeOptions()}
-                      </select>
-                    </div>
-                  </div>
 
-                  <button
-                    onClick={handleSearch}
-                    className="bg-[#379237] hover:bg-[#F0FF42] text-white hover:text-black transition-colors duration-300 font-bold py-2 px-4 rounded-lg"
-                  >
-                    Start
-                  </button>
+                    <h1 class="font-bold text-xl mb-2">End Your Trip Here</h1>
+
+                    <div class="flex flex-col mb-4">
+                      <div class="flex flex-col">
+                        <select
+                          id="returnCity"
+                          value={formData.returnCity}
+                          onChange={handleInputChange}
+                          class="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        >
+                          <option value="0" selected="selected">
+                            Return City & Location:
+                          </option>
+                          <option value="1. Negombo">1. Negombo</option>
+                          <option value="2. Sigiriya">2. Sigiriya</option>
+                          <option value="3. Dambulla">3. Dambulla</option>
+                          <option value="4. Anuradhapura">4. Anuradhapura</option>
+                          <option value="5. Polonnaruwa">5. Polonnaruwa</option>
+                          <option value="6. Kandy">6. Kandy</option>
+                          <option value="7. Kitulgala">7. Kitulgala</option>
+                          <option value="8. Ella">8. Ella</option>
+                          <option value="9. Nuwara Eliya">9. Nuwara Eliya</option>
+                          <option value="10. Galle">10. Galle</option>
+                          <option value="11. Mirissa">11. Mirissa</option>
+                          <option value="12. Trincomalee">12. Trincomalee</option>
+                          <option value="13. Nilaveli">13. Nilaveli</option>
+                          <option value="14. Arugam Bay">14. Arugam Bay</option>
+                          <option value="15. Jaffna">15. Jaffna</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="md:flex mb-4 md:space-x-4">
+                      <div className="flex flex-col w-full">
+                        <label for="endDate" class="text-sm font-medium">
+                          Date
+                        </label>
+                        <input
+                          type="date"
+                          name="endDate"
+                          id="returnDate"
+                          value={formData.returnDate}
+                          min={formData.pickupDate}
+                          onChange={handleInputChange}
+                          class="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        />
+                      </div>
+                      <div className="flex flex-col w-full">
+                        <label for="endTime" class="text-sm font-medium">
+                          Time
+                        </label>
+                        <select
+                          name="endTime"
+                          id="returnTime"
+                          value={formData.returnTime}
+                          onChange={handleInputChange}
+                          class="border border-gray-400 rounded-lg px-3 py-2 w-full"
+                        >
+                          {generateTimeOptions()}
+                        </select>
+                      </div>
+                    </div>
+
+                    <button
+                      onClick={handleSearch}
+                      className="bg-[#379237] hover:bg-[#F0FF42] text-white hover:text-black transition-colors duration-300 font-bold py-2 px-4 rounded-lg"
+                    >
+                      Start
+                    </button>
+                  </div>
                 </div>
                 <div className="flex items-center font-serif">
                   <p class="lg:text-5xl text-3xl mx-5 mt-16 font-bold text-center py-10 border-4 border-white text-[#F0FF42]">
@@ -490,7 +492,7 @@ export default function Home() {
             <div>
               <div className="mt-10 space-y-10 lg:flex lg:my-10 lg:space-y-0">
                 {drive.map((d) => (
-                  <div class="xl:max-w-96 lg:max-w-[250px] md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
+                  <div class="xl:max-w-[350px] lg:max-w-[250px] md:max-w-[600px] mx-auto bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 duration-500 ease-in-out">
                     <div>
                       <div>
                         <img
