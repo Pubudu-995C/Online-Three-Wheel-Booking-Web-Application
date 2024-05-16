@@ -310,7 +310,7 @@ export default function Home() {
 
             <div className="absolute top-0 w-full mt-10 xl:mt-24 md:mt-12 2xl:px-40 xl:px-24 lg:px-20 px-5">
               <h1 className="mt-20 text-3xl font-bold text-center text-white uppercase xl:text-6xl lg:text-5xl lg:leading-normal">
-                Explore Sri Lanka with Tuktuk rentals
+                Explore Sri Lanka with Tuktuk Mango
               </h1>
               <div className="grid lg:grid-cols-2 ">
                 <div>
